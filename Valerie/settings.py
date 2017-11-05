@@ -77,11 +77,11 @@ DATABASES = {
      'default': {
          'ENGINE': 'django.db.backends.mysql',
      # Backends disponibles : 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-         'NAME': 'valerie-v3',  # Nom de la base de données
-         'USER': 'valerie-v3',  # Utilisateur
-         'PASSWORD': 'koL1o7kGdrmnwkmP',  # Mot de passe si nécessaire
-         'HOST': '192.168.1.1',  # Utile si votre base de données est sur une autre machine
-         'PORT': '',  # ... et si elle utilise un autre port que celui par défaut
+         'NAME': 'valerie-v3',
+         'USER': 'valerie-v3',
+         'PASSWORD': 'koL1o7kGdrmnwkmP',
+         'HOST': '192.168.1.1',
+         'PORT': '', 
     }
 
 }
