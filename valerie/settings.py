@@ -37,8 +37,8 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'photos_gallery',
-    'navigation',
+    'valerie.photos_gallery',
+    'valerie.navigation',
 ]
 
 MIDDLEWARE = [
@@ -51,7 +51,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'Valerie.urls'
+ROOT_URLCONF = 'valerie.urls'
 
 TEMPLATES = [
     {
@@ -69,7 +69,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'Valerie.wsgi.application'
+WSGI_APPLICATION = 'alerie.wsgi.application'
 
 
 # Database

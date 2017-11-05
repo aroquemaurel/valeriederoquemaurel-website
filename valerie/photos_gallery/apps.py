@@ -4,5 +4,5 @@ from __future__ import unicode_literals
 from django.apps import AppConfig
 
 
-class NavigationConfig(AppConfig):
-    name = 'Navigation'
+class PhotosGalleryConfig(AppConfig):
+    name = 'photos_gallery'
