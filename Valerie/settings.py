@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'valerie_photos'
 ]
 
 MIDDLEWARE = [
@@ -77,12 +78,15 @@ DATABASES = {
      'default': {
          'ENGINE': 'django.db.backends.mysql',
      # Backends disponibles : 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
-         'NAME': 'valerie-v3',
-         'USER': 'valerie-v3',
-         'PASSWORD': 'koL1o7kGdrmnwkmP',
+         'NAME': 'valerie_v3',
+         'USER': 'valerie_v3',
+         'PASSWORD': 'OUFf7yKZ8AKSuuTq',
          'HOST': '192.168.1.1',
-         'PORT': '', 
-    }
+         'PORT': '',
+         'OPTIONS': {
+             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+         },
+     }
 
 }
 
