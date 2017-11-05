@@ -74,10 +74,16 @@ WSGI_APPLICATION = 'Valerie.wsgi.application'
 # https://docs.djangoproject.com/en/1.11/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+     'default': {
+         'ENGINE': 'django.db.backends.mysql',
+     # Backends disponibles : 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+         'NAME': 'valerie-v3',  # Nom de la base de données
+         'USER': 'valerie-v3',  # Utilisateur
+         'PASSWORD': 'koL1o7kGdrmnwkmP',  # Mot de passe si nécessaire
+         'HOST': '192.168.1.1',  # Utile si votre base de données est sur une autre machine
+         'PORT': '',  # ... et si elle utilise un autre port que celui par défaut
     }
+
 }
 
 
@@ -103,7 +109,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'en-us'
+LANGUAGE_CODE = 'fr-FR'
 
 TIME_ZONE = 'UTC'
 
