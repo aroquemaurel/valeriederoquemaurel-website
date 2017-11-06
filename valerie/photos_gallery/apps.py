@@ -5,4 +5,4 @@ from django.apps import AppConfig
 
 
 class PhotosGalleryConfig(AppConfig):
-    name = 'photos_gallery'
+    name = 'valerie.photos_gallery'
