@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'valerie.photos_gallery',
     'valerie.navigation',
+    'valerie.users',
 ]
 
 MIDDLEWARE = [
@@ -69,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'alerie.wsgi.application'
+WSGI_APPLICATION = 'valerie.wsgi.application'
 
 
 # Database
@@ -78,7 +79,7 @@ WSGI_APPLICATION = 'alerie.wsgi.application'
 DATABASES = {
      'default': {
          'ENGINE': 'django.db.backends.mysql',
-     # Backends disponibles : 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+         # Backends disponibles : 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
          'NAME': 'valerie_v3',
          'USER': 'valerie_v3',
          'PASSWORD': 'OUFf7yKZ8AKSuuTq',

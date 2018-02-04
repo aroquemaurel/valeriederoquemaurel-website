@@ -15,7 +15,10 @@ Including another URLconf
 """
 from django.conf.urls import url
 from django.contrib import admin
+from valerie.users import views as users_views
 
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
+    url(r'^connexion/$', users_views.connexion, name='connexion'),
+    url(r'^deconnexion/$', users_views.deconnexion, name='deconnexion'),
 ]
