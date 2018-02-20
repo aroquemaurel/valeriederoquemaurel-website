@@ -6,13 +6,10 @@ from django.db import models
 
 class Category(models.Model):
     title = models.CharField(max_length=256)
-    # TODO AR : parent, null ou une autre categorie
+    slug = models.SlugField(max_length=100)
+    # Si aucun parent, catégorie, sinon sous-catégorie.
+    parent = models.ForeignKey('Category', null=True)
 
     def __str__(self):
         return self.title
-
-
-class SubCategory(models.Model):
-    title = models.CharField(max_length=256)
-    parent = models.ForeignKey('Category')
 
