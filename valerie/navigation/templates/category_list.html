@@ -1,0 +1,10 @@
+<ul>
+{% for category in categories %}
+    <li>{{ category.title }} </li>
+    <ul>
+        {% for subcat in category.get_childs %}
+            <li>{{subcat.title}}</li>
+        {% endfor %}
+    </ul>
+{% endfor %}
+</ul>

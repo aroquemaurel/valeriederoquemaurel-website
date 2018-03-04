@@ -10,6 +10,11 @@ class Category(models.Model):
     # Si aucun parent, catégorie, sinon sous-catégorie.
     parent = models.ForeignKey('Category', null=True)
 
+    # Retourne les sous-catégories de la categorie courante
+    def get_childs(self):
+        return self.category_set.all()
+
+
     def __str__(self):
         return self.title
 
