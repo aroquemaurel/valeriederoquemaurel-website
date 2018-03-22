@@ -1,3 +1,6 @@
+{% extends "base.html" %}
+
+{% block navbar %}
 <ul>
 {% for category in categories %}
 
@@ -21,3 +24,4 @@
     {% endif %}
 {% endfor %}
 </ul>
+{% endblock %}
