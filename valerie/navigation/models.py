@@ -6,6 +6,7 @@ from django.db import models
 class Type:
     PHOTO = 1
     CONTENT = 2
+    EVENT = 3
 
 
 class Category(models.Model):
@@ -13,7 +14,10 @@ class Category(models.Model):
     slug = models.SlugField(max_length=100)
     # Si aucun parent, catégorie, sinon sous-catégorie.
     parent = models.ForeignKey('ParentCategory', null=True, related_name='parent_cat')
-    type = models.IntegerField(default=1)
+    default_page = models.ForeignKey('Page', null=True, related_name='default_page')
+
+    def get_pages(self):
+        return self.category_page.all()
 
     def __str__(self):
         return self.title
@@ -26,6 +30,14 @@ class ParentCategory(Category):
     # Retourne les sous-catégories de la categorie courante
     def get_childs(self):
         return self.parent_cat.all()
+
+
+class Page(models.Model):
+    title = models.CharField(max_length=256)
+    slug = models.SlugField(max_length=100)
+    parent = models.ForeignKey('Category', null=True, related_name='category_page')
+    type = models.IntegerField(default=1)
+
 
 
 

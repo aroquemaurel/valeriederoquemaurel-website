@@ -37,10 +37,12 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'valerie',
     'valerie.photos_gallery',
     'valerie.navigation',
     'valerie.users',
     'valerie.files',
+    'valerie.pages',
 ]
 
 MIDDLEWARE = [

@@ -16,6 +16,7 @@ Including another URLconf
 from django.conf.urls import url, include
 
 urlpatterns = [
+    url(r'^', include('valerie.pages.urls')),
     url(r'^', include('valerie.users.urls')),
     url(r'^', include('valerie.navigation.urls')),
     url(r'^', include('valerie.photos_gallery.urls'))

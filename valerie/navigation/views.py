@@ -51,20 +51,15 @@ def _display_category(request, cat):
 
 
 def _display_subcategory(request, cat, subcat):
-    if subcat is None or cat is None:
+    if subcat is None or cat is None or subcat.default_page is None:
         # TODO AR : on balance une 404
         pass
 
-    if subcat.type == Type.PHOTO:
-        # TODO AR : ?
-        pass
-    elif subcat.type == Type.CONTENT:
-        # TODO AR : ?
-        pass
+    return _display_page(request, cat, subcat, subcat.default_page)
 
-    return render(request, 'category_list.html', {'categories': ParentCategory.objects.all(),
-                                                      'current_cat': cat,
-                                                      'current_subcat': subcat})
+    #return render(request, 'category_list.html', {'categories': ParentCategory.objects.all(),
+#                                                      'current_cat': cat,
+#                                                      'current_subcat': subcat})
 
 
 # Route
@@ -90,4 +85,29 @@ def category_list(request):
         slug_cat = None
 
     return display_category(request, slug_cat)
+
+
+def _display_page(request, cat, subcat, page):
+    if page.type == Type.PHOTO:
+        pass
+    elif page.type == Type.CONTENT:
+        pass
+
+
+    return None
+
+
+# Route
+def display_page(request, slug_cat, slug_subcat, id_page):
+    try:
+        cat = ParentCategory.objects.get(slug=slug_cat)
+    except Category.DoesNotExist:
+        cat = None
+
+    try:
+        subcat = Category.objects.get(slug=slug_subcat)
+    except Category.DoesNotExist:
+        subcat = None
+
+    return _display_page(request, cat, subcat, id_page)
 
