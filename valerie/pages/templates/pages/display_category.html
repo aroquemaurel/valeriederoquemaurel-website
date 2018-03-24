@@ -1,0 +1,13 @@
+{% extends "pages/page.html" %}
+
+{% block body %}
+    TODO AR
+
+    {% for subcat in current_cat.get_childs %}
+            <li><a href="{% url 'display_subcategory' current_cat.slug subcat.slug %}"
+            {% if current_subcat.slug == subcat.slug %}
+                   class="selected"
+            {% endif %}
+            >{{subcat.title}}</a></li>
+    {% endfor %}
+{% endblock %}

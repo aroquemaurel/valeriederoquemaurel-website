@@ -2,11 +2,10 @@
 from __future__ import unicode_literals
 import valerie
 
-from django.shortcuts import render
 from valerie.pages import views
 
 # Create your views here.
-from valerie.navigation.models import Category, ParentCategory
+from valerie.navigation.models import Category
 
 
 # Route
@@ -15,23 +14,18 @@ def display_category(request, slug):
     cat = None
 
     try:
-        cat = ParentCategory.objects.get(slug=slug)
+        cat = Category.objects.get(slug=slug)
+    except Category.DoesNotExist:
+        cat = None
+    # TODO AR : 404
 
-        if cat.default_child is not None:
-            slug_subcat = cat.default_child.slug
-        else:
-            slug_subcat = None
-    except ParentCategory.DoesNotExist:
-        slug_subcat = None
-
+    # On a pas d'enfants, on prends la page par défaut
     if slug_subcat is None and cat.get_childs().count() == 0:
-        return valerie.pages.views.display_page(request, cat.default_page)
+        return valerie.pages.views.display_page(request, cat.get_default_page())
 
-    elif slug_subcat is None:
-        # TODO AR : On a des enfants, mais on connait pas la page par défaut
-        return None
 
-    return display_subcategory(request, slug, slug_subcat)
+    # On a des enfants, on affiche la catégorie
+    return valerie.pages.views.display_category(request, cat)
 
 
 #def _display_category_without_childs(request, cat):
@@ -67,7 +61,7 @@ def display_category(request, slug):
 # Route
 def display_subcategory(request, slug_cat, slug_subcat):
     try:
-        cat = ParentCategory.objects.get(slug=slug_cat)
+        cat = Category.objects.get(slug=slug_cat)
     except Category.DoesNotExist:
         cat = None
        # TODO AR : 404
@@ -78,43 +72,7 @@ def display_subcategory(request, slug_cat, slug_subcat):
         subcat = None
         # TODO AR : 404
 
-    return valerie.pages.views.display_page(request, subcat.default_page)
+    return valerie.pages.views.display_page(request, subcat.get_default_page())
 
 
 #    return _display_subcategory(request, cat, subcat)
-
-
-# Route
-def category_list(request):
-    try:
-        slug_cat = ParentCategory.objects.get(is_home=True).slug
-    except Category.DoesNotExist:
-        slug_cat = None
-
-    return display_category(request, slug_cat)
-
-
-def _display_page(request, cat, subcat, page):
-    if page.type == Type.PHOTO:
-        pass
-    elif page.type == Type.CONTENT:
-        pass
-
-
-    return None
-
-
-# Route
-def display_page(request, slug_cat, slug_subcat, id_page):
-    try:
-        cat = ParentCategory.objects.get(slug=slug_cat)
-    except Category.DoesNotExist:
-        cat = None
-
-    try:
-        subcat = Category.objects.get(slug=slug_subcat)
-    except Category.DoesNotExist:
-        subcat = None
-
-    return _display_page(request, cat, subcat, id_page)
-

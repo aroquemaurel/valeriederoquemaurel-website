@@ -8,11 +8,24 @@ class Type:
     PHOTO = 1
     CONTENT = 2
     EVENT = 3
+    PRESS = 4
 
 
 class Page(models.Model):
-    title = models.CharField(max_length=256)
-    slug = models.SlugField(max_length=100)
     parent = models.ForeignKey('navigation.Category', null=True, related_name='category_page')
     type = models.IntegerField(default=1)
+
+    def title(self):
+        return self.parent.title
+
+    def slug(self):
+        return self.parent.slug
+
+
+
+class NameablePage(Page):
+    title = models.CharField(max_length=256)
+    slug = models.SlugField(max_length=100)
+
+
 
