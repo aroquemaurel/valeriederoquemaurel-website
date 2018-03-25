@@ -22,7 +22,6 @@ class Page(models.Model):
         return self.parent.slug
 
 
-
 class NameablePage(Page):
     title = models.CharField(max_length=256)
     slug = models.SlugField(max_length=100)

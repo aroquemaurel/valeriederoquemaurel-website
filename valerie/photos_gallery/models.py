@@ -3,10 +3,12 @@ from __future__ import unicode_literals
 
 from django.db import models
 
+from valerie import pages
+from valerie.pages.models import Page
 
-class Photo(models.Model):
+
+class Photo(pages.models.NameablePage):
     # TODO AR : Categorie
-    title = models.CharField(max_length=256)
     content = models.TextField(null=True)
     # TODO AR : favorite home, home image, home link, utile ?
     position = models.PositiveIntegerField()

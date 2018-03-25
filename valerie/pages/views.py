@@ -2,10 +2,12 @@
 from __future__ import unicode_literals
 
 from django.shortcuts import render
+import valerie
 
 # Create your views here.
 from valerie.navigation.models import Category
 from valerie.pages.models import Type
+from valerie.photos_gallery import views
 
 
 def home(request):
@@ -33,6 +35,9 @@ def display_page(request, page):
                           'current_cat': cat,
                           'page': page
                       })
+
+    elif page.type == Type.PHOTO:
+        return valerie.photos_gallery.views.display_photo(request, page.id)
 
     else:
         return None

@@ -1,0 +1,13 @@
+{% extends "pages/page.html" %}
+{% load static %}
+
+{% block body %}
+    {# TODO AR : liste des photos #}
+    {% for photo in all_photos %}
+        {{ photo.id }}
+    {% endfor %}
+
+    {# TODO AR : la photo courante #}
+
+    {# TODO AR : next/previous #}
+{% endblock %}
