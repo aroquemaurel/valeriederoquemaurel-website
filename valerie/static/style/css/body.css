@@ -17,5 +17,13 @@ body #content #text-content {
 }
 
 #text-left {
-    position: absolute;
+    float: left;
+    margin-left: 100px;
+    width: 30%;
+}
+
+#content h1 {
+    color: #98105d;
+    font-size: 18pt;
+    padding-bottom: 10px;
 }
