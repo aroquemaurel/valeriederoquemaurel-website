@@ -6,7 +6,7 @@ header .horizontal-menu {
     font-size: 12.5pt;
 }
 
-header .horizontal-menu a:hover, header .horizontal-menu .selected {
+header .horizontal-menu .selected {
     color: #98105d;
 }
 
@@ -15,12 +15,17 @@ header #home {
     display: block;
     position: absolute;
 }
+
 header .horizontal-menu, header .horizontal-menu a {
     color: #717171;
 }
 
 header .vertical-submenu, header .vertical-submenu a {
     color: #a9a9a9
+}
+
+header .horizontal-menu a:hover, header .vertical-submenu a:hover {
+    color: #b14b85
 }
 
 header #logo {

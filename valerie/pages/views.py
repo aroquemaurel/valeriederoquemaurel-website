@@ -38,11 +38,6 @@ def display_page(request, page):
         return None
 
 
-def display_category(request, cat):
-    return render(request, 'pages/display_category.html', {
-                            'categories': Category.objects.filter(parent=None),
-                            'current_cat': cat
-    })
 
 
 

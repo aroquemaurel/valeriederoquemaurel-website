@@ -1,5 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
+
+from django.shortcuts import render
+
 import valerie
 
 from valerie.pages import views
@@ -25,8 +28,10 @@ def display_category(request, slug):
 
 
     # On a des enfants, on affiche la catégorie
-    return valerie.pages.views.display_category(request, cat)
-
+    return render(request,  'navigation/display_category.html', {
+                                'categories': Category.objects.filter(parent=None),
+                                'current_cat': cat
+                            })
 
 #def _display_category_without_childs(request, cat):
 #    # TODO AR : on devra afficher directement le contenu de la page.
@@ -56,7 +61,6 @@ def display_category(request, slug):
     #return render(request, 'category_list.html', {'categories': ParentCategory.objects.all(),
 #                                                      'current_cat': cat,
 #                                                      'current_subcat': subcat})
-
 
 # Route
 def display_subcategory(request, slug_cat, slug_subcat):

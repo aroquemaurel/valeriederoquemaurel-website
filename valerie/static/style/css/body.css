@@ -2,28 +2,71 @@ body {
     margin: auto;
     max-width: 1200px;
 
-    font-family: Candara,  Galdeano, Orienta,Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    font-family: Candara, Galdeano, Orienta,Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
 }
 
 body #content {
      font-variant: small-caps;
+     margin-left: 30%;
 }
 
 body #content #text-content {
-    width: 60%;
     text-align: justify;
-    padding-right: 80px;
-    margin-left: 40%;
+    padding-right: 130px;
 }
 
 #text-left {
-    float: left;
-    margin-left: 100px;
+    position: absolute;
     width: 30%;
+    margin-left: -30%;
+    padding-right: 20px;
 }
+
+a:hover {
+    color: #b14b85
+}
+
+a {
+    color: #98105d;
+}
+
+
 
 #content h1 {
     color: #98105d;
     font-size: 18pt;
     padding-bottom: 10px;
 }
+
+.picture-element {
+    margin-right: 60px;
+    margin-bottom: 60px;
+}
+
+.picture-element .caption {
+    text-align: center;
+    display: block;
+    width: 100%;
+}
+
+.picture-element .square {
+    height: 170px;
+    width: 250px;
+    display: block;
+}
+
+.picture-element .square-0 {
+    background-color: #98105d;
+ }
+
+ .picture-element .square-1 {
+    background-color: #999999;
+ }
+
+ .picture-element .square-2 {
+    background-color: #4d4d4d;
+ }
+
+ .picture-element .square-3 {
+    background-color: #cccccc;
+ }

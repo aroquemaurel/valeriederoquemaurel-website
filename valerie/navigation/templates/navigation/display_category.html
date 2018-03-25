@@ -1,0 +1,17 @@
+{% extends "pages/page.html" %}
+{% block body %}
+    <table>
+        {% for subcat in current_cat.get_childs %}
+        {% if not forloop.counter|divisibleby:2 %}<tr>{% endif %}
+            <td>
+                <div class="picture-element">
+                    <a href="{% url 'display_subcategory' current_cat.slug subcat.slug %}">
+                        <span class="square square-{%cycle '0' '1' '2' '3'%}"></span>
+                        <span class="caption">{{subcat.title}}</span>
+                    </a>
+                </div>
+            </td>
+        {% if forloop.counter|divisibleby:2 %}</tr>{% endif %}
+    {% endfor %}
+    </table>
+{% endblock %}
