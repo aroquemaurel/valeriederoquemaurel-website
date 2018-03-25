@@ -1,0 +1,21 @@
+body {
+    margin: auto;
+    max-width: 1200px;
+
+    font-family: Candara,  Galdeano, Orienta,Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+}
+
+body #content {
+     font-variant: small-caps;
+}
+
+body #content #text-content {
+    width: 60%;
+    text-align: justify;
+    padding-right: 80px;
+    margin-left: 40%;
+}
+
+#text-left {
+    position: absolute;
+}

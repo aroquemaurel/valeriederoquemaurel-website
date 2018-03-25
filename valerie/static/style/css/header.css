@@ -1,0 +1,57 @@
+header .horizontal-menu {
+    height: 150px;
+    text-align: right;
+    margin-right: 0px;
+    text-transform: uppercase;
+    font-size: 12.5pt;
+}
+
+header .horizontal-menu a:hover, header .horizontal-menu .selected {
+    color: #98105d;
+}
+
+header #home {
+    margin-top: -25px;
+    display: block;
+    position: absolute;
+}
+header .horizontal-menu, header .horizontal-menu a {
+    color: #717171;
+}
+
+header .vertical-submenu, header .vertical-submenu a {
+    color: #a9a9a9
+}
+
+header #logo {
+    margin-left: 0;
+    height: 140px;
+}
+
+.horizontal-menu, .vertical-submenu {
+    list-style-type: none;
+}
+
+.horizontal-menu {
+    margin: 0;
+    padding: 0;
+}
+
+.horizontal-menu .vertical-submenu {
+    position : absolute;
+    text-align: left;
+    margin-left: -40px;
+    font-size: 9pt;
+}
+
+.horizontal-menu .category {
+    padding-left: 80px;
+}
+
+.horizontal-menu .category {
+     display: inline-block;
+}
+
+
+
+

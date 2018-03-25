@@ -1,9 +1,9 @@
 {% load static %}
 
 <!-- TODO AR : à implémenter -->
-<!DOCTYPE html>
 
-<html lang="en">
+<!DOCTYPE html>
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <!-- TODO AR : descriptions -->
@@ -11,12 +11,34 @@
 
     <title>{% block title %}{% endblock %}</title>
 
-    <link href="{% static '/style/css/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static '/style/css/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static '/style/css/body.css' %}" rel="stylesheet">
+    <link href="{% static '/style/css/header.css' %}" rel="stylesheet">
+    <link href="{% static '/style/css/footer.css' %}" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Galdeano|Orienta" rel="stylesheet">
+
 </head>
 <body>
-    {% block navbar %} {% endblock %}
-    {% block body %} {% endblock %}
-</body>
+    <header>
+        <img id="logo" src="{% static '/style/img/logo.jpg' %}" alt="Valérie de Roquemaurel" />
+        {% block navbar %} {% endblock %}
+    </header>
 
-<footer>{% block footer %} {% endblock %}</footer>
+    <div id="content">
+        {% block body %} {% endblock %}
+    </div>
+    <footer>
+        <div class="contact">
+            <!-- TODO AR : dans la config-->
+            <span class="element">Valérie de Roquemaurel</span>
+            <span class="element">+41 78 910 45 105</span>
+            <span class="element">valerie@createursverriers.ch</span>
+        </div>
+        <div class="social">
+            <span class="element"><img src="{% static '/style/img/logo-fb.jpg' %}" alt="Facebook" /></span>
+            <span class="element"><img src="{% static '/style/img/logo-insta.jpg' %}" alt="Instagram" /></span>
+        </div>
+        {% block footer %} {% endblock %}
+    </footer>
+</body>
 </html>

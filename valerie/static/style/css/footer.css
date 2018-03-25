@@ -1,0 +1,26 @@
+footer {
+    margin-top: 30px;
+    width: 100%;
+}
+
+footer .contact .element {
+    padding-left: 40px;
+    padding-bottom: 30px;
+}
+
+footer .social .element {
+    padding-left: 10px;
+}
+footer .social{
+    float: right;
+}
+
+footer .contact {
+    float: left;
+}
+
+footer .social {
+    text-align: right;
+    right: 0;
+}
+

@@ -1,27 +1,28 @@
 {% extends "base.html" %}
+{% load static %}
 
 {% block navbar %}
-<ul>
-{% for category in categories %}
+<ul class="horizontal-menu">
 
-    <li><a href="{% url 'display_category' category.slug %}"
-    {% if current_cat.slug == category.slug %}
-        class="selected"
-    {% endif %}
-    >{{ category.title }}</a></li>
+{% for category in categories %}
+    <span class="category">
+    <li><a href="{% url 'display_category' category.slug %}"{% if current_cat.slug == category.slug %} class="selected" {% endif %}>
+        {% if category.slug != 'accueil' %}{{ category.title }}{%else%}<span id="home"><img src="{% static '/style/img/home.jpg' %}" alt="{{category.title}}"/></span>{%endif%}
+    </a></li>
 
     {# On affiche les sous-catégories uniquement pour la catégorie courante #}
     {% if current_cat.slug == category.slug %}
-        <ul>
+        <ul class="vertical-submenu">
             {% for subcat in category.get_childs %}
-            <li><a href="{% url 'display_subcategory' category.slug subcat.slug %}"
-            {% if current_subcat.slug == subcat.slug %}
+            <li class="subcategory"><a href="{% url 'display_subcategory' category.slug subcat.slug %}"
+            {% if page.parent.slug == subcat.slug %}
                    class="selected"
             {% endif %}
             >{{subcat.title}}</a></li>
             {% endfor %}
         </ul>
     {% endif %}
+        </span>
 {% endfor %}
 </ul>
 {% endblock %}
