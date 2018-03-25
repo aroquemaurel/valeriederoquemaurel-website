@@ -5,16 +5,16 @@ from django.shortcuts import render
 
 # Create your views here.
 from valerie.navigation.models import Category
-from valerie.pages.models import Type, Page
+from valerie.pages.models import Type
 
 
 def home(request):
     try:
-        cat = Category.objects.get(slug="accueil")  # TODO AR : config ?
+        cat = Category.objects.get(slug='accueil')  # TODO AR : config ?
     except Category.DoesNotExist:
-        cat = None
+        return None
 
-    return display_page(request, cat.default_page())
+    return display_page(request, cat.get_default_page())
 
 
 def display_page(request, page):
