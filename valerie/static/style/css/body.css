@@ -30,7 +30,10 @@ a {
     color: #98105d;
 }
 
-
+#photo-home {
+    width: 80%;
+    margin-top: -80px;
+}
 
 #content h1 {
     color: #98105d;
