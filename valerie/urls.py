@@ -22,4 +22,7 @@ urlpatterns = [
     url(r'^', include('valerie.users.urls')),
     url(r'^', include('valerie.navigation.urls')),
     url(r'^', include('valerie.photos_gallery.urls'))
-] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT)
+] + static(settings.STATIC_URL, document_root=settings.STATIC_ROOT) + \
+    static(settings.UPLOAD_URL, document_root=settings.UPLOAD_DIR)
+
+

@@ -133,10 +133,15 @@ USE_TZ = True
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.11/howto/static-files/
 
+UPLOAD_RELATIVE_DIR = 'upload'
+
 STATIC_URL = '/static/'
+
+UPLOAD_URL = '/'+UPLOAD_RELATIVE_DIR+'/'
+
+UPLOAD_DIR = BASE_DIR+UPLOAD_URL
 
 #STATIC_ROOT = BASE_DIR
 
 STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static"),
-]
+    os.path.join(BASE_DIR, "static")]
