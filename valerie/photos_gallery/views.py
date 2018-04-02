@@ -14,11 +14,14 @@ def display_photo(request, id_photo):
     # TODO AR : afficher categorie, sous categorie, liste sous categorie et photo associé en paramètre
     try:
         photo = Photo.objects.get(id=id_photo)
-    except Category.DoesNotExist:
+    except Photo.DoesNotExist:
         # TODO AR : return 404
         return None
 
     current_cat = photo.parent
+
+    if current_cat.parent is not None:
+        current_cat = current_cat.parent
 
     return render(request, 'photos_gallery/display-photo.html',
                   {
