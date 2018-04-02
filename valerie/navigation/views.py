@@ -32,6 +32,7 @@ def display_category(request, slug):
                                 'categories': Category.objects.filter(parent=None),
                                 'current_cat': cat
                             })
+
 # Route
 def display_subcategory(request, slug_cat, slug_subcat):
     try:

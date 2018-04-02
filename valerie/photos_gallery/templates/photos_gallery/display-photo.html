@@ -4,12 +4,16 @@
 {% block body %}
     {# TODO AR : liste des photos #}
     {% for photo in all_photos %}
-        {{ photo.id }}
+        {%if photo.id == page.id%}
+                <img style="width: 50%" src="/{{ page.photo_img }}" alt="TODO" />
+        {%else%}
+        <a href="{% url 'display_photo' current_cat.slug current_subcat.slug photo.id photo.slug %}">
+        <img style="height: 200px" src="/{{ photo.photo_img }}" alt="TODO" />
+        </a>
+        {%endif%}
     {% endfor %}
 
     {# TODO AR : la photo courante #}
     {{page.content}}
-
-    <img src="/{{ page.photo_img }}" alt="ERR" />
     {# TODO AR : next/previous #}
 {% endblock %}

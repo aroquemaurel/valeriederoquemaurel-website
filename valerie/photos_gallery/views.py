@@ -18,15 +18,18 @@ def display_photo(request, id_photo):
         # TODO AR : return 404
         return None
 
-    current_cat = photo.parent
+    cat = photo.parent
 
-    if current_cat.parent is not None:
-        current_cat = current_cat.parent
+    if cat.parent is not None:
+        current_cat = cat.parent
+    else:
+        current_cat = cat
 
     return render(request, 'photos_gallery/display-photo.html',
                   {
                       'categories': Category.objects.filter(parent=None),
                       'current_cat': current_cat,
+                      'current_subcat': cat,
                       'page': photo,
-                      'all_photos': current_cat.get_pages()
+                      'all_photos': Photo.objects.filter(parent_id=cat.id)
                   })
