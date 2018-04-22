@@ -1,0 +1,43 @@
+.gallery {
+    margin-left: -30%;
+    height: 650px; /* Hauteur main-photo + 150px */
+}
+
+.mini-photos {
+    float: left;
+    min-width: 330px;
+    text-align : center;
+}
+
+.mini-photos img {
+    padding-right: 10px;
+    padding-left: 10px;
+    vertical-align: middle;
+    margin-top: 150px; /* (Hauteur main-photo - hauteur mini-photo) / 2 */
+}
+
+.caption {
+    display: inline-block;
+    width: 100%;
+}
+
+.caption #content {
+    display: inline-block;
+    width: 100%;
+    margin: auto;
+}
+
+.main-photo img {
+    width: auto;
+    padding-right: 10px;
+    padding-left: 10px;
+}
+
+.main-photo {
+    float: left;
+}
+
+div.caption {
+    padding: 15px;
+    text-align: center;
+}

@@ -2,18 +2,36 @@
 {% load static %}
 
 {% block body %}
-    {# TODO AR : liste des photos #}
-    {% for photo in all_photos %}
-        {%if photo.id == page.id%}
-                <img style="width: 50%" src="/{{ page.photo_img }}" alt="TODO" />
-        {%else%}
-        <a href="{% url 'display_photo' current_cat.slug current_subcat.slug photo.id photo.slug %}">
-        <img style="height: 200px" src="/{{ photo.photo_img }}" alt="TODO" />
-        </a>
-        {%endif%}
-    {% endfor %}
+<div class="gallery">
 
-    {# TODO AR : la photo courante #}
-    {{page.content}}
-    {# TODO AR : next/previous #}
+                {# TODO : function #}
+    <div class="mini-photos">&nbsp;
+{% for photo in previous_photos %}
+
+        <a href="{% url 'display_photo' current_cat.slug current_subcat.slug photo.id photo.slug %}">
+        <img height="200px" src="/{{ photo.photo_img }}" alt="TODO" />
+        </a>
+
+{% endfor %}
+        </div>
+
+        <div class="main-photo">
+            <img style="" height="500px" src="/{{ page.photo_img }}" alt="{{ page.title }}"/><br/>
+            <div class="caption">
+                <h2 id="title">{{ page.title }} </h2>
+                <span id="content">{{ page.content }}</span>
+            </div>
+        </div>
+            {# TODO : function #}
+            <div class="mini-photos">&nbsp;
+{% for photo in next_photos %}
+
+        <a href="{% url 'display_photo' current_cat.slug current_subcat.slug photo.id photo.slug %}">
+        <img height="200px" src="/{{ photo.photo_img }}" alt="TODO" />
+        </a>
+{% endfor %}
+        </div>
+
+    </div>
+
 {% endblock %}
