@@ -5,30 +5,23 @@
 from django.core.files import File
 from valerie.photos_gallery.models import Photo
 
-photo = Photo(title='Pichet', content='Verre soufflé, overlay de couleur, hanse et bec soufflé
-        rapportés.', slug='pichet', position=0)
-photo.photo_img.save('pichet.jpg',
-        File(open('/home/aroquemaurel/projets/python/Valerie/backup-photos/art-table/1359140025_pichet.jpg', 'r')))
+photo = Photo(title='Paquerettes', content='', slug='paquerettes', position=0)
+photo.photo_img.save('paquerettes.jpg', File(open('/home/aroquemaurel/projets/python/Valerie/backup-photos/bijoux/1359132137_paquerettes.jpg', 'r')))
 photo.save()
 
-photo = Photo(title='Cuquetier', content='Pâte de cristal.', slug='Cuquetier', position=0)
-photo.photo_img.save('cuquetier.jpg',
-        File(open('/home/aroquemaurel/projets/python/Valerie/backup-photos/art-table/1359140109_cuquetier.jpg', 'r')))
+photo = Photo(title='Bijou d\'Enfance', content='Ensemble en verre et argent 925. Photo S.  Massonnet', slug='bijoux-enfance', position=0)
+photo.photo_img.save('bijoux-enfance.jpg', File(open('/home/aroquemaurel/projets/python/Valerie/backup-photos/bijoux/1359144452_bijou-d-enfance.jpg', 'r')))
 photo.save()
 
-photo = Photo(title='Cuquetiers', content='Pâte de verre.', slug='Cuquetiers', position=0)
-photo.photo_img.save('cuquetiers.jpg',
-        File(open('/home/aroquemaurel/projets/python/Valerie/backup-photos/art-table/1359140131_cuquetiers.jpg', 'r')))
+photo = Photo(title='Cailloux', content='Perles pleines réalisées au chalumeau, avec feuille d\'argent en surface. ', slug='cailloux', position=0)
+photo.photo_img.save('cailloux.jpg', File(open('/home/aroquemaurel/projets/python/Valerie/backup-photos/bijoux/1359140830_cailloux.jpg', 'r')))
 photo.save()
 
-photo = Photo(title='Beurrier', content='Verre soufflé, contenant en deux parties. Capuchon avec
-        apports rapportés, réminiscent du beurre à étaler.', slug='beurrier', position=0)
-photo.photo_img.save('beurrier.jpg',
-        File(open('/home/aroquemaurel/projets/python/Valerie/backup-photos/art-table/1359140200_beurrier.jpg', 'r')))
+photo = Photo(title='Bobines transparentes', content='Collier en verre filé, montures argent 925.', slug='bobines-transparentes', position=0)
+photo.photo_img.save('bobines-transparentes.jpg', File(open('/home/aroquemaurel/projets/python/Valerie/backup-photos/bijoux/1359144138_bobines-transparentes.jpg', 'r')))
 photo.save()
 
-photo = Photo(title='Nids à desserts', content='Verre soufflé, posés sur un talon collé à chaud.', slug='nids-a-desserts', position=0)
-photo.photo_img.save('nids-a-desserts.jpg',
-        File(open('/home/aroquemaurel/projets/python/Valerie/backup-photos/art-table/1359140254_nids-a-desserts.jpg', 'r')))
+photo = Photo(title='Collier filigrane, rouge', content='Perles creuses, verre filigrané, montures argent 925, photo B. Grivel', slug='collier-filigrane-rouge', position=0)
+photo.photo_img.save('collier-filigrane-rouge.jpg', File(open('/home/aroquemaurel/projets/python/Valerie/backup-photos/bijoux/1409665211_collier-filigrane-rouge.jpg', 'r')))
 photo.save()
 

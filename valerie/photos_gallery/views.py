@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
-from django.http import HttpResponse
+from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import render
 
 
@@ -15,8 +15,7 @@ def display_photo(request, id_photo):
     try:
         current_photo = Photo.objects.get(id=id_photo)
     except Photo.DoesNotExist:
-        # TODO AR : return 404
-        return None
+        return HttpResponseNotFound('<h1>Page not found</h1>')
 
     cat = current_photo.parent
 
