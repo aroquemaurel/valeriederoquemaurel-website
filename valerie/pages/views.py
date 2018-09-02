@@ -8,6 +8,7 @@ import valerie
 from valerie.navigation.models import Category
 from valerie.pages.models import Type
 from valerie.photos_gallery import views
+from valerie.events import views
 
 
 def home(request):
@@ -38,6 +39,9 @@ def display_page(request, page):
 
     elif page.type == Type.PHOTO:
         return valerie.photos_gallery.views.display_photo(request, page.id)
+
+    elif page.type == Type.EVENT:
+        return valerie.events.views.display_event(request, page.id)
 
     else:
         return None

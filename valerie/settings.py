@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'valerie.users',
     'valerie.files',
     'valerie.pages',
+    'valerie.events',
 ]
 
 MIDDLEWARE = [
