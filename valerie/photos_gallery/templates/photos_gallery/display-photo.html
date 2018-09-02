@@ -6,32 +6,30 @@
 
                 {# TODO : function #}
     <div class="mini-photos">&nbsp;
-{% for photo in previous_photos %}
-
+    {% for photo in previous_photos %}
         <a href="{% url 'display_photo' current_cat.slug current_subcat.slug photo.id photo.slug %}">
-        <img height="200px" src="/{{ photo.photo_img }}" alt="TODO" />
+        <img height="150px" src="/{{ photo.photo_img }}" alt="TODO" />
         </a>
-
-{% endfor %}
-        </div>
+    {% endfor %}
+    </div>
 
         <div class="main-photo">
-            <img style="" height="500px" src="/{{ page.photo_img }}" alt="{{ page.title }}"/><br/>
+            <img style="" src="/{{ page.photo_img }}" alt="{{ page.title }}"/><br/>
             <div class="caption">
                 <h2 id="title">{{ page.title }} </h2>
                 <span id="content">{{ page.content }}</span>
             </div>
         </div>
-            {# TODO : function #}
-            <div class="mini-photos">&nbsp;
-{% for photo in next_photos %}
 
+    {# TODO : function #}
+    <div class="mini-photos">&nbsp;
+    {% for photo in next_photos %}
         <a href="{% url 'display_photo' current_cat.slug current_subcat.slug photo.id photo.slug %}">
-        <img height="200px" src="/{{ photo.photo_img }}" alt="TODO" />
+        <img width="150px" src="/{{ photo.photo_img }}" alt="TODO" />
         </a>
-{% endfor %}
-        </div>
-
+    {% endfor %}
     </div>
+
+</div>
 
 {% endblock %}

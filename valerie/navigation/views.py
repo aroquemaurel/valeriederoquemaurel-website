@@ -33,6 +33,7 @@ def display_category(request, slug):
                                 'current_cat': cat
                             })
 
+
 # Route
 def display_subcategory(request, slug_cat, slug_subcat):
     try:

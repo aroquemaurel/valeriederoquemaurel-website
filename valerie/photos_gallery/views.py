@@ -40,10 +40,10 @@ def display_photo(request, id_photo):
             next_photo.append(photo)
 
     if len(previous_photo) > nb_elements_around_photo:
-        previous_photo = previous_photo[nb_elements_around_photo*-1]
+        previous_photo = previous_photo[::-1][:nb_elements_around_photo]
 
     if len(next_photo) > nb_elements_around_photo:
-        next_photo = previous_photo[nb_elements_around_photo * -1]
+        next_photo = next_photo[:nb_elements_around_photo]
 
     return render(request, 'photos_gallery/display-photo.html',
                   {
