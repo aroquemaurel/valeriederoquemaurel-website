@@ -2,4 +2,9 @@
 {% load static %}
 
 {% block body %}
+    {% for event in events %}
+        <p>Du <b>{{ event.start_date }}</b> au <b>{{ event.end_date }}</b> à <b>{{ event.location }}</b><br/>
+        <em>{{ event.description }}</em>
+        </p>
+    {% endfor %}
 {% endblock %}

@@ -9,5 +9,9 @@ class Event(models.Model):
     end_date = models.DateTimeField()
     location = models.TextField()
     description = models.TextField()
-    
-# Create your models here.
+
+    def __str__(self):
+        return 'from ' + self.start_date.strftime('%b %d %Y %I:%M%p')+\
+               ' to '+self.end_date.strftime('%b %d %Y %I:%M%p')+\
+               ' at '+self.location
+
