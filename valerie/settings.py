@@ -45,6 +45,7 @@ INSTALLED_APPS = [
     'valerie.files',
     'valerie.pages',
     'valerie.events',
+    'valerie.press',
 ]
 
 MIDDLEWARE = [
