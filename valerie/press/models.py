@@ -11,6 +11,10 @@ class Article(models.Model):
     date = models.DateTimeField()
     title = models.CharField(max_length=256)
     content = models.TextField(null=True)
+    youtube_link = models.CharField(max_length=256, null=True)
+
+    def get_images(self):
+        return self.article_image.all().order_by('position')
 
 
 class ImageArticle(models.Model):
