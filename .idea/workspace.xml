@@ -5,26 +5,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a04e327-d78f-400c-8443-00e02d6f5c9f" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/valerie/pages/templates/pages/content/plaisirs/ateliers.html" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/valerie/pages/templates/pages/content/plaisirs/collaborations.html" afterPath="" />
-      <change type="MOVED" beforePath="$PROJECT_DIR$/valerie/pages/templates/pages/content/cours/bon-cadeaux.html" afterPath="$PROJECT_DIR$/valerie/pages/templates/pages/content/cours/bon-cadeau.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/add-photo.py" afterPath="$PROJECT_DIR$/add-photo.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valerie/events/templates/events/display-events.html" afterPath="$PROJECT_DIR$/valerie/events/templates/events/display-events.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valerie/navigation/templates/navigation/display_category.html" afterPath="$PROJECT_DIR$/valerie/navigation/templates/navigation/display_category.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valerie/pages/models.py" afterPath="$PROJECT_DIR$/valerie/pages/models.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valerie/pages/templates/pages/content/cours/presentation.html" afterPath="$PROJECT_DIR$/valerie/pages/templates/pages/content/cours/presentation.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/biographie.html" afterPath="$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/biographie.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/cv.html" afterPath="$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/cv.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/liens.html" afterPath="$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/liens.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/permanences.html" afterPath="$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/permanences.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valerie/photos_gallery/templates/photos_gallery/display-photo.html" afterPath="$PROJECT_DIR$/valerie/photos_gallery/templates/photos_gallery/display-photo.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valerie/photos_gallery/views.py" afterPath="$PROJECT_DIR$/valerie/photos_gallery/views.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valerie/press/templates/press/display-articles.html" afterPath="$PROJECT_DIR$/valerie/press/templates/press/display-articles.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valerie/settings.py" afterPath="$PROJECT_DIR$/valerie/settings.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valerie/static/style/css/body.css" afterPath="$PROJECT_DIR$/valerie/static/style/css/body.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valerie/static/style/css/footer.css" afterPath="$PROJECT_DIR$/valerie/static/style/css/footer.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valerie/static/style/css/photos.css" afterPath="$PROJECT_DIR$/valerie/static/style/css/photos.css" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -113,8 +94,10 @@
         <entry file="file://$PROJECT_DIR$/valerie/pages/templates/pages/content/cours/presentation.html">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="66">
-              <caret line="3" column="30" lean-forward="false" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-              <folding />
+              <caret line="3" column="33" lean-forward="false" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+              <folding>
+                <element signature="e#73#100#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -869,7 +852,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1460" y="149" width="1900" height="1053" extended-state="1" />
+    <frame x="1460" y="149" width="1900" height="1053" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23315789" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
@@ -1090,8 +1073,8 @@
         <state relative-caret-position="88">
           <caret line="4" column="131" lean-forward="true" selection-start-line="4" selection-start-column="131" selection-end-line="4" selection-end-column="131" />
           <folding>
-            <element signature="e#75#104#0#HTML" expanded="true" />
-            <element signature="e#246#272#0#HTML" expanded="true" />
+            <element signature="e#75#104#0#HTML" expanded="false" />
+            <element signature="e#246#272#0#HTML" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1109,7 +1092,7 @@
         <state relative-caret-position="198">
           <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1127,7 +1110,7 @@
         <state relative-caret-position="154">
           <caret line="7" column="87" lean-forward="false" selection-start-line="7" selection-start-column="87" selection-end-line="7" selection-end-column="87" />
           <folding>
-            <element signature="e#0#32#0" expanded="true" />
+            <element signature="e#0#32#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1137,7 +1120,7 @@
         <state relative-caret-position="391">
           <caret line="41" column="0" lean-forward="false" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
           <folding>
-            <element signature="e#24#63#0" expanded="true" />
+            <element signature="e#24#63#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -1264,10 +1247,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/liens.html">
+    <entry file="file://$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/permanences.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="66">
-          <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
+        <state relative-caret-position="88">
+          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1280,10 +1263,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/permanences.html">
+    <entry file="file://$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/liens.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
+        <state relative-caret-position="66">
+          <caret line="3" column="9" lean-forward="false" selection-start-line="3" selection-start-column="9" selection-end-line="3" selection-end-column="9" />
           <folding />
         </state>
       </provider>
@@ -1291,8 +1274,10 @@
     <entry file="file://$PROJECT_DIR$/valerie/pages/templates/pages/content/cours/presentation.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
-          <caret line="3" column="30" lean-forward="false" selection-start-line="3" selection-start-column="30" selection-end-line="3" selection-end-column="30" />
-          <folding />
+          <caret line="3" column="33" lean-forward="false" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+          <folding>
+            <element signature="e#73#100#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
