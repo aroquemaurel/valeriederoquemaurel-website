@@ -9,7 +9,7 @@
     {% for photo in previous_photos %}
         <span class="mini-photo">
         <a href="{% url 'display_photo' current_cat.slug current_subcat.slug photo.id photo.slug %}">
-        <img width="150px" src="/{{ photo.photo_img }}" alt="TODO" />
+        <img src="/{{ photo.photo_img }}" alt="TODO" />
         </a>
         </span>
     {% endfor %}
@@ -28,7 +28,7 @@
     {% for photo in next_photos %}
         <span class="mini-photo">
         <a href="{% url 'display_photo' current_cat.slug current_subcat.slug photo.id photo.slug %}">
-            <img width="150px" src="/{{ photo.photo_img }}" alt="TODO" />
+            <img src="/{{ photo.photo_img }}" alt="TODO" />
         </a>
         </span>
     {% endfor %}

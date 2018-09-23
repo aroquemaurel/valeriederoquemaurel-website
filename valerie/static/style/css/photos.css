@@ -1,6 +1,5 @@
 .gallery {
-    margin-left: -40%;
-    height: 650px; /* Hauteur main-photo + 150px */
+    width: 110%;
 }
 
 .mini-photos {
@@ -13,6 +12,7 @@
 .mini-photos a img {
     opacity: 0.70;
     filter: blur(1.5px);
+    height: 100px;
 }
 
 .mini-photo a:hover img {
@@ -40,7 +40,7 @@
 }
 
 .main-photo img {
-    max-width: 400px;
+    max-width: 600px;
     padding-right: 10px;
     padding-left: 10px;
 }
@@ -49,9 +49,6 @@
     vertical-align: top;
     text-align: center;
     display: inline-block;
-    max-width: 400px;
-    height: 100%;
-    /*float: left;*/
 }
 
 div.caption {

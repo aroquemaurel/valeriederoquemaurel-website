@@ -2,9 +2,12 @@
 {% load static %}
 
 {% block body %}
+        <div id="text-content">
+        <h1>Expositions</h1>
     {% for event in events %}
         <p>Du <b>{{ event.start_date }}</b> au <b>{{ event.end_date }}</b> à <b>{{ event.location }}</b><br/>
         <em>{{ event.description }}</em>
         </p>
     {% endfor %}
+        </div>
 {% endblock %}

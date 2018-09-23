@@ -1,25 +1,27 @@
 body {
     margin: auto;
     max-width: 1200px;
-
     font-family: Candara, Galdeano, Orienta,Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
 }
 
 body #content {
-     font-variant: small-caps;
-     margin-left: 30%;
+    font-variant: small-caps;
+    width: 100%;
+    min-height: 580px;
+}
+
+body #content #main {
+    margin: auto;"
 }
 
 body #content #text-content {
     text-align: justify;
-    padding-right: 130px;
+    width: 60%;
+    margin-left: 40%;
 }
 
 #text-left {
     position: absolute;
-    width: 30%;
-    margin-left: -30%;
-    padding-right: 20px;
 }
 
 a:hover {

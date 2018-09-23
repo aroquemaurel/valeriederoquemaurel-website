@@ -1,7 +1,7 @@
 {% extends "pages/page.html" %}
 {% block title%} {{ current_cat.title }} {% endblock %}
 {% block body %}
-    <table>
+    <table id="main">
         {% for subcat in current_cat.get_childs %}
         {% if not forloop.counter|divisibleby:2 %}<tr>{% endif %}
             <td>

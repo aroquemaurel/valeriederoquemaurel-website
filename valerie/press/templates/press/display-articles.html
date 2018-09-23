@@ -2,6 +2,7 @@
 {% load static %}
 
 {% block body %}
+            <div id="text-content">
     <h1>Articles de presse</h1>
     <div>
     {% for article in articles %}
@@ -49,13 +50,12 @@
                 </div>
             </div>
         </div>
-
+            </div>
     <script type="text/javascript">
     let modalId = $('#image-gallery');
 
 $(document)
   .ready(function () {
-
     loadGallery(true, 'a.thumbnail');
 
     //This function disables buttons when needed

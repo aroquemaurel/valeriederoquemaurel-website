@@ -11,7 +11,6 @@ from valerie.photos_gallery.models import Photo
 
 
 def display_photo(request, id_photo):
-    # TODO AR : afficher categorie, sous categorie, liste sous categorie et photo associé en paramètre
     try:
         current_photo = Photo.objects.get(id=id_photo)
     except Photo.DoesNotExist:

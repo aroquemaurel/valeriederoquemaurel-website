@@ -21,12 +21,12 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 # See https://docs.djangoproject.com/en/1.11/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '52g&953lrs5f8_l2z$my+u*#v)vo=v30-p=%h0&qz!+a=&qhyq'
+SECRET_KEY = '+lme4ft(x8ug15o1-6x)d+mdsm_p-2cbr&24v*ipbd&$zx#!7l'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False 
+DEBUG = True
 
-ALLOWED_HOSTS = ['beta.valerie.roquemaurel.pro']
+ALLOWED_HOSTS = []
 
 
 # Application definition
@@ -89,7 +89,7 @@ DATABASES = {
          'NAME': 'valerie_v3',
          'USER': 'valerie_v3',
          'PASSWORD': 'OUFf7yKZ8AKSuuTq',
-         'HOST': '127.0.0.1',
+         'HOST': '192.168.1.1',
          'PORT': '',
          'OPTIONS': {
              'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
@@ -143,7 +143,7 @@ UPLOAD_URL = '/'+UPLOAD_RELATIVE_DIR+'/'
 
 UPLOAD_DIR = BASE_DIR+UPLOAD_URL
 
-STATIC_ROOT = 'static' 
+#STATIC_ROOT = BASE_DIR
 
 STATICFILES_DIRS = [
     os.path.join(BASE_DIR, "static")]
