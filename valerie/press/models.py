@@ -20,5 +20,6 @@ class Article(models.Model):
 class ImageArticle(models.Model):
     img = models.ImageField(upload_to=settings.UPLOAD_RELATIVE_DIR + '/presse')
     position = models.PositiveIntegerField()
-    article = models.ForeignKey('press.Article', null=True, related_name='article_image')
+    article = models.ForeignKey('press.Article', null=True, related_name='article_image',
+            on_delete=models.CASCADE)
 

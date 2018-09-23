@@ -6,7 +6,7 @@ from django.contrib.auth.models import User
 
 
 class Profil(models.Model):
-    user = models.OneToOneField(User)  # La liaison OneToOne vers le modèle User
+    user = models.OneToOneField(User, on_delete=models.CASCADE)  # La liaison OneToOne vers le modèle User
     # Si besoin d'autres infos
 
     def __str__(self):

@@ -12,7 +12,8 @@ class Type:
 
 
 class Page(models.Model):
-    parent = models.ForeignKey('navigation.Category', null=True, related_name='category_page')
+    parent = models.ForeignKey('navigation.Category', null=True, related_name='category_page',
+            on_delete=models.CASCADE)
     type = models.IntegerField(default=1)
 
     def title(self):
