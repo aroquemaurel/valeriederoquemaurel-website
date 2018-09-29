@@ -61,6 +61,8 @@ a {
     height: 170px;
     width: 250px;
     display: block;
+    text-align: center;
+    padding-top: 5px;
 }
 
 .picture-element .square-0 {

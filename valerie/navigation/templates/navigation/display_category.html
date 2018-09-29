@@ -7,7 +7,11 @@
             <td>
                 <div class="picture-element">
                     <a href="{% url 'display_subcategory' current_cat.slug subcat.slug %}">
-                        <span class="square square-{%cycle '0' '1' '2' '3'%}"></span>
+                        <span class="square square-{%cycle '0' '1' '2'%}">
+                            {% if subcat.img_mini %}
+                                <img src="/{{ subcat.img_mini }}" />
+                            {% endif %}
+                        </span>
                         <span class="caption title">{{subcat.title}}</span>
                     </a>
                 </div>

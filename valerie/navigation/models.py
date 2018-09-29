@@ -2,7 +2,7 @@
 from __future__ import unicode_literals
 
 from django.db import models
-
+from django.conf import settings
 
 class Category(models.Model):
     title = models.CharField(max_length=256)
@@ -12,6 +12,7 @@ class Category(models.Model):
             on_delete=models.CASCADE)
     default_page = models.ForeignKey('pages.Page', null=True, related_name='default_page',
             on_delete=models.CASCADE)
+    img_mini = models.ImageField(upload_to=settings.UPLOAD_RELATIVE_DIR + '/categories', null=True)
 
     def get_pages(self):
         return self.category_page.all()
