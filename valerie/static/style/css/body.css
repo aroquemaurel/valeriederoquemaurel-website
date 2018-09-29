@@ -5,9 +5,12 @@ body {
 }
 
 body #content {
-    font-variant: small-caps;
     width: 100%;
     min-height: 580px;
+}
+
+.title, h1, h2, h3, h4, h5 {
+    font-variant: small-caps;
 }
 
 body #content #main {
