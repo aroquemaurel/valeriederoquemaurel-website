@@ -7,9 +7,9 @@
 <head>
     <meta charset="UTF-8">
     <!-- TODO AR : descriptions -->
-    <!-- TODO AR : favicon -->
 
     <title>{% block title %}{% endblock %} – Valérie de Roquemaurel</title>
+    <link rel="shortcut icon" type="image/x-icon" href="{% static '/style/img/favico.png' %}" />
 
     <link href="{% static '/style/css/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static '/style/css/body.css' %}" rel="stylesheet">
@@ -36,7 +36,7 @@
         <div class="contact">
             <span class="element">Valérie de Roquemaurel</span>
             <span class="element">+41 78 910 45 105</span>
-            <span class="element"><a href="mailto:valerie@createursverriers.ch">valerie@createursverriers.ch</a></span>
+            <span class="element"><a onClick="javascript:window.open('mailto:valerie@createursverriers.ch', 'mail');event.preventDefault()" href="mailto:valerie@createursverriers.ch">valerie@createursverriers.ch</a></span>
         </div>
         <div class="social">
             <span class="element"><a target="_blank" href="https://www.facebook.com/valerie.deroquemaurel/"><img src="{% static '/style/img/logo-fb.jpg' %}" alt="Facebook" /></a></span>
