@@ -13,6 +13,7 @@
 
     <link href="{% static '/style/css/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
     <link href="{% static '/style/css/body.css' %}" rel="stylesheet">
+    <link href="{% static '/style/css/timeline.css' %}" rel="stylesheet">
     <link href="{% static '/style/css/photos.css' %}" rel="stylesheet">
     <link href="{% static '/style/css/press.css' %}" rel="stylesheet">
     <link href="{% static '/style/css/header.css' %}" rel="stylesheet">
@@ -33,14 +34,13 @@
     </div>
     <footer>
         <div class="contact">
-            <!-- TODO AR : dans la config-->
             <span class="element">Valérie de Roquemaurel</span>
             <span class="element">+41 78 910 45 105</span>
-            <span class="element">valerie@createursverriers.ch</span>
+            <span class="element"><a href="mailto:valerie@createursverriers.ch">valerie@createursverriers.ch</a></span>
         </div>
         <div class="social">
-            <span class="element"><a href="https://www.facebook.com/createursverriers/"><img src="{% static '/style/img/logo-fb.jpg' %}" alt="Facebook" /></a></span>
-            <span class="element"><a href="https://www.instagram.com/valeriederoquemaurel/"><img src="{% static '/style/img/logo-insta.jpg' %}" alt="Instagram" /></a></span>
+            <span class="element"><a target="_blank" href="https://www.facebook.com/valerie.deroquemaurel/"><img src="{% static '/style/img/logo-fb.jpg' %}" alt="Facebook" /></a></span>
+            <span class="element"><a target="_blank" href="https://www.instagram.com/valeriederoquemaurel/"><img src="{% static '/style/img/logo-insta.jpg' %}" alt="Instagram" /></a></span>
         </div>
         {% block footer %} {% endblock %}
     </footer>
