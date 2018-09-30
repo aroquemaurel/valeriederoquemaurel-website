@@ -5,10 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="5a04e327-d78f-400c-8443-00e02d6f5c9f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valerie/navigation/models.py" afterPath="$PROJECT_DIR$/valerie/navigation/models.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valerie/navigation/templates/navigation/display_category.html" afterPath="$PROJECT_DIR$/valerie/navigation/templates/navigation/display_category.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valerie/static/style/css/body.css" afterPath="$PROJECT_DIR$/valerie/static/style/css/body.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valerie/pages/templates/pages/content/contact.html" afterPath="$PROJECT_DIR$/valerie/pages/templates/pages/content/contact.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/cv.html" afterPath="$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/cv.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/liens.html" afterPath="$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/liens.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/permanences.html" afterPath="$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/permanences.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valerie/static/style/css/photos.css" afterPath="$PROJECT_DIR$/valerie/static/style/css/photos.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valerie/templates/base.html" afterPath="$PROJECT_DIR$/valerie/templates/base.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -23,23 +25,21 @@
   <component name="ExecutionTargetManager" SELECTED_TARGET="default_target" />
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="biographie.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/biographie.html">
+      <file leaf-file-name="cv.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/cv.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="418">
-              <caret line="19" column="35" lean-forward="false" selection-start-line="19" selection-start-column="35" selection-end-line="19" selection-end-column="35" />
-              <folding>
-                <element signature="e#1744#1771#0#HTML" expanded="true" />
-              </folding>
+            <state relative-caret-position="748">
+              <caret line="271" column="0" lean-forward="false" selection-start-line="271" selection-start-column="0" selection-end-line="271" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="cv.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/cv.html">
+      <file leaf-file-name="timeline.css" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/valerie/static/style/css/timeline.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="176">
-              <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
+            <state relative-caret-position="198">
+              <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
               <folding />
             </state>
           </provider>
@@ -55,33 +55,41 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/valerie/photos_gallery/models.py">
+      <file leaf-file-name="base.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/valerie/templates/base.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="88">
-              <caret line="4" column="32" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="32" />
+            <state relative-caret-position="352">
+              <caret line="16" column="46" lean-forward="false" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="models.py" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/valerie/navigation/models.py">
+      <file leaf-file-name="contact.html" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/valerie/pages/templates/pages/content/contact.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="440">
-              <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
-              <folding>
-                <element signature="e#24#63#0" expanded="true" />
-              </folding>
+            <state relative-caret-position="156">
+              <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="presentation.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/valerie/pages/templates/pages/content/cours/presentation.html">
+      <file leaf-file-name="body.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/valerie/static/style/css/body.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="66">
-              <caret line="3" column="33" lean-forward="false" selection-start-line="3" selection-start-column="33" selection-end-line="3" selection-end-column="33" />
+            <state relative-caret-position="198">
+              <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="header.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/valerie/static/style/css/header.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="594">
+              <caret line="27" column="18" lean-forward="false" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -90,28 +98,8 @@
       <file leaf-file-name="liens.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/liens.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="330">
-              <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="body.css" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/valerie/static/style/css/body.css">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="434">
-              <caret line="64" column="21" lean-forward="false" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="display_category.html" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/valerie/navigation/templates/navigation/display_category.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="70" lean-forward="false" selection-start-line="9" selection-start-column="70" selection-end-line="9" selection-end-column="70" />
+            <state relative-caret-position="110">
+              <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
               <folding />
             </state>
           </provider>
@@ -120,8 +108,18 @@
       <file leaf-file-name="display-photo.html" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/valerie/photos_gallery/templates/photos_gallery/display-photo.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="329">
-              <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
+            <state relative-caret-position="571">
+              <caret line="28" column="23" lean-forward="false" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="photos.css" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/valerie/static/style/css/photos.css">
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="417">
+              <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -139,37 +137,41 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>_display_page</find>
-      <find>_display_category_without_childs</find>
-      <find>category_list</find>
-      <find>display_category</find>
-      <find>stat</find>
-      <find>STATICFILES</find>
-      <find>urlpatt</find>
-      <find>left</find>
-      <find>:hover</find>
-      <find>text-lef</find>
-      <find>pages.</find>
-      <find>filter(</find>
-      <find>filter</find>
-      <find>category_page</find>
-      <find>display_photo</find>
-      <find>display_subcategory</find>
-      <find>550</find>
-      <find>instagram</find>
-      <find>bac</find>
-      <find>photos_gallery</find>
-      <find>events</find>
-      <find>templa</find>
-      <find>event</find>
-      <find>image-</find>
       <find>image-gallery</find>
       <find>glyphicon glyphicon-arrow-left</find>
       <find>../font</find>
       <find>../</find>
       <find>fonts</find>
       <find>loadGallery</find>
+      <find>ho</find>
+      <find>artiste</find>
+      <find>Concours</find>
+      <find>padding</find>
+      <find>timeline-entry</find>
+      <find>50%</find>
+      <find>left:</find>
+      <find>timeline li</find>
+      <find>ul</find>
+      <find>margin</find>
+      <find>width</find>
+      <find>font</find>
+      <find>time</find>
+      <find>.time {</find>
+      <find>.time</find>
+      <find>background</find>
+      <find>wrapp</find>
+      <find>flag-wrapper</find>
+      <find>.time</find>
+      <find>enumerate</find>
+      <find>time-wrapper</find>
+      <find>&lt;li&gt;</find>
+      <find>&lt;/li&gt;</find>
+      <find>a href=</find>
     </findStrings>
+    <replaceStrings>
+      <replace>&lt;br/&gt;</replace>
+      <replace>a target=&quot;_blank&quot; href=</replace>
+    </replaceStrings>
     <dirStrings>
       <dir>$PROJECT_DIR$/valerie/photos_gallery</dir>
     </dirStrings>
@@ -180,7 +182,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/valerie/pages/urls.py" />
         <option value="$PROJECT_DIR$/valerie/pages/templates/pages/accueil.html" />
         <option value="$PROJECT_DIR$/valerie/pages/templates/pages/content/infos.html" />
         <option value="$PROJECT_DIR$/valerie/pages/templates/pages/content/cours.html" />
@@ -199,7 +200,6 @@
         <option value="$PROJECT_DIR$/valerie/pages/templates/pages/content/accueil.html" />
         <option value="$PROJECT_DIR$/valerie/photos_gallery/models.py" />
         <option value="$PROJECT_DIR$/valerie/photos_gallery/urls.py" />
-        <option value="$PROJECT_DIR$/valerie/pages/templates/pages/content/contact.html" />
         <option value="$PROJECT_DIR$/valerie/urls.py" />
         <option value="$PROJECT_DIR$/valerie/events/apps.py" />
         <option value="$PROJECT_DIR$/valerie/events/templates/display-events.html" />
@@ -211,26 +211,28 @@
         <option value="$PROJECT_DIR$/valerie/press/views.py" />
         <option value="$PROJECT_DIR$/valerie/press/models.py" />
         <option value="$PROJECT_DIR$/valerie/static/style/css/press.css" />
-        <option value="$PROJECT_DIR$/valerie/templates/base.html" />
         <option value="$PROJECT_DIR$/valerie/settings.py" />
         <option value="$PROJECT_DIR$/valerie/pages/templates/pages/content/cours/bon-cadeau.html" />
         <option value="$PROJECT_DIR$/valerie/navigation/views.py" />
         <option value="$PROJECT_DIR$/valerie/pages/models.py" />
         <option value="$PROJECT_DIR$/valerie/photos_gallery/views.py" />
         <option value="$PROJECT_DIR$/valerie/photos_gallery/templates/photos_gallery/display-photo.html" />
-        <option value="$PROJECT_DIR$/valerie/static/style/css/photos.css" />
         <option value="$PROJECT_DIR$/valerie/events/templates/events/display-events.html" />
         <option value="$PROJECT_DIR$/valerie/press/templates/press/display-articles.html" />
         <option value="$PROJECT_DIR$/valerie/pages/templates/pages/content/plaisirs/ateliers.html" />
-        <option value="$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/permanences.html" />
         <option value="$PROJECT_DIR$/valerie/pages/templates/pages/content/cours/presentation.html" />
-        <option value="$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/liens.html" />
         <option value="$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/biographie.html" />
-        <option value="$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/cv.html" />
         <option value="$PROJECT_DIR$/valerie/static/style/css/footer.css" />
         <option value="$PROJECT_DIR$/valerie/navigation/models.py" />
         <option value="$PROJECT_DIR$/valerie/static/style/css/body.css" />
         <option value="$PROJECT_DIR$/valerie/navigation/templates/navigation/display_category.html" />
+        <option value="$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/permanences.html" />
+        <option value="$PROJECT_DIR$/valerie/pages/templates/pages/content/contact.html" />
+        <option value="$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/liens.html" />
+        <option value="$PROJECT_DIR$/valerie/static/style/css/photos.css" />
+        <option value="$PROJECT_DIR$/valerie/templates/base.html" />
+        <option value="$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/cv.html" />
+        <option value="$PROJECT_DIR$/valerie/static/style/css/timeline.css" />
       </list>
     </option>
   </component>
@@ -241,10 +243,10 @@
     <sorting>DEFINITION_ORDER</sorting>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="1440" />
-    <option name="y" value="147" />
-    <option name="width" value="1920" />
-    <option name="height" value="1055" />
+    <option name="x" value="1460" />
+    <option name="y" value="149" />
+    <option name="width" value="1890" />
+    <option name="height" value="1053" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
     <entry key="Project Default">
@@ -306,6 +308,42 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="valerie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Valerie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Valerie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="valerie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="users" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Valerie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="Valerie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="valerie" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="templates" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -619,28 +657,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="pages" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="migrations" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Valerie" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="Valerie" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="valerie" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="navigation" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -927,10 +943,10 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="1440" y="147" width="1920" height="1055" extended-state="6" />
+    <frame x="1460" y="149" width="1890" height="1053" extended-state="1" />
     <editor active="true" />
     <layout>
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23072916" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.23439154" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32911393" sideWeight="0.5" order="8" side_tool="true" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -985,14 +1001,6 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$USER_HOME$/.PyCharm2017.1/system/python_stubs/-1247971763/_datetime.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="223" column="8" lean-forward="false" selection-start-line="223" selection-start-column="8" selection-end-line="223" selection-end-column="8" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/valerie/press/__init__.py" />
     <entry file="file://$PROJECT_DIR$/valerie/pages/apps.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1103,14 +1111,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/valerie/templates/base.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="836">
-          <caret line="38" column="44" lean-forward="false" selection-start-line="38" selection-start-column="44" selection-end-line="38" selection-end-column="44" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/valerie/pages/templates/pages/content/cours/bon-cadeau.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="88">
@@ -1202,14 +1202,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/valerie/static/style/css/photos.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="22">
-          <caret line="1" column="0" lean-forward="false" selection-start-line="1" selection-start-column="0" selection-end-line="1" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/valerie/pages/templates/pages/page.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
@@ -1242,31 +1234,7 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/valerie/pages/templates/pages/content/contact.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="0">
-          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/valerie/pages/templates/pages/content/plaisirs/ateliers.html" />
-    <entry file="file://$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/permanences.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="88">
-          <caret line="4" column="0" lean-forward="false" selection-start-line="4" selection-start-column="0" selection-end-line="4" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/liens.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="330">
-          <caret line="15" column="27" lean-forward="false" selection-start-line="15" selection-start-column="27" selection-end-line="15" selection-end-column="27" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/valerie/pages/templates/pages/content/cours/presentation.html">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="66">
@@ -1282,22 +1250,6 @@
           <folding>
             <element signature="e#1744#1771#0#HTML" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/cv.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="176">
-          <caret line="8" column="28" lean-forward="false" selection-start-line="8" selection-start-column="28" selection-end-line="8" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/valerie/static/style/css/footer.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="462">
-          <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1320,18 +1272,10 @@
     <entry file="file://$PROJECT_DIR$/valerie/navigation/models.py">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="440">
-          <caret line="20" column="32" lean-forward="true" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
+          <caret line="20" column="32" lean-forward="false" selection-start-line="20" selection-start-column="32" selection-end-line="20" selection-end-column="32" />
           <folding>
             <element signature="e#24#63#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/valerie/photos_gallery/templates/photos_gallery/display-photo.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="329">
-          <caret line="17" column="32" lean-forward="true" selection-start-line="17" selection-start-column="32" selection-end-line="17" selection-end-column="32" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1343,10 +1287,90 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/permanences.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="242">
+          <caret line="11" column="9" lean-forward="false" selection-start-line="11" selection-start-column="9" selection-end-line="11" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/valerie/pages/templates/pages/content/contact.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="156">
+          <caret line="24" column="0" lean-forward="false" selection-start-line="24" selection-start-column="0" selection-end-line="24" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/valerie/static/style/css/footer.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="462">
+          <caret line="21" column="5" lean-forward="false" selection-start-line="21" selection-start-column="5" selection-end-line="21" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/valerie/photos_gallery/templates/photos_gallery/display-photo.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="571">
+          <caret line="28" column="23" lean-forward="false" selection-start-line="28" selection-start-column="23" selection-end-line="28" selection-end-column="23" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/valerie/static/style/css/photos.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="417">
+          <caret line="27" column="19" lean-forward="false" selection-start-line="27" selection-start-column="19" selection-end-line="27" selection-end-column="19" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/valerie/templates/base.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="352">
+          <caret line="16" column="46" lean-forward="false" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/valerie/static/style/css/body.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="434">
-          <caret line="64" column="21" lean-forward="false" selection-start-line="64" selection-start-column="21" selection-end-line="64" selection-end-column="21" />
+        <state relative-caret-position="198">
+          <caret line="12" column="16" lean-forward="true" selection-start-line="12" selection-start-column="16" selection-end-line="12" selection-end-column="16" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/cv.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="748">
+          <caret line="271" column="0" lean-forward="false" selection-start-line="271" selection-start-column="0" selection-end-line="271" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/valerie/pages/templates/pages/content/infos/liens.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="110">
+          <caret line="5" column="9" lean-forward="true" selection-start-line="5" selection-start-column="9" selection-end-line="5" selection-end-column="9" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/valerie/static/style/css/header.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="594">
+          <caret line="27" column="18" lean-forward="false" selection-start-line="27" selection-start-column="12" selection-end-line="27" selection-end-column="18" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/valerie/static/style/css/timeline.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="198">
+          <caret line="9" column="29" lean-forward="false" selection-start-line="9" selection-start-column="29" selection-end-line="9" selection-end-column="29" />
           <folding />
         </state>
       </provider>
