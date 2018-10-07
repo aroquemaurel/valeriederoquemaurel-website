@@ -28,7 +28,7 @@ def display_photo(request, id_photo):
     previous_photo = []
     next_photo = []
     fill_previous = True
-    nb_elements_around_photo = 2
+    nb_elements_around_photo = 3
     for photo in all_photos:
         if photo.id == current_photo.id:
             fill_previous = False

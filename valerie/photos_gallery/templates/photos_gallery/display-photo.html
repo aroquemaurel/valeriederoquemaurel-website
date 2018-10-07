@@ -6,7 +6,7 @@
 
 
     {# TODO : function #}
-    <div class="mini-photos">&nbsp;
+    <div class="mini-photos left">&nbsp;
     {% for photo in previous_photos %}
         <span class="mini-photo">
         <a href="{% url 'display_photo' current_cat.slug current_subcat.slug photo.id photo.slug %}">
@@ -43,7 +43,7 @@
     {% endif %}
 
     {# TODO : function #}
-    <div class="mini-photos">&nbsp;
+    <div class="mini-photos right">&nbsp;
     {% for photo in next_photos %}
         <span class="mini-photo">
         <a href="{% url 'display_photo' current_cat.slug current_subcat.slug photo.id photo.slug %}">
