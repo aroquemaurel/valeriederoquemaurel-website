@@ -54,3 +54,21 @@ div.caption {
     padding: 15px;
     text-align: center;
 }
+
+.gallery .horizontal-arrow {
+    display: inline;
+    position: absolute;
+    margin-top: 300px;
+}
+
+.gallery .horizontal-arrow.left {
+    margin-left: -100px;
+}
+
+.gallery .horizontal-arrow.right {
+    margin-left: 20px;
+}
+
+.gallery .horizontal-arrow img {
+    width: 70px;
+}

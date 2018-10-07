@@ -80,3 +80,19 @@ a {
  .picture-element .square-3 {
     background-color: #cccccc;
  }
+
+ .vertical-arrow img {
+     width: 40px;
+ }
+
+#back2Top, #back2Bottom {
+    overflow: hidden;
+    z-index: 999;
+    display: none;
+    cursor: pointer;
+    position: fixed;
+    bottom: 50px;
+    right: 20px;
+}
+#back2Top:hover {
+}
