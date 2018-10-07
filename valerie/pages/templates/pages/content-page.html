@@ -1,13 +1,52 @@
 {% extends "pages/page.html" %}
+{% load static %}
 
 {% block body %}
+
     <div id="text-left">
         {% block left-content %}{%endblock%}
     </div>
     <div id="text-content">
-    <h1>{{ page.title }}</h1>
-            {% block text-content %}
-            {% endblock %}
+        <h1>{{ page.title }}</h1>
+        {% block text-content %}{% endblock %}
+
+        <div class="vertical-arrow">
+            <a id="back2Top" title="Monter" href="#">
+                <img src="{%  static '/style/img/arrows/top.png' %}" alt="Haut" />
+            </a>
+            <a id="back2Bottom" title="Descendre" href="#">
+            <img src="{%  static '/style/img/arrows/bottom.png' %}" alt="Bas" />
+            </a>
+        </div>
     </div>
 
+    <script type="text/javascript">
+    /*Scroll to top when arrow up clicked BEGIN*/
+    $(window).scroll(function() {
+        var height = $(window).scrollTop();
+        if (height > 100) {
+            $('#back2Top').fadeIn();
+            $('#back2Bottom').fadeOut();
+        } else {
+            $('#back2Top').fadeOut();
+            $('#back2Bottom').fadeIn();
+        }
+    });
+
+    $(document).ready(function() {
+        $('#back2Bottom').fadeIn();
+        $("#back2Top").click(function(event) {
+            event.preventDefault();
+            $("html, body").animate({ scrollTop: 0 }, "slow");
+            return false;
+        });
+
+        $('#back2Bottom').click(function(event) {
+            event.preventDefault();
+            $("html, body").animate({ scrollTop: $(window).height() }, "slow");
+            return false;
+        });
+    });
+ /*Scroll to top when arrow up clicked END*/
+    </script>
 {% endblock %}

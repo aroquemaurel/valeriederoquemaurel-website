@@ -4,7 +4,8 @@
 {% block body %}
 <div class="gallery">
 
-                {# TODO : function #}
+
+    {# TODO : function #}
     <div class="mini-photos">&nbsp;
     {% for photo in previous_photos %}
         <span class="mini-photo">
@@ -15,13 +16,31 @@
     {% endfor %}
     </div>
 
-        <div class="main-photo">
+    {% if previous_photos|length != 0 %}
+    <div class="horizontal-arrow left">
+        {% with previous_photos|last as prev_photo %}
+        <a href="{% url 'display_photo' current_cat.slug current_subcat.slug prev_photo.id prev_photo.slug %}">
+            <img src="{%  static '/style/img/arrows/left.png' %}" alt="Précédent" />
+        </a>
+        {% endwith %}
+    </div>
+    {% endif %}
+
+    <div class="main-photo">
             <img style="" src="/{{ page.photo_img }}" alt="{{ page.title }}"/><br/>
             <div class="caption">
                 <h2 id="title">{{ page.title }} </h2>
                 <span id="content">{{ page.content }}</span>
             </div>
-        </div>
+    </div>
+
+    {% if next_photos|length != 0 %}
+    <div class="horizontal-arrow right">
+        <a href="{% url 'display_photo' current_cat.slug current_subcat.slug next_photos.0.id next_photos.0.slug %}">
+            <img src="{%  static '/style/img/arrows/right.png' %}" alt="Suivant" />
+        </a>
+    </div>
+    {% endif %}
 
     {# TODO : function #}
     <div class="mini-photos">&nbsp;
