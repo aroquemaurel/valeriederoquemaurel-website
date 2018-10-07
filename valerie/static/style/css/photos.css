@@ -4,7 +4,7 @@
 
 .mini-photos {
     display: inline-block;
-    min-width: 350px;
+    min-width: 400px;
 }
 
 .mini-photos.left {
@@ -20,7 +20,7 @@
 .mini-photos a img {
     opacity: 0.70;
     filter: blur(1.5px);
-    height: 100px;
+    height: 80px;
 }
 
 .mini-photo a:hover img {
@@ -45,7 +45,7 @@
 }
 
 .main-photo img {
-    max-width: 540px;
+    max-width: 550px;
     padding-right: 10px;
     padding-left: 10px;
 }
