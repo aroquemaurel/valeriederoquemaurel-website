@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'valerie.photos_gallery',
     'valerie.navigation',
     'valerie.users',
-    'valerie.files',
     'valerie.pages',
     'valerie.events',
     'valerie.press',
@@ -143,7 +142,6 @@ UPLOAD_URL = '/'+UPLOAD_RELATIVE_DIR+'/'
 
 UPLOAD_DIR = BASE_DIR+UPLOAD_URL
 
-STATIC_ROOT = 'static' 
+STATIC_ROOT = '/home/aroquemaurel/www/beta/valerie-v3/static' 
 
-STATICFILES_DIRS = [
-    os.path.join(BASE_DIR, "static")]
+STATICFILES_DIRS = [ ]
