@@ -5,58 +5,45 @@
 from django.core.files import File
 from valerie.photos_gallery.models import Photo
 
-photo = Photo(title='En Catimini', content='Verre soufflé. Rose à l\'or, 2016, 13.5cm de ht × 29ø', slug='en-catimini', position=0)
-photo.photo_img.save('en-catimini.jpg',
-        File(open('/home/aroquemaurel/projets/python/Valerie/upload/1480498564_en-catimini.jpg', 'r')))
+photo = Photo(title='Collier cailloux', content='Verre filé, montures argent 925, perles creuses.', slug='collier-cailloux', position=0)
+photo.photo_img.save('collier-cailloux.jpg',
+        File(open('/home/aroquemaurel/projets/python/Valerie/tmp/1-1480500134_collier-cailloux.jpg', 'r')))
 photo.save()
 
-photo = Photo(title='La vie du corps', content='Verre soufflé, sablé. 2016, 32 cm de ht x 25 ø', slug='la-vie-du-corps', position=0)
-photo.photo_img.save('la-vie-du-corps.jpg',
-        File(open('/home/aroquemaurel/projets/python/Valerie/upload/1480498617_la-vie-du-corps.jpg', 'r')))
+photo = Photo(title='Collier cailloux', content='Verre filé, montures argent 925, perles creuses.', slug='collier-cailloux', position=0)
+photo.photo_img.save('collier-cailloux-2.jpg',
+        File(open('/home/aroquemaurel/projets/python/Valerie/tmp/2-1480500117_collier-cailloux.jpg', 'r')))
+photo.save()
+photo = Photo(title='Boucles cailloux', content='Verre filé, montures argent 925.', slug='boucles-cailloux', position=0)
+photo.photo_img.save('boucles-cailloux.jpg',
+        File(open('/home/aroquemaurel/projets/python/Valerie/tmp/3-1480500090_boucles-cailloux.jpg', 'r')))
 photo.save()
 
-photo = Photo(title='Nuages', content='Pièces en verre soufflé, découpe au sablage, 12.2016.', slug='nuages', position=0)
-photo.photo_img.save('nuages.jpg',
-        File(open('/home/aroquemaurel/projets/python/Valerie/upload/1484815598_nuages.jpg', 'r')))
+photo = Photo(title='Douceurs', content='Colliers sablés, verre filé, montures argent 925. Photo Baptiste Grivel.', slug='douceurs', position=0)
+photo.photo_img.save('douceurs.jpg',
+        File(open('/home/aroquemaurel/projets/python/Valerie/tmp/4-1383063554_douceurs.jpg', 'r')))
 photo.save()
-
-photo = Photo(title='En Catimini', content='Verre soufflé. Rose à l\'or, 2016, 13.5cm de ht × 29ø', slug='en-catimini', position=0)
-photo.photo_img.save('1480498564_en-catimini.jpg',
-        File(open('/home/aroquemaurel/projets/python/Valerie/upload1480498564_en-catimini.jpg', 'r')))
+photo = Photo(title='Douceurs', content='Colliers sablés, verre filé, montures argent 925. Détail. Photo Baptiste Grivel.', slug='douceurs', position=0)
+photo.photo_img.save('douceurs-2.jpg',
+        File(open('/home/aroquemaurel/projets/python/Valerie/tmp/5-1383063586_douceurs.jpg', 'r')))
 photo.save()
-
-photo = Photo(title='Framboise', content='Verre soufflé, découpe au sablage, satiné partiellement, liseré de lumière, 27,5x 27,5 cm, Photo Luca Delachaux', slug='framboise', position=0)
-photo.photo_img.save('framboise.jpg',
-        File(open('/home/aroquemaurel/projets/python/Valerie/upload/1375188957_framboise.jpg', 'r')))
+photo = Photo(title='Douceurs', content='Colliers sablés, verre filé, montures argent 925. Photo Baptiste Grivel.', slug='douceurs', position=0)
+photo.photo_img.save('douceurs-3.jpg',
+        File(open('/home/aroquemaurel/projets/python/Valerie/tmp/6-1383063752_douceurs.jpg', 'r')))
 photo.save()
-
-photo = Photo(title='Murmure', content='Verre soufflé, sablé, 37 cm de diam. 2012, Photo C. Lehmann', slug='murmure', position=0)
-photo.photo_img.save('murmure.jpg',
-        File(open('/home/aroquemaurel/projets/python/Valerie/upload/1359139315_murmure.jpg', 'r')))
+photo = Photo(title='Collier douceurs', content='Perles creuses, verre dépoli, montures argent 925, photo B. Grivel.', slug='collier-douceurs', position=0)
+photo.photo_img.save('collier-douceurs.jpg',
+        File(open('/home/aroquemaurel/projets/python/Valerie/tmp/7-1409665128_collier-douceurs.jpg', 'r')))
 photo.save()
-
-photo = Photo(title='Transparence', content='Pièce en verre soufflé, sablé. Concours FIMA 2010. Photo C. Lehmann', slug='transparence', position=0)
-photo.photo_img.save('transparence.jpg',
-        File(open('/home/aroquemaurel/projets/python/Valerie/upload/1359131997_transparence.jpg', 'r')))
+photo = Photo(title='Boucles bulles Douceurs', content='Perles creuses, verre dépoli, montures argent 925, photo B. Grivel.', slug='boucles-bulles-douceurs', position=0)
+photo.photo_img.save('boucles-bulles-douceurs.jpg',
+        File(open('/home/aroquemaurel/projets/python/Valerie/tmp/8-1409665157_boucles-bulles-douceurs.jpg', 'r')))
 photo.save()
-
-photo = Photo(title='Vase épis', content='Verre soufflé, découpe au sablage, poli. Photo B. Grivel', slug='vase-epis', position=0)
-photo.photo_img.save('vase-epis.jpg',
-        File(open('/home/aroquemaurel/projets/python/Valerie/upload/1375189163_vase-epis.jpg', 'r')))
+photo = Photo(title='Boucles bulles filigranées', content='Perles creuses, verre filigrané, montures argent 925, photo B. Grivel.', slug='boucles-bulles-filigranees', position=0)
+photo.photo_img.save('boucles-bulles-filigranees.jpg',
+        File(open('/home/aroquemaurel/projets/python/Valerie/tmp/9-1409665232_boucles-bulles-filigranees.jpg', 'r')))
 photo.save()
-
-photo = Photo(title='Ecoute', content='Verre soufflé, découpe au sablage, photo C. Lehmann', slug='ecoute', position=0)
-photo.photo_img.save('ecoute.jpg',
-        File(open('/home/aroquemaurel/projets/python/Valerie/upload/1375189008_ecoute.jpg', 'r')))
+photo = Photo(title='Boucles grappe de bulles', content='Perles creuses, montures argent 925, photo B. Grivel.', slug='boucles-grappe-bulles', position=0)
+photo.photo_img.save('boucles-grappe-bulles.jpg',
+        File(open('/home/aroquemaurel/projets/python/Valerie/tmp/10-1409665261_boucles-grappes-de-bulles.jpg', 'r')))
 photo.save()
-
-photo = Photo(title='Dans la tête', content='Verre soufflé, découpe au sablage. Photo C. Lehmann', slug='dans-la-tete', position=0)
-photo.photo_img.save('dans-la-tete.jpg',
-        File(open('/home/aroquemaurel/projets/python/Valerie/upload/1359134260_dans-la-tete.jpg', 'r')))
-photo.save()
-
-photo = Photo(title='Elan', content='Verre soufflé, overlay de couleurs, découpe au sablage.', slug='elan', position=0)
-photo.photo_img.save('elan.jpg',
-        File(open('/home/aroquemaurel/projets/python/Valerie/upload/1359139347_elan.jpg', 'r')))
-photo.save()
-
