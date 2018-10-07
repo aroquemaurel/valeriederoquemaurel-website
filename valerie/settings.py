@@ -42,7 +42,6 @@ INSTALLED_APPS = [
     'valerie.photos_gallery',
     'valerie.navigation',
     'valerie.users',
-    'valerie.files',
     'valerie.pages',
     'valerie.events',
     'valerie.press',
