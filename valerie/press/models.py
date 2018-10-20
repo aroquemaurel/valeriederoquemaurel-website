@@ -8,7 +8,7 @@ from valerie import settings
 
 
 class Article(models.Model):
-    date = models.DateTimeField()
+    date = models.DateField()
     title = models.CharField(max_length=256)
     content = models.TextField(null=True)
     youtube_link = models.CharField(max_length=256, null=True)

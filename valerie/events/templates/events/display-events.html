@@ -5,9 +5,18 @@
         <div id="text-content">
         <h1>Expositions</h1>
     {% for event in events %}
+        {% if not event.is_ended %}
         <p>Du <b>{{ event.start_date }}</b> au <b>{{ event.end_date }}</b> à <b>{{ event.location }}</b><br/>
-        <em>{{ event.description }}</em>
+        <em>
+            {% if event.is_now%}
+                L'exposition se déroule actuellement
+            {% else %}
+                L'expo est dans {{ event.start_date|timeuntil }}
+            {% endif %}
+        </em>
+        {{ event.description|linebreaks }}
         </p>
+        {% endif %}
     {% endfor %}
         </div>
 {% endblock %}
