@@ -1,3 +1,9 @@
+@media(max-width: 758px) {
+    footer {
+        margin-top: 350px;
+    }
+}
+
 footer {
     bottom: 0;
     width: 100%;

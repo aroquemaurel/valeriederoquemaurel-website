@@ -2,6 +2,7 @@
     width: 110%;
 }
 
+
 .mini-photos {
     display: inline-block;
     min-width: 400px;
@@ -78,4 +79,30 @@ div.caption {
 
 .gallery .horizontal-arrow img {
     width: 70px;
+}
+
+@media(max-width: 758px) {
+    .mini-photos, .mini-photo  {
+        display: none;
+    }
+    .main-photo {
+        margin: auto;
+        width: 80%;
+    }
+
+    .main-photo img {
+        width: 70%;
+    }
+
+    .gallery .horizontal-arrow.left img, .gallery .horizontal-arrow.right img {
+        width: 60px;
+    }
+
+    .gallery .horizontal-arrow.left {
+        margin-left: 30px;
+    }
+
+    .gallery .horizontal-arrow.right {
+        margin-left: -40px;
+    }
 }

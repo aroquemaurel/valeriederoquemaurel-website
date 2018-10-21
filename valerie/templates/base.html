@@ -1,7 +1,5 @@
 {% load static %}
 
-<!-- TODO AR : à implémenter -->
-
 <!DOCTYPE html>
 <html lang="fr">
 <head>
@@ -25,7 +23,9 @@
 </head>
 <body>
     <header>
+        {# TODO AR : deux logos mobile / reste du monde #}
         <img id="logo" src="{% static '/style/img/logo.jpg' %}" alt="Valérie de Roquemaurel" />
+        <img id="logo_mini" src="{% static '/style/img/logo_mini.jpg' %}" alt="Valérie de Roquemaurel" />
         {% block navbar %} {% endblock %}
     </header>
 

@@ -1,19 +1,16 @@
 header .horizontal-menu {
-    height: 150px;
     text-align: right;
     margin-right: 0px;
     text-transform: uppercase;
-    font-size: 12.5pt;
+    font-size: 11pt;
+}
+
+.horizontal-menu .vertical-submenu {
+    font-size: 8pt;
 }
 
 header .horizontal-menu .selected {
     color: #98105d;
-}
-
-header #home {
-    margin-top: -25px;
-    display: block;
-    position: absolute;
 }
 
 header .horizontal-menu, header .horizontal-menu a {
@@ -28,35 +25,52 @@ header .horizontal-menu a:hover, header .vertical-submenu a:hover {
     color: #b14b85
 }
 
-header #logo {
-    margin-left: 0;
-    height: 140px;
-}
-
 .horizontal-menu, .vertical-submenu {
     list-style-type: none;
 }
 
-.horizontal-menu {
-    margin: 0;
-    padding: 0;
+.navbar-default {
+    background: none;
+    border: none;
 }
 
-.horizontal-menu .vertical-submenu {
-    position : absolute;
-    text-align: left;
-    margin-left: -40px;
-    font-size: 9pt;
-}
+@media(min-width:758px) {
+    header .horizontal-menu {
+        height: 150px;
+        font-size: 12.5pt;
+    }
 
-.horizontal-menu .category {
-    padding-left: 80px;
-}
+    header #home {
+        margin-top: -25px;
+        display: block;
+        position: absolute;
+    }
 
-.horizontal-menu .category {
-     display: inline-block;
-}
+    header #logo {
+        margin-left: 0;
+        height: 140px;
+    }
 
+    .horizontal-menu {
+        margin: 0;
+        padding: 0;
+    }
+
+    .horizontal-menu .vertical-submenu {
+        position: absolute;
+        text-align: left;
+        margin-left: -40px;
+        font-size: 9pt;
+    }
+
+    .horizontal-menu .category {
+        padding-left: 80px;
+    }
+
+    .horizontal-menu .category {
+        display: inline-block;
+    }
+}
 
 
 
