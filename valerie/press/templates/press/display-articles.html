@@ -8,7 +8,8 @@
     {% for article in articles %}
         <p><b>{{ article.title }}</b> paru le {{ article.date }}</p>
         {% if article.youtube_link != None %}
-        Ici, on doit afficher une vidéo youtube
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ article.youtube_link }}"
+                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
         {% endif %}
 
         <div class="img-press">
