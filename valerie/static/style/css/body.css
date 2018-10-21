@@ -17,7 +17,7 @@ body #content #main {
     margin: auto;"
 }
 
-body #content #text-content {
+body #content #text-content #text-main {
     text-align: justify;
     width: 60%;
     margin-left: 40%;
@@ -25,6 +25,7 @@ body #content #text-content {
 
 #text-left {
     position: absolute;
+    top: 350px;
 }
 
 a:hover {
@@ -94,5 +95,42 @@ a {
     bottom: 50px;
     right: 20px;
 }
+
 #back2Top:hover {
+}
+
+@media(max-width: 758px) {
+    #logo {
+        display: none;
+    }
+
+    #logo_mini {
+        display: inline;
+    }
+
+    #text-left {
+        position: relative;
+        text-align: center;
+        margin-top: -300px;
+    }
+
+    body #content #text-content #text-main {
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    body #content {
+        width: 100%;
+        min-height: 0;
+    }
+}
+
+@media(min-width: 758px) {
+   #logo_mini {
+        display: none;
+    }
+
+    #logo {
+        display: inline;
+    }
 }
