@@ -17,6 +17,10 @@ body #content #main {
     margin: auto;"
 }
 
+body #content #text-content #only-text {
+    width: 60%;
+    margin-left: 20%;
+}
 body #content #text-content #text-main {
     text-align: justify;
     width: 60%;

@@ -2,7 +2,8 @@
 {% load static %}
 
 {% block body %}
-        <div id="text-content">
+    <div id="text-content">
+        <div id="only-text">
         <h1>Expositions</h1>
     {% for event in events %}
         {% if not event.is_ended %}
@@ -19,4 +20,5 @@
         {% endif %}
     {% endfor %}
         </div>
+    </div>
 {% endblock %}
