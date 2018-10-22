@@ -2,30 +2,41 @@
 {% load static %}
 
 {% block body %}
-            <div id="text-content">
+    <div id="text-content">
+    <div id="only-text">
     <h1>Articles de presse</h1>
     <div>
-    {% for article in articles %}
-        <p><b>{{ article.title }}</b> paru le {{ article.date }}</p>
-        {% if article.youtube_link != None %}
-        <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ article.youtube_link }}"
-                frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
-        {% endif %}
+        <ul class="timeline">
+            {% for year, articles_year in articles.items %}
+                <li>
+                    <span class="circle"></span><span class="title">{{ year }}</span>
+                    <span class="text">
+                        {% for article in articles_year %}
+                            <p><b>{{ article.title }}</b> paru le {{ article.date }}</p>
+                            {% if article.youtube_link != None %}
+                                <iframe width="560" height="315" src="https://www.youtube.com/embed/{{ article.youtube_link }}"
+                                    frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe>
+                            {% endif %}
 
-        <div class="img-press">
-            <div class="row">
-        {% for img in article.get_images %}
-            <div class="col-lg-3 col-md-4 col-xs-6 thumb">
-            <a class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
-               data-image="/{{ img.img }}"
-               data-target="#image-gallery">
-                    <img class="img-thumbnail" src="/{{img.img}}" style="height:100px" />
-            </a>
-            </div>
-        {% endfor %}
-        </div>
-        </div>
-    {% endfor %}
+                            <div class="img-press">
+                                <div class="row">
+                                    {% for img in article.get_images %}
+
+                                        <div class="col-lg-3 col-md-4 col-xs-6">
+                                            <a style="border: none;"class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                                                data-image="/{{ img.img }}"
+                                                data-target="#image-gallery">
+                                                <img class="img-thumbnail" src="/{{img.img}}" style="height:80px;" />
+                                            </a>
+                                        </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+                        {% endfor %}
+                    </span>
+                </li>
+            {% endfor %}
+        </ul>
     </div>
 
         <div class="modal fade" id="image-gallery" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -51,7 +62,8 @@
                 </div>
             </div>
         </div>
-            </div>
+    </div>
+    </div>
     <script type="text/javascript">
     let modalId = $('#image-gallery');
 

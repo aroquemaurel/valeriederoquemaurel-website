@@ -10,7 +10,10 @@ from valerie.press.models import Article
 
 def display_articles(request, page_id):
     current_page = Page.objects.get(id=page_id)
-    articles = Article.objects.all()
+
+    articles = {}
+    for article in Article.objects.all():
+        articles.setdefault(str(article.date.year), []).append(article)
 
     return render(request, 'press/display-articles.html',
                   {
