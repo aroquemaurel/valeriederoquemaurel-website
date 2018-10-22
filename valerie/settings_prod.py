@@ -26,7 +26,7 @@ SECRET_KEY = '52g&953lrs5f8_l2z$my+u*#v)vo=v30-p=%h0&qz!+a=&qhyq'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = False 
 
-ALLOWED_HOSTS = ['beta.valerie.roquemaurel.pro']
+ALLOWED_HOSTS = ['valerie.roquemaurel.pro', 'valeriederoquemaurel.com']
 
 
 # Application definition
@@ -142,6 +142,6 @@ UPLOAD_URL = '/'+UPLOAD_RELATIVE_DIR+'/'
 
 UPLOAD_DIR = BASE_DIR+UPLOAD_URL
 
-STATIC_ROOT = '/home/aroquemaurel/www/beta/valerie-v3/static' 
+STATIC_ROOT = '/data/www/prod/Valerie/static' 
 
 STATICFILES_DIRS = [ ]
