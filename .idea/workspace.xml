@@ -7,7 +7,6 @@
     <list default="true" id="5a04e327-d78f-400c-8443-00e02d6f5c9f" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valerie/pages/templates/pages/content/contact.html" afterPath="$PROJECT_DIR$/valerie/pages/templates/pages/content/contact.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/valerie/templates/base.html" afterPath="$PROJECT_DIR$/valerie/templates/base.html" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -54,9 +53,12 @@
       <file leaf-file-name="contact.html" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/valerie/pages/templates/pages/content/contact.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="198">
-              <caret line="9" column="86" lean-forward="false" selection-start-line="9" selection-start-column="86" selection-end-line="9" selection-end-column="86" />
-              <folding />
+            <state relative-caret-position="318">
+              <caret line="28" column="51" lean-forward="false" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+              <folding>
+                <element signature="e#1403#1445#0#HTML" expanded="true" />
+                <element signature="e#1583#1612#0#HTML" expanded="true" />
+              </folding>
             </state>
           </provider>
         </entry>
@@ -148,9 +150,6 @@
   </component>
   <component name="FindInProjectRecents">
     <findStrings>
-      <find>left:</find>
-      <find>timeline li</find>
-      <find>ul</find>
       <find>margin</find>
       <find>width</find>
       <find>font</find>
@@ -178,6 +177,9 @@
       <find>body #content #text-content</find>
       <find>gallery</find>
       <find>text-content</find>
+      <find>Email</find>
+      <find>email</find>
+      <find>Subsc</find>
     </findStrings>
     <replaceStrings>
       <replace>&lt;br/&gt;</replace>
@@ -902,6 +904,7 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="0">
           <caret line="0" column="21" lean-forward="false" selection-start-line="0" selection-start-column="21" selection-end-line="0" selection-end-column="21" />
+          <folding />
         </state>
       </provider>
     </entry>
@@ -1079,9 +1082,12 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/valerie/pages/templates/pages/content/contact.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="198">
-          <caret line="9" column="86" lean-forward="false" selection-start-line="9" selection-start-column="86" selection-end-line="9" selection-end-column="86" />
-          <folding />
+        <state relative-caret-position="318">
+          <caret line="28" column="51" lean-forward="false" selection-start-line="28" selection-start-column="51" selection-end-line="28" selection-end-column="51" />
+          <folding>
+            <element signature="e#1403#1445#0#HTML" expanded="true" />
+            <element signature="e#1583#1612#0#HTML" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
