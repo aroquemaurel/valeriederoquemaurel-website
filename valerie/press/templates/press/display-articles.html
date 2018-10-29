@@ -7,7 +7,7 @@
     <h1>Articles de presse</h1>
     <div>
         <ul class="timeline">
-            {% for year, articles_year in articles.items %}
+            {% for year, articles_year in articles.items|dictsortreversed:"0.lower" %}
                 <li>
                     <span class="circle"></span><span class="title">{{ year }}</span>
                     <span class="text">
