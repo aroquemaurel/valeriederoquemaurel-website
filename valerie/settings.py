@@ -24,9 +24,9 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '52g&953lrs5f8_l2z$my+u*#v)vo=v30-p=%h0&qz!+a=&qhyq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False 
+DEBUG = True
 
-ALLOWED_HOSTS = ['valerie.roquemaurel.pro', 'valeriederoquemaurel.com']
+ALLOWED_HOSTS = ['localhost', '127.0.0.1', 'valerie.roquemaurel.pro', 'valeriederoquemaurel.com']
 
 
 # Application definition
@@ -86,8 +86,8 @@ DATABASES = {
          'ENGINE': 'django.db.backends.mysql',
          # Backends disponibles : 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
          'NAME': 'valerie_v3',
-         'USER': 'valerie_v3',
-         'PASSWORD': 'OUFf7yKZ8AKSuuTq',
+         'USER': 'root',
+         'PASSWORD': 'root',
          'HOST': '127.0.0.1',
          'PORT': '',
          'OPTIONS': {
