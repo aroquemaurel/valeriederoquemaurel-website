@@ -23,32 +23,32 @@ def display_photo(request, id_photo):
     else:
         current_cat = cat
 
-    all_photos = Photo.objects.filter(parent_id=cat.id).order_by('position')
+    all_photos = Photo.objects.filter(parent_id=cat.id).order_by('position', 'id')
 
-    previous_photo = []
-    next_photo = []
+    previous_photos = []
+    next_photos = []
     fill_previous = True
     nb_elements_around_photo = 3
     for photo in all_photos:
         if photo.id == current_photo.id:
             fill_previous = False
         elif fill_previous:
-            previous_photo.append(photo)
+            previous_photos.append(photo)
         else:
-            next_photo.append(photo)
+            next_photos.append(photo)
 
-    if len(previous_photo) > nb_elements_around_photo:
-        previous_photo = previous_photo[::-1][:nb_elements_around_photo]
+    if len(previous_photos) > nb_elements_around_photo:
+        previous_photos = previous_photos[::-1][:nb_elements_around_photo][::-1]
 
-    if len(next_photo) > nb_elements_around_photo:
-        next_photo = next_photo[:nb_elements_around_photo]
+    if len(next_photos) > nb_elements_around_photo:
+        next_photos = next_photos[:nb_elements_around_photo]
 
     return render(request, 'photos_gallery/display-photo.html',
                   {
                       'categories': Category.objects.filter(parent=None),
                       'current_cat': current_cat,
                       'current_subcat': cat,
-                      'previous_photos': previous_photo,
-                      'next_photos': next_photo,
+                      'previous_photos': previous_photos,
+                      'next_photos': next_photos,
                       'page': current_photo
                   })
