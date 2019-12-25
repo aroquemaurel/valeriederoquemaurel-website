@@ -7,16 +7,25 @@
         <h1>Expositions</h1>
     {% for event in events %}
         {% if not event.is_ended %}
-        <p>Du <b>{{ event.start_date }}</b> au <b>{{ event.end_date }}</b> à <b>{{ event.location }}</b><br/>
-        <em>
-            {% if event.is_now%}
-                L'exposition se déroule actuellement
-            {% else %}
-                L'expo est dans {{ event.start_date|timeuntil }}
-            {% endif %}
-        </em>
-        {{ event.description|linebreaks }}
-        </p>
+            <p>Du <b>{{ event.start_date }}</b> au <b>{{ event.end_date }}</b> à <b>{{ event.location }}</b><br/>
+            <em>
+                {% if event.is_now%}
+                    L'exposition se déroule actuellement
+                {% else %}
+                    L'expo est dans {{ event.start_date|timeuntil }}
+                {% endif %}
+            </em>
+            {{ event.description|linebreaks }}
+            </p>
+            {% for img in article.get_images %}
+                <div class="col-lg-3 col-md-4 col-xs-6">
+                <a style="border: none;"class="thumbnail" href="#" data-image-id="" data-toggle="modal" data-title=""
+                data-image="/{{ img.img }}"
+                data-target="#image-gallery">
+                    <img class="img-thumbnail" src="/{{img.img}}" style="height:80px;" />
+                </a>
+                </div>
+            {% endfor %}
         {% endif %}
     {% endfor %}
         </div>

@@ -28,12 +28,12 @@ class Event(models.Model):
                ' at '+self.location
 
     def get_images(self):
-        return self.article_image.all().order_by('position')
+        return self.event_image.all().order_by('position')
 
 
 class ImageEvent(models.Model):
     img = models.ImageField(upload_to=settings.UPLOAD_RELATIVE_DIR + '/events')
     position = models.PositiveIntegerField()
-    article = models.ForeignKey('events.Event', null=True, related_name='event_image',
+    event = models.ForeignKey('events.Event', null=True, related_name='event_image',
             on_delete=models.CASCADE)
 
