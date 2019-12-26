@@ -12,7 +12,6 @@
     top: 0;
 	bottom: 0;
 	left:-19px;
-
 }
 
 .timeline .title {
@@ -23,8 +22,12 @@
     text-align: center;
     color: #b14b85;
     font-weight: bold;
+
 }
 
+.timeline .text h3 {
+	display: inline;
+}
 .timeline .text {
     margin-top: 0;
     display: block;

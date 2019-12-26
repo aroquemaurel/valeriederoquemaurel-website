@@ -9,7 +9,7 @@
         <ul class="timeline">
             {% for year, articles_year in articles.items|dictsortreversed:"0.lower" %}
                 <li>
-                    <span class="circle"></span><span class="title">{{ year }}</span>
+                    <span class="title">{{ year }}</span>
                     <span class="text">
                         {% for article in articles_year %}
                             <p><b>{{ article.title }}</b> paru le {{ article.date }}</p>

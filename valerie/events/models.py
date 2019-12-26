@@ -23,9 +23,9 @@ class Event(models.Model):
         return self.start_date <= date.today() <= self.end_date
 
     def __str__(self):
-        return 'from ' + self.start_date.strftime('%b %d %Y %I:%M%p')+\
-               ' to '+self.end_date.strftime('%b %d %Y %I:%M%p')+\
-               ' at '+self.location
+        return 'from ' + self.start_date.strftime('%b %d %Y %I:%M%p') + \
+               ' to ' + self.end_date.strftime('%b %d %Y %I:%M%p') + \
+               ' at ' + self.location
 
     def get_images(self):
         return self.event_image.all().order_by('position')
@@ -35,5 +35,4 @@ class ImageEvent(models.Model):
     img = models.ImageField(upload_to=settings.UPLOAD_RELATIVE_DIR + '/events')
     position = models.PositiveIntegerField()
     event = models.ForeignKey('events.Event', null=True, related_name='event_image',
-            on_delete=models.CASCADE)
-
+                              on_delete=models.CASCADE)

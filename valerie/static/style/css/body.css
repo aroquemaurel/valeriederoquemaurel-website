@@ -51,6 +51,11 @@ a {
     padding-bottom: 10px;
 }
 
+#content h3 {
+    color: #b14b85;
+    font-size: 13pt;
+    font-weight: bold;
+}
 .picture-element {
     margin-right: 60px;
     margin-bottom: 60px;
