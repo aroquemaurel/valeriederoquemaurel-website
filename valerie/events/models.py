@@ -30,9 +30,21 @@ class Event(models.Model):
     def get_images(self):
         return self.event_image.all().order_by('position')
 
+    def get_documents(self):
+        return self.event_document.all().order_by('position')
+
 
 class ImageEvent(models.Model):
     img = models.ImageField(upload_to=settings.UPLOAD_RELATIVE_DIR + '/events')
     position = models.PositiveIntegerField()
     event = models.ForeignKey('events.Event', null=True, related_name='event_image',
                               on_delete=models.CASCADE)
+
+
+class DocumentEvent(models.Model):
+    title = models.CharField(max_length=256)
+    doc = models.FileField(upload_to=settings.UPLOAD_RELATIVE_DIR + '/events')
+    position = models.PositiveIntegerField()
+    event = models.ForeignKey('events.Event', null=True, related_name='event_document',
+                              on_delete=models.CASCADE)
+
