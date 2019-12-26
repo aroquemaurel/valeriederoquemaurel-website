@@ -1,5 +1,7 @@
 {% extends "pages/page.html" %}
 {% load static %}
+{% load common_string %}
+{% load common_url %}
 
 {% block body %}
     <div id="text-content">
@@ -37,14 +39,20 @@
                                             {% endfor %}
                                         </div>
                                     </div>
-                                    <ul>
+                                    <ul style="list-style-type: none">
                                         {% for document in event.get_documents %}
-                                            <li style="list-style-type: none">
-                                                <a href="/{{ document.doc }}">
-                                                    <i class="glyphicon glyphicon-file"></i> {{ document.title }}
-                                                </a>
+                                            <li>
+                                                {% with title=document.title %}
+                                                {{ document.doc|file_attachment:title|safe }}
+                                                {% endwith %}
                                             </li>
                                         {% endfor %}
+
+                                         {% if  event.url|startswith:'https://www.youtube.com' or event.url|startswith:"http://www.youtube.com" or event.url|startswith:"https://youtube.com" or event.url|startswith:"http://youtube.com"%}
+                                            {{ event.url|youtube_embedded|safe }}
+                                         {% elif event.url %}
+                                             <li>{{ event.url|url_attachment|safe }}</li>
+                                         {% endif %}
                                     </ul>
                                 </span>
                             </li>
