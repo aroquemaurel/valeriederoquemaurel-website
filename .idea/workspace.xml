@@ -2,12 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a04e327-d78f-400c-8443-00e02d6f5c9f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/valerie/navigation/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/valerie/navigation/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/valerie/photos_gallery/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/valerie/photos_gallery/views.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/valerie/events/migrations/0003_auto_20191225_1834.py" beforeDir="false" afterPath="$PROJECT_DIR$/valerie/events/migrations/0003_auto_20191225_1834.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/valerie/events/migrations/0004_auto_20191225_1849.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/valerie/events/migrations/0005_documentevent.py" beforeDir="false" afterPath="$PROJECT_DIR$/valerie/events/migrations/0005_documentevent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/valerie/events/migrations/0006_auto_20191226_2155.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/valerie/events/migrations/0007_documentevent_title.py" beforeDir="false" afterPath="$PROJECT_DIR$/valerie/events/migrations/0007_documentevent_title.py" afterDir="false" />
     </list>
-    <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -33,119 +34,51 @@
       </list>
     </option>
   </component>
-  <component name="FindInProjectRecents">
-    <findStrings>
-      <find>pre</find>
-      <find>_photo</find>
-      <find>previous_photo</find>
-      <find>Nan</find>
-    </findStrings>
-    <replaceStrings>
-      <replace />
-    </replaceStrings>
-  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
   </component>
-  <component name="ProjectFrameBounds" extendedState="6">
-    <option name="y" value="27" />
-    <option name="width" value="1600" />
-    <option name="height" value="873" />
-  </component>
-  <component name="ProjectId" id="1NNeLMXCRfSHX7tOhSXRaLhtACV" />
-  <component name="ProjectInspectionProfilesVisibleTreeState">
-    <entry key="Project Default">
-      <profile-state>
-        <expanded-state>
-          <State>
-            <id />
-          </State>
-          <State>
-            <id>Python</id>
-          </State>
-        </expanded-state>
-        <selected-state>
-          <State>
-            <id>PyCompatibilityInspection</id>
-          </State>
-        </selected-state>
-      </profile-state>
-    </entry>
-  </component>
+  <component name="ProjectId" id="1UhlqCIVXJnjXErMTzg43KNOb3A" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="1" id="Add" />
   </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showExcludedFiles" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.path.for.package.eslint" value="project" />
-    <property name="node.js.path.for.package.tslint" value="project" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PyActiveSdkModuleConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/valerie" />
+      <recent name="$PROJECT_DIR$/valerie/events/templates/events" />
+      <recent name="$PROJECT_DIR$/valerie/navigation/templates/navigation" />
+      <recent name="$PROJECT_DIR$/valerie/static/style/js/bootstrap" />
+      <recent name="$PROJECT_DIR$/valerie/static/style/css/bootstrap" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/valerie/press" />
       <recent name="$PROJECT_DIR$/valerie/static/style/css" />
       <recent name="$PROJECT_DIR$/valerie/photos_gallery/migrations" />
       <recent name="$PROJECT_DIR$/valerie/pages/migrations" />
     </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/valerie/events/templates/events" />
-      <recent name="$PROJECT_DIR$/valerie/navigation/templates/navigation" />
-      <recent name="$PROJECT_DIR$/valerie/static/style/js/bootstrap" />
-      <recent name="$PROJECT_DIR$/valerie/static/style/css/bootstrap" />
-      <recent name="$PROJECT_DIR$/valerie/pages/templates/pages/content" />
-    </key>
-  </component>
-  <component name="RunDashboard">
-    <option name="ruleStates">
-      <list>
-        <RuleState>
-          <option name="name" value="ConfigurationTypeDashboardGroupingRule" />
-        </RuleState>
-        <RuleState>
-          <option name="name" value="StatusDashboardGroupingRule" />
-        </RuleState>
-      </list>
-    </option>
   </component>
   <component name="RunManager">
-    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+    <configuration default="true" type="PyBehaveRunConfigurationType" factoryName="Behave">
       <module name="Valerie" />
       <option name="INTERPRETER_OPTIONS" value="" />
       <option name="PARENT_ENVS" value="true" />
-      <envs>
-        <env name="PYTHONUNBUFFERED" value="1" />
-      </envs>
-      <option name="SDK_HOME" value="/usr/bin/python3.6" />
+      <option name="SDK_HOME" value="" />
       <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
-      <option name="launchJavascriptDebuger" value="false" />
-      <option name="port" value="8000" />
-      <option name="host" value="" />
-      <option name="additionalOptions" value="" />
-      <option name="browserUrl" value="" />
-      <option name="runTestServer" value="false" />
-      <option name="runNoReload" value="false" />
-      <option name="useCustomRunCommand" value="false" />
-      <option name="customRunCommand" value="" />
-      <method v="2" />
-    </configuration>
-    <configuration default="true" type="js.build_tools.gulp">
-      <node-interpreter>project</node-interpreter>
-      <node-options />
-      <gulpfile />
-      <tasks />
-      <arguments />
-      <envs />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="ADDITIONAL_ARGS" value="" />
       <method v="2" />
     </configuration>
     <configuration default="true" type="PythonConfigurationType" factoryName="Python">
@@ -194,6 +127,38 @@
       <option name="customRunCommand" value="" />
       <method v="2" />
     </configuration>
+    <configuration default="true" type="Python.DjangoServer" factoryName="Django server">
+      <module name="Valerie" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="/usr/bin/python3.6" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <option name="port" value="8000" />
+      <option name="host" value="" />
+      <option name="additionalOptions" value="" />
+      <option name="browserUrl" value="" />
+      <option name="runTestServer" value="false" />
+      <option name="runNoReload" value="false" />
+      <option name="useCustomRunCommand" value="false" />
+      <option name="customRunCommand" value="" />
+      <method v="2" />
+    </configuration>
+    <configuration default="true" type="js.build_tools.gulp">
+      <node-interpreter>project</node-interpreter>
+      <node-options />
+      <gulpfile />
+      <tasks />
+      <arguments />
+      <envs />
+      <method v="2" />
+    </configuration>
     <configuration default="true" type="tests" factoryName="Unittests">
       <module name="Valerie" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -210,6 +175,18 @@
       <method v="2" />
     </configuration>
   </component>
+  <component name="ServiceViewManager">
+    <option name="viewStates">
+      <list>
+        <serviceView>
+          <treeState>
+            <expand />
+            <select />
+          </treeState>
+        </serviceView>
+      </list>
+    </option>
+  </component>
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -220,15 +197,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1509921188414</updated>
-      <workItem from="1561925927136" duration="2165000" />
-      <workItem from="1561928983157" duration="1165000" />
-      <workItem from="1564787995669" duration="1772000" />
-      <workItem from="1564789802352" duration="144000" />
+      <workItem from="1575816903278" duration="16000" />
+      <workItem from="1577118457447" duration="570000" />
+      <workItem from="1577296618685" duration="303000" />
+      <workItem from="1577296931386" duration="944000" />
+      <workItem from="1577366955713" duration="771000" />
+      <workItem from="1577387317030" duration="6901000" />
+      <workItem from="1577400523151" duration="1815000" />
     </task>
     <servers />
-  </component>
-  <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="1916000" />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="1" />
@@ -236,32 +213,19 @@
   <component name="UnknownFeatures">
     <option featureType="com.intellij.fileTypeFactory" implementationName="*.css" />
   </component>
-  <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="COLUMN_ORDER" />
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
-    <option name="RECENT_FILTERS">
-      <map>
-        <entry key="Branch">
-          <value>
-            <list />
-          </value>
-        </entry>
-        <entry key="User">
-          <value>
-            <list />
-          </value>
-        </entry>
-      </map>
-    </option>
+  <component name="WindowStateProjectService">
+    <state x="555" y="214" width="800" height="684" key="#Inspections" timestamp="1577119026366">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="555" y="214" width="800" height="684" key="#Inspections/0.27.1920.1053/1920.574.1680.1050@0.27.1920.1053" timestamp="1577119026366" />
+    <state x="449" y="188" width="1022" height="737" key="SettingsEditor" timestamp="1577299135778">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="449" y="188" width="1022" height="737" key="SettingsEditor/0.27.1920.1053/1920.574.1680.1050@0.27.1920.1053" timestamp="1577299135778" />
+    <state x="620" y="380" key="com.intellij.ide.util.TipDialog" timestamp="1575816909039">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="620" y="380" key="com.intellij.ide.util.TipDialog/0.27.1920.1053/1920.574.1680.1050@0.27.1920.1053" timestamp="1575816909039" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -273,12 +237,12 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/valerie/navigation/views.py</url>
-          <line>40</line>
+          <line>39</line>
           <option name="timeStamp" value="12" />
         </line-breakpoint>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/valerie/photos_gallery/views.py</url>
-          <line>13</line>
+          <line>14</line>
           <option name="timeStamp" value="13" />
         </line-breakpoint>
       </breakpoints>
