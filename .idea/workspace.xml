@@ -3,7 +3,11 @@
   <component name="ChangeListManager">
     <list default="true" id="5a04e327-d78f-400c-8443-00e02d6f5c9f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/valerie/events/templates/events/display-events.html" beforeDir="false" afterPath="$PROJECT_DIR$/valerie/events/templates/events/display-events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/valerie/events/migrations/0003_auto_20191225_1834.py" beforeDir="false" afterPath="$PROJECT_DIR$/valerie/events/migrations/0003_auto_20191225_1834.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/valerie/events/migrations/0004_auto_20191225_1849.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/valerie/events/migrations/0005_documentevent.py" beforeDir="false" afterPath="$PROJECT_DIR$/valerie/events/migrations/0005_documentevent.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/valerie/events/migrations/0006_auto_20191226_2155.py" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/valerie/events/migrations/0007_documentevent_title.py" beforeDir="false" afterPath="$PROJECT_DIR$/valerie/events/migrations/0007_documentevent_title.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -199,7 +203,7 @@
       <workItem from="1577296931386" duration="944000" />
       <workItem from="1577366955713" duration="771000" />
       <workItem from="1577387317030" duration="6901000" />
-      <workItem from="1577400523151" duration="1194000" />
+      <workItem from="1577400523151" duration="1815000" />
     </task>
     <servers />
   </component>

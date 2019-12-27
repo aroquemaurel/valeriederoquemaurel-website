@@ -7,7 +7,7 @@ import django.db.models.deletion
 class Migration(migrations.Migration):
 
     dependencies = [
-        ('events', '0004_auto_20191225_1849'),
+        ('events', '0003_auto_20191225_1834'),
     ]
 
     operations = [
@@ -15,7 +15,7 @@ class Migration(migrations.Migration):
             name='DocumentEvent',
             fields=[
                 ('id', models.AutoField(auto_created=True, primary_key=True, serialize=False, verbose_name='ID')),
-                ('link', models.FileField(upload_to='upload/events')),
+                ('doc', models.FileField(upload_to='upload/events')),
                 ('position', models.PositiveIntegerField()),
                 ('event', models.ForeignKey(null=True, on_delete=django.db.models.deletion.CASCADE, related_name='event_document', to='events.Event')),
             ],
