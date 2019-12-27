@@ -10,7 +10,7 @@ from valerie.pages.models import Page
 
 def display_event(request, page_id):
     current_page = Page.objects.get(id=page_id)
-    events = Event.objects.all()
+    events = Event.objects.all().order_by('start_date', 'end_date')
 
     return render(request, 'events/display-events.html',
                   {
