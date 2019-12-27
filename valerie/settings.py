@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '52g&953lrs5f8_l2z$my+u*#v)vo=v30-p=%h0&qz!+a=&qhyq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False 
+DEBUG = True
 
 ALLOWED_HOSTS = ['valerie.roquemaurel.pro', 'valeriederoquemaurel.com', '127.0.0.1', 'localhost']
 
@@ -44,6 +44,7 @@ INSTALLED_APPS = [
     'valerie.pages',
     'valerie.events',
     'valerie.press',
+    'valerie.common'
 ]
 
 MIDDLEWARE = [
@@ -141,6 +142,6 @@ UPLOAD_URL = '/'+UPLOAD_RELATIVE_DIR+'/'
 
 UPLOAD_DIR = BASE_DIR+UPLOAD_URL
 
-STATIC_ROOT = '/data/www/prod/Valerie/static' 
+STATIC_ROOT = '/data/www/prod/Valerie/static'
 
 STATICFILES_DIRS = [ ]
