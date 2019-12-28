@@ -21,5 +21,16 @@
   </component>
   <component name="TemplatesService">
     <option name="TEMPLATE_CONFIGURATION" value="Django" />
+    <option name="TEMPLATE_FOLDERS">
+      <list>
+        <option value="$MODULE_DIR$/valerie/common/templates" />
+        <option value="$MODULE_DIR$/valerie/events/templates" />
+        <option value="$MODULE_DIR$/valerie/press/templates" />
+        <option value="$MODULE_DIR$/valerie/templates" />
+        <option value="$MODULE_DIR$/valerie/photos_gallery/templates" />
+        <option value="$MODULE_DIR$/valerie/pages/templates" />
+        <option value="$MODULE_DIR$/valerie/navigation/templates" />
+      </list>
+    </option>
   </component>
 </module>
