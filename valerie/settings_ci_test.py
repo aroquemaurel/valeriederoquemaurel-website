@@ -87,8 +87,8 @@ DATABASES = {
          # Backends disponibles : 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
          'NAME': 'ci',
          'USER': 'root',
-         'PASSWORD': 'mysql',
-         'HOST': '127.0.0.1',
+         'PASSWORD': 'mysql_password_ci',
+         'HOST': 'mysql',
          'PORT': '',
          'OPTIONS': {
              'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
