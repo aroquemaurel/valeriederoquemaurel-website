@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="5a04e327-d78f-400c-8443-00e02d6f5c9f" name="Default" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/valerie/events/migrations/0009_documentattachmentevent_imageattachmentevent.py" beforeDir="false" afterPath="$PROJECT_DIR$/valerie/events/migrations/0009_documentattachmentevent_imageattachmentevent.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/valerie/press/migrations/0005_imageattachmentarticle.py" beforeDir="false" afterPath="$PROJECT_DIR$/valerie/press/migrations/0005_imageattachmentarticle.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,23 +45,23 @@
   <component name="PropertiesComponent">
     <property name="DefaultHtmlFileTemplate" value="HTML File" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/valerie/common/templates/common" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/valerie" />
     <property name="settings.editor.selected.configurable" value="com.jetbrains.python.configuration.PythonContentEntriesConfigurable" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/valerie" />
+      <recent name="$PROJECT_DIR$/valerie/common/templates/common" />
+      <recent name="$PROJECT_DIR$/valerie/press" />
+      <recent name="$PROJECT_DIR$/valerie/static/style/css" />
+      <recent name="$PROJECT_DIR$/valerie/photos_gallery/migrations" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="$PROJECT_DIR$/valerie/common" />
       <recent name="$PROJECT_DIR$/valerie" />
       <recent name="$PROJECT_DIR$/valerie/events/templates/events" />
       <recent name="$PROJECT_DIR$/valerie/navigation/templates/navigation" />
       <recent name="$PROJECT_DIR$/valerie/static/style/js/bootstrap" />
-    </key>
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="$PROJECT_DIR$/valerie/common/templates/common" />
-      <recent name="$PROJECT_DIR$/valerie/press" />
-      <recent name="$PROJECT_DIR$/valerie/static/style/css" />
-      <recent name="$PROJECT_DIR$/valerie/photos_gallery/migrations" />
-      <recent name="$PROJECT_DIR$/valerie/pages/migrations" />
     </key>
   </component>
   <component name="RunManager" selected="Python.migrate">
@@ -253,6 +251,7 @@
       <workItem from="1577387317030" duration="6901000" />
       <workItem from="1577400523151" duration="1815000" />
       <workItem from="1577472172299" duration="4223000" />
+      <workItem from="1577552888772" duration="626000" />
     </task>
     <servers />
   </component>

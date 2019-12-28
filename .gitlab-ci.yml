@@ -10,7 +10,8 @@ services:
   - mysql:latest
 
 variables:
-  POSTGRES_DB: database_name
+  MYSQL_DATABASE: ci
+  MYSQL_ROOT_PASSWORD: mysql
 
 # This folder is cached between builds
 # http://docs.gitlab.com/ce/ci/yaml/README.html#cache
@@ -46,4 +47,4 @@ test:
 #  variables:
 #    DATABASE_URL: "postgresql://postgres:postgres@postgres:5432/$POSTGRES_DB"
   script:
-    - python manage.py test
+    - python manage.py test --settings valerie.settings_ci_test
