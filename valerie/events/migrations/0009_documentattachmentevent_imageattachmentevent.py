@@ -25,6 +25,7 @@ def copy_document_att(apps, schema_editor):
         new_doc.doc = old_doc.doc
         new_doc.position = old_doc.position
         new_doc.event_id = old_doc.event.id
+        new_doc.title = old_doc.title
         new_doc.save()
 
 class Migration(migrations.Migration):
