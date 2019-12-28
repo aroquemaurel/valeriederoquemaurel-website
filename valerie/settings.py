@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = '52g&953lrs5f8_l2z$my+u*#v)vo=v30-p=%h0&qz!+a=&qhyq'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False 
 
 ALLOWED_HOSTS = ['valerie.roquemaurel.pro', 'valeriederoquemaurel.com', '127.0.0.1', 'localhost']
 
@@ -44,7 +44,6 @@ INSTALLED_APPS = [
     'valerie.pages',
     'valerie.events',
     'valerie.press',
-    'valerie.common'
 ]
 
 MIDDLEWARE = [
@@ -77,6 +76,27 @@ TEMPLATES = [
 
 WSGI_APPLICATION = 'valerie.wsgi.application'
 
+
+# Database
+# https://docs.djangoproject.com/en/1.11/ref/settings/#databases
+
+DATABASES = {
+     'default': {
+         'ENGINE': 'django.db.backends.mysql',
+         # Backends disponibles : 'postgresql_psycopg2', 'mysql', 'sqlite3' or 'oracle'.
+         'NAME': 'valerie_v3',
+         'USER': 'valerie_v3',
+         'PASSWORD': 'OUFf7yKZ8AKSuuTq',
+         'HOST': '127.0.0.1',
+         'PORT': '',
+         'OPTIONS': {
+             'init_command': "SET sql_mode='STRICT_TRANS_TABLES'",
+         },
+     }
+
+}
+
+
 # Password validation
 # https://docs.djangoproject.com/en/1.11/ref/settings/#auth-password-validators
 
@@ -99,7 +119,7 @@ AUTH_PASSWORD_VALIDATORS = [
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
 
-LANGUAGE_CODE = 'fr'
+LANGUAGE_CODE = 'fr-FR'
 
 TIME_ZONE = 'UTC'
 
@@ -121,6 +141,6 @@ UPLOAD_URL = '/'+UPLOAD_RELATIVE_DIR+'/'
 
 UPLOAD_DIR = BASE_DIR+UPLOAD_URL
 
-STATIC_ROOT = '/data/www/prod/Valerie/static'
+STATIC_ROOT = '/data/www/prod/Valerie/static' 
 
 STATICFILES_DIRS = [ ]
