@@ -1,0 +1,11 @@
+{% load common_url %}
+
+<ul style="list-style-type: none">
+    {% for document in documents %}
+        <li>
+        {% with title=document.title %}
+        {{ document.doc|file_attachment:title|safe }}
+        {% endwith %}
+        </li>
+    {% endfor %}
+</ul>

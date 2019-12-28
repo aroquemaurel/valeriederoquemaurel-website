@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a04e327-d78f-400c-8443-00e02d6f5c9f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/Valerie.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/Valerie.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/valerie/common/templates/common/display-mini-images.html" beforeDir="false" afterPath="$PROJECT_DIR$/valerie/common/templates/common/display-mini-images.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/valerie/events/templates/events/display-events.html" beforeDir="false" afterPath="$PROJECT_DIR$/valerie/events/templates/events/display-events.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/valerie/press/templates/press/display-articles.html" beforeDir="false" afterPath="$PROJECT_DIR$/valerie/press/templates/press/display-articles.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -27,8 +27,8 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Python Script" />
-        <option value="HTML File" />
         <option value="JavaScript File" />
+        <option value="HTML File" />
       </list>
     </option>
   </component>
@@ -229,7 +229,7 @@
       <workItem from="1577366955713" duration="771000" />
       <workItem from="1577387317030" duration="6901000" />
       <workItem from="1577400523151" duration="1815000" />
-      <workItem from="1577472172299" duration="3720000" />
+      <workItem from="1577472172299" duration="4002000" />
     </task>
     <servers />
   </component>

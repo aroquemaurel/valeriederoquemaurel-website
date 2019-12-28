@@ -26,24 +26,21 @@
                                         </em>
                                         {{ event.description|linebreaks }}
                                     </p>
+
                                     {% with images=event.get_images %}
                                         {% include 'common/display-mini-images.html' %}
                                     {% endwith %}
 
-                                    <ul style="list-style-type: none">
-                                        {% for document in event.get_documents %}
-                                            <li>
-                                                {% with title=document.title %}
-                                                {{ document.doc|file_attachment:title|safe }}
-                                                {% endwith %}
-                                            </li>
-                                        {% endfor %}
+                                    {% with documents=event.get_documents %}
+                                         {% include 'common/display-documents.html' %}
+                                    {% endwith %}
 
+                                    <ul style="list-style-type: none">
                                          {% if  event.url|startswith:'https://www.youtube.com' or event.url|startswith:"http://www.youtube.com" or event.url|startswith:"https://youtube.com" or event.url|startswith:"http://youtube.com"%}
                                             {{ event.url|youtube_embedded|safe }}
-                                         {% elif event.url %}
-                                             <li>{{ event.url|url_attachment|safe }}</li>
-                                         {% endif %}
+                                        {% elif event.url %}
+                                            <li>{{ event.url|url_attachment|safe }}</li>
+                                        {% endif %}
                                     </ul>
                                 </span>
                             </li>
