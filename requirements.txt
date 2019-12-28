@@ -1,4 +1,0 @@
-mysqlclient
-Django==3.0
-django-mysql==3.3
-Pillow
