@@ -1,16 +1,10 @@
 from django.test import TestCase
 
-from valerie.navigation.models import Category
+from valerie.common.tests.common_tests import CommonCategoryModelTests
 from valerie.pages.models import Page, Type
 
 
-class PageModelsTests(TestCase):
-    _category1 = None
-    _category2 = None
-
-    def setUp(self):
-        self._category1 = Category.objects.create(title="Category 1", slug="category-1")
-        self._category2 = Category.objects.create(title="Category 2", slug="category-2")
+class PageModelsTests(CommonCategoryModelTests):
 
     def test_title(self):
         page1 = Page.objects.create(parent=self._category1)

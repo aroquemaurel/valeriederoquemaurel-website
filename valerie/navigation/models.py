@@ -10,9 +10,9 @@ class Category(models.Model):
     slug = models.SlugField(max_length=100)
     # Si aucun parent, catégorie, sinon sous-catégorie.
     parent = models.ForeignKey('Category', null=True, related_name='parent_cat',
-            on_delete=models.CASCADE)
+                               on_delete=models.CASCADE)
     default_page = models.ForeignKey('pages.Page', null=True, related_name='default_page',
-            on_delete=models.CASCADE)
+                                     on_delete=models.CASCADE)
     img_mini = models.ImageField(upload_to=settings.UPLOAD_RELATIVE_DIR + '/categories', null=True)
 
     def get_pages(self):
@@ -33,6 +33,7 @@ class Category(models.Model):
         return page
 
         # Retourne les sous-catégories de la categorie courante
+
     def get_childs(self):
         return self.parent_cat.all()
 
