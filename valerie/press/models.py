@@ -3,8 +3,6 @@ from __future__ import unicode_literals
 
 from django.db import models
 
-# Create your models here.
-from valerie import settings
 from valerie.common.models import ImageAttachment
 
 
