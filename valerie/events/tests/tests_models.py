@@ -7,6 +7,7 @@ from django.test import TestCase
 
 from valerie.events.models import Event, ImageAttachmentEvent, DocumentAttachmentEvent
 
+
 @freeze_time("2010-01-01")
 class EventModelTests(TestCase):
     def test_end_date(self):
@@ -35,12 +36,15 @@ class EventModelTests(TestCase):
         e = Event(start_date=date(2010, 1, 1), end_date=date(2011, 1, 1))
         self.assertTrue(e.is_now)
 
-
     def test_get_images(self):
-        event1 = Event.objects.create(title="Test1", start_date=date.today(), end_date=date.today(), location="Test", description="Test")
-        event2 = Event.objects.create(title="Test2", start_date=date.today(), end_date=date.today(), location="Test", description="Test")
-        event3 = Event.objects.create(title="Test3", start_date=date.today(), end_date=date.today(), location="Test", description="Test")
-        event4 = Event.objects.create(title="Test3", start_date=date.today(), end_date=date.today(), location="Test", description="Test")
+        event1 = Event.objects.create(title="Test1", start_date=date.today(), end_date=date.today(), location="Test",
+                                      description="Test")
+        event2 = Event.objects.create(title="Test2", start_date=date.today(), end_date=date.today(), location="Test",
+                                      description="Test")
+        event3 = Event.objects.create(title="Test3", start_date=date.today(), end_date=date.today(), location="Test",
+                                      description="Test")
+        event4 = Event.objects.create(title="Test3", start_date=date.today(), end_date=date.today(), location="Test",
+                                      description="Test")
 
         img1 = ImageAttachmentEvent.objects.create(position=1, title="Test 1", event=event1)
         img3 = ImageAttachmentEvent.objects.create(position=3, title="Test 3", event=event1)
@@ -63,12 +67,15 @@ class EventModelTests(TestCase):
         self.assertEqual(img4, event3.get_images()[0])
         self.assertEqual(img6, event3.get_images()[1])
 
-
     def test_get_documents(self):
-        event1 = Event.objects.create(title="Test1", start_date=date.today(), end_date=date.today(), location="Test", description="Test")
-        event2 = Event.objects.create(title="Test2", start_date=date.today(), end_date=date.today(), location="Test", description="Test")
-        event3 = Event.objects.create(title="Test3", start_date=date.today(), end_date=date.today(), location="Test", description="Test")
-        event4 = Event.objects.create(title="Test3", start_date=date.today(), end_date=date.today(), location="Test", description="Test")
+        event1 = Event.objects.create(title="Test1", start_date=date.today(), end_date=date.today(), location="Test",
+                                      description="Test")
+        event2 = Event.objects.create(title="Test2", start_date=date.today(), end_date=date.today(), location="Test",
+                                      description="Test")
+        event3 = Event.objects.create(title="Test3", start_date=date.today(), end_date=date.today(), location="Test",
+                                      description="Test")
+        event4 = Event.objects.create(title="Test3", start_date=date.today(), end_date=date.today(), location="Test",
+                                      description="Test")
 
         doc1 = DocumentAttachmentEvent.objects.create(position=1, title="Test 1", event=event1)
         doc3 = DocumentAttachmentEvent.objects.create(position=3, title="Test 3", event=event1)
@@ -80,7 +87,7 @@ class EventModelTests(TestCase):
         self.assertEqual(3, event1.get_documents().count())
         self.assertEqual(1, event2.get_documents().count())
         self.assertEqual(2, event3.get_documents().count())
-        self.assertEqual(0 ,event4.get_documents().count())
+        self.assertEqual(0, event4.get_documents().count())
 
         self.assertEqual(doc1, event1.get_documents()[0])
         self.assertEqual(doc2, event1.get_documents()[1])
@@ -90,7 +97,6 @@ class EventModelTests(TestCase):
 
         self.assertEqual(doc4, event3.get_documents()[0])
         self.assertEqual(doc6, event3.get_documents()[1])
-
 
 
 class ImageAttachmentEventModelsTests(TestCase):
