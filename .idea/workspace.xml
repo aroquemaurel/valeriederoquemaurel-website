@@ -2,11 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5a04e327-d78f-400c-8443-00e02d6f5c9f" name="Default" comment="">
-      <change beforePath="$PROJECT_DIR$/.gitlab-ci.yml" beforeDir="false" afterPath="$PROJECT_DIR$/.gitlab-ci.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/valerie/navigation/models.py" beforeDir="false" afterPath="$PROJECT_DIR$/valerie/navigation/models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/valerie/navigation/tests/tests_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/valerie/navigation/tests/tests_models.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/valerie/pages/tests/tests_models.py" beforeDir="false" afterPath="$PROJECT_DIR$/valerie/pages/tests/tests_models.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/valerie/static/style/css/body.css" beforeDir="false" afterPath="$PROJECT_DIR$/valerie/static/style/css/body.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/valerie/static/style/css/footer.css" beforeDir="false" afterPath="$PROJECT_DIR$/valerie/static/style/css/footer.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/valerie/static/style/css/header.css" beforeDir="false" afterPath="$PROJECT_DIR$/valerie/static/style/css/header.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/valerie/static/style/css/photos.css" beforeDir="false" afterPath="$PROJECT_DIR$/valerie/static/style/css/photos.css" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -322,12 +322,12 @@
     <list>
       <item itemvalue="Django server.RunServer" />
       <item itemvalue="Django tests.Test: " />
-      <item itemvalue="Python.makemigrations" />
-      <item itemvalue="Python.migrate" />
       <item itemvalue="Django tests.Test: valerie.pages.tests.tests_models.PageModelsTests.test_slug" />
       <item itemvalue="Django tests.Test: valerie.navigation.tests.tests_models.CategoryModelTests.test_get_childs" />
       <item itemvalue="Django tests.Test: valerie.navigation.tests.tests_models.CategoryModelTests.test_get_pages" />
       <item itemvalue="Django tests.Test: valerie.navigation.tests.tests_models.CategoryModelTests.test_get_default_page" />
+      <item itemvalue="Python.makemigrations" />
+      <item itemvalue="Python.migrate" />
     </list>
     <recent_temporary>
       <list>
@@ -371,7 +371,8 @@
       <workItem from="1577400523151" duration="1815000" />
       <workItem from="1577472172299" duration="4223000" />
       <workItem from="1577552888772" duration="2336000" />
-      <workItem from="1577577195542" duration="4743000" />
+      <workItem from="1577577195542" duration="5466000" />
+      <workItem from="1577640898337" duration="2880000" />
     </task>
     <servers />
   </component>
@@ -414,22 +415,22 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="743" y="332" width="424" height="491" key="FileChooserDialogImpl/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1577572119521" />
-    <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1577637158710">
+    <state width="1874" height="275" key="GridCell.Tab.0.bottom" timestamp="1577637194087">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1577637158710" />
-    <state width="1874" height="275" key="GridCell.Tab.0.center" timestamp="1577637158709">
+    <state width="1874" height="275" key="GridCell.Tab.0.bottom/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1577637194087" />
+    <state width="1874" height="275" key="GridCell.Tab.0.center" timestamp="1577637194087">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1577637158709" />
-    <state width="1874" height="275" key="GridCell.Tab.0.left" timestamp="1577637158709">
+    <state width="1874" height="275" key="GridCell.Tab.0.center/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1577637194087" />
+    <state width="1874" height="275" key="GridCell.Tab.0.left" timestamp="1577637194087">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1577637158709" />
-    <state width="1874" height="275" key="GridCell.Tab.0.right" timestamp="1577637158709">
+    <state width="1874" height="275" key="GridCell.Tab.0.left/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1577637194087" />
+    <state width="1874" height="275" key="GridCell.Tab.0.right" timestamp="1577637194087">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state width="1874" height="275" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1577637158709" />
+    <state width="1874" height="275" key="GridCell.Tab.0.right/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1577637194087" />
     <state width="1874" height="340" key="GridCell.Tab.1.bottom" timestamp="1577637056505">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -455,14 +456,18 @@
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="620" y="380" key="com.intellij.ide.util.TipDialog/0.27.1920.1053/1920.574.1680.1050@0.27.1920.1053" timestamp="1575816909039" />
+    <state x="613" y="171" width="683" height="771" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1577641369424">
+      <screen x="0" y="27" width="1920" height="1053" />
+    </state>
+    <state x="613" y="171" width="683" height="771" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1577641369424" />
     <state x="732" y="473" width="455" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1577576386710">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
     <state x="732" y="473" width="455" height="167" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1577576386710" />
-    <state x="610" y="144" width="700" height="819" key="find.popup" timestamp="1577524789328">
+    <state x="610" y="144" width="700" height="819" key="find.popup" timestamp="1577643778182">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
-    <state x="610" y="144" width="700" height="819" key="find.popup/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1577524789328" />
+    <state x="610" y="144" width="700" height="819" key="find.popup/0.27.1920.1053/1920.0.1680.1050@0.27.1920.1053" timestamp="1577643778182" />
     <state x="623" y="259" width="672" height="678" key="search.everywhere.popup" timestamp="1577575756845">
       <screen x="0" y="27" width="1920" height="1053" />
     </state>
@@ -497,7 +502,7 @@
     <SUITE FILE_PATH="coverage/Valerie$makemigrations.coverage" NAME="makemigrations Coverage Results" MODIFIED="1577472504264" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Valerie$Test__valerie_pages_tests_tests_models_PageModelsTests.coverage" NAME="Test: valerie.pages.tests.tests_models.PageModelsTests Coverage Results" MODIFIED="1577635121310" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Valerie$Test__valerie_navigation_tests_tests_models_CategoryModelTests_test_get_pages.coverage" NAME="Test: valerie.navigation.tests.tests_models.CategoryModelTests.test_get_pages Coverage Results" MODIFIED="1577636463967" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
-    <SUITE FILE_PATH="coverage/Valerie$Test__.coverage" NAME="Test:  Coverage Results" MODIFIED="1577637158698" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/Valerie$Test__.coverage" NAME="Test:  Coverage Results" MODIFIED="1577637194078" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Valerie$Test__valerie_pages_tests_tests_models_PageModelsTests_test_slug.coverage" NAME="Test: valerie.pages.tests.tests_models.PageModelsTests.test_slug Coverage Results" MODIFIED="1577635142492" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
     <SUITE FILE_PATH="coverage/Valerie$Test__valerie_navigation_tests_tests_models_CategoryModelTests_test_get_default_page.coverage" NAME="Test: valerie.navigation.tests.tests_models.CategoryModelTests.test_get_default_page Coverage Results" MODIFIED="1577637005525" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>

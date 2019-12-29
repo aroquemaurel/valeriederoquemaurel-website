@@ -70,7 +70,21 @@ header .horizontal-menu a:hover, header .vertical-submenu a:hover {
     .horizontal-menu .category {
         display: inline-block;
     }
+
 }
 
+/* #16 : Fix bug in responsive */
+@media(max-width: 1000px) {
+    header .container, header .container-fluid, header .navbar-collapse {
+        width: 100%;
+        padding: 0;
+    }
 
+    @media(max-width: 810px) {
+        header .container ul {
+            width: 800px;
+            margin-left: -50px;
+        }
+    }
+}
 

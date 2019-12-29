@@ -27,7 +27,7 @@ class CategoryModelTests(CommonCategoryModelTests):
 
     def test_get_default_page(self):
         page1 = Page.objects.create(parent=self._category1)
-        page2 = Page.objects.create(parent=self._category2)
+        Page.objects.create(parent=self._category2)
         Page.objects.create(parent=self._category2)
         Page.objects.create(parent=self._category2)
 
