@@ -28,11 +28,11 @@
                                         {% endif %}>
                                         {% if category.slug != 'accueil' %}
                                             {{ category.title }}
-                                        {%else%}
+                                        {% else %}
                                             <span id="home">
                                                 <img src="{% static '/style/img/home.jpg' %}" alt="{{category.title}}"/>
                                             </span>
-                                        {%endif%}
+                                        {% endif %}
                                     </a>
                                 </li>
 
