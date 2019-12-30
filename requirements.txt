@@ -1,5 +1,5 @@
 mysqlclient
-Django==3.0
+Django==2.2 # Need migration to django3
 django-mysql==3.3
 Pillow
 mock
