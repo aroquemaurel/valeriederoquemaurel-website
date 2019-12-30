@@ -1,4 +1,8 @@
 **/*.pyc
 venv
 /venv/
+/valerie.env
+/tmp
+/static
 .idea
+/google*.html
