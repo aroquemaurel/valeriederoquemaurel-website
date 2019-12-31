@@ -13,7 +13,7 @@ class Event(models.Model):
     title = models.CharField(max_length=256, verbose_name="Titre")
     start_date = models.DateField(verbose_name="Date de début")
     end_date = models.DateField(verbose_name="Date de fin")
-    location = models.TextField(verbose_name="Lieu")
+    location = models.CharField(verbose_name="Lieu", max_length=256)
     description = models.TextField(verbose_name="Description")
     url = models.CharField(max_length=256, null=True, verbose_name="Lien (facultatif)")
 
