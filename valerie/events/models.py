@@ -25,6 +25,12 @@ class Event(models.Model):
     def is_now(self):
         return self.start_date <= date.today() <= self.end_date
 
+    def get_images(self):
+        return self.event_attachment_image.all().order_by('position')
+
+    def get_documents(self):
+        return self.event_attachment_document.all().order_by('position')
+
     def get_label(self):
         str_return = ""
 
@@ -36,12 +42,6 @@ class Event(models.Model):
             str_return = 'Prochainement'
 
         return str_return
-
-    def get_images(self):
-        return self.event_attachment_image.all().order_by('position')
-
-    def get_documents(self):
-        return self.event_attachment_document.all().order_by('position')
 
     def __str__(self):
         str_return = '['+self.get_label().upper() + '] '
