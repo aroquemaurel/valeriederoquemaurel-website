@@ -1,6 +1,7 @@
-# -*- coding: utf-8 -*-
-from __future__ import unicode_literals
-
 from django.contrib import admin
 
-# Register your models here.
+from valerie.events.models import Event, ImageAttachmentEvent, DocumentAttachmentEvent
+
+admin.site.register(Event)
+admin.site.register(ImageAttachmentEvent)
+admin.site.register(DocumentAttachmentEvent)
