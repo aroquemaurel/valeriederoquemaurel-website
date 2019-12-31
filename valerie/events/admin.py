@@ -14,6 +14,7 @@ class EventsAdmin(admin.ModelAdmin):
     date_hierarchy = 'start_date'
     ordering = '-start_date', '-end_date'
     search_fields = 'title', 'location', 'description', 'start_date', 'end_date'
+    fields = 'title', 'start_date', 'end_date', 'location', 'url', 'description'
 
 
 admin.site.register(Event, EventsAdmin)
