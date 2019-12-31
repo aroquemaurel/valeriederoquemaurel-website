@@ -4,6 +4,13 @@ from valerie.common.admin import admin_method_attributes
 from valerie.events.models import Event, ImageAttachmentEvent, DocumentAttachmentEvent
 
 
+class EventsImagesInline(admin.TabularInline):
+    model = ImageAttachmentEvent
+    raw_id_fields = ('event',)
+    min_num = 0
+    extra = 0
+
+
 class EventsAdmin(admin.ModelAdmin):
     list_display = ('label_event', 'title', 'start_date', 'end_date', 'location')
     list_display_links = ('label_event', 'title', 'start_date', 'end_date', 'location')
@@ -13,6 +20,10 @@ class EventsAdmin(admin.ModelAdmin):
     search_fields = 'title', 'location', 'description', 'start_date', 'end_date'
     fields = 'title', 'start_date', 'end_date', 'location', 'url', 'description'
 
+    inlines = [
+        EventsImagesInline,
+    ]
+
     @staticmethod
     @admin_method_attributes(short_description='Label', allow_tags=True)
     def label_event(event):
@@ -20,5 +31,4 @@ class EventsAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Event, EventsAdmin)
-admin.site.register(ImageAttachmentEvent)
 admin.site.register(DocumentAttachmentEvent)

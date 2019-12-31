@@ -15,7 +15,7 @@ class Event(models.Model):
     end_date = models.DateField(verbose_name="Date de fin")
     location = models.CharField(verbose_name="Lieu", max_length=256)
     description = models.TextField(verbose_name="Description")
-    url = models.CharField(max_length=256, null=True, verbose_name="Lien (facultatif)")
+    url = models.CharField(max_length=256, null=True, verbose_name="URL (facultatif)")
 
     @property
     def is_ended(self):
@@ -67,6 +67,10 @@ class ImageAttachmentEvent(ImageAttachment):
     event = models.ForeignKey('events.Event', null=True, related_name='event_attachment_image',
                               on_delete=models.CASCADE)
 
+    class Meta:
+        verbose_name = _(ImageAttachment.verbose_name)
+        verbose_name_plural = _(ImageAttachment.verbose_name_plural)
+
 
 class DocumentAttachmentEvent(DocumentAttachment):
     def folder_name(self):
@@ -74,3 +78,7 @@ class DocumentAttachmentEvent(DocumentAttachment):
 
     event = models.ForeignKey('events.Event', null=True, related_name='event_attachment_document',
                               on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name = _(DocumentAttachment.verbose_name)
+        verbose_name_plural = _(DocumentAttachment.verbose_name_plural)
