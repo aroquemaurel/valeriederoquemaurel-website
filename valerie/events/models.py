@@ -4,18 +4,18 @@ from __future__ import unicode_literals
 from datetime import date
 
 from django.db import models
-from django.conf import settings
+from django.utils.translation import ugettext_lazy as _
 
 from valerie.common.models import ImageAttachment, DocumentAttachment
 
 
 class Event(models.Model):
-    title = models.CharField(max_length=256)
-    start_date = models.DateField()
-    end_date = models.DateField()
-    location = models.TextField()
-    description = models.TextField()
-    url = models.CharField(max_length=256, null=True)
+    title = models.CharField(max_length=256, verbose_name="Titre")
+    start_date = models.DateField(verbose_name="Date de début")
+    end_date = models.DateField(verbose_name="Date de fin")
+    location = models.TextField(verbose_name="Lieu")
+    description = models.TextField(verbose_name="Description")
+    url = models.CharField(max_length=256, null=True, verbose_name="Lien (facultatif)")
 
     @property
     def is_ended(self):
@@ -25,16 +25,39 @@ class Event(models.Model):
     def is_now(self):
         return self.start_date <= date.today() <= self.end_date
 
-    def __str__(self):
-        return 'from ' + self.start_date.strftime('%b %d %Y %I:%M%p') + \
-               ' to ' + self.end_date.strftime('%b %d %Y %I:%M%p') + \
-               ' at ' + self.location
+    def get_label(self):
+        str_return = ""
+
+        if self.is_ended:
+            str_return = 'Terminé'
+        elif self.is_now:
+            str_return = 'Actuellement'
+        else:
+            str_return = 'Prochainement'
+
+        return str_return
 
     def get_images(self):
         return self.event_attachment_image.all().order_by('position')
 
     def get_documents(self):
         return self.event_attachment_document.all().order_by('position')
+
+    def __str__(self):
+        str_return = '['+self.get_label().upper() + '] '
+
+        if self.title != "":
+            str_return += self.title + ' '
+
+        str_return += ' du ' + self.start_date.strftime('%d %b %Y') + \
+                      ' au ' + self.end_date.strftime('%d %b %Y') + \
+                      ' à ' + self.location
+
+        return str_return
+
+    class Meta:
+        verbose_name = _('Événement')
+        verbose_name_plural = _(verbose_name + 's')
 
 
 class ImageAttachmentEvent(ImageAttachment):
