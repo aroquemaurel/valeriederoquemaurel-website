@@ -15,7 +15,7 @@ class Event(models.Model):
     end_date = models.DateField(verbose_name="Date de fin")
     location = models.CharField(verbose_name="Lieu", max_length=256)
     description = models.TextField(verbose_name="Description")
-    url = models.CharField(max_length=256, null=True, verbose_name="URL (facultatif)")
+    url = models.CharField(max_length=256, null=True, verbose_name="URL (facultatif)", blank=True)
 
     @property
     def is_ended(self):
