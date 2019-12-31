@@ -39,4 +39,3 @@ class EventsAdmin(admin.ModelAdmin):
 
 
 admin.site.register(Event, EventsAdmin)
-admin.site.register(DocumentAttachmentEvent)
