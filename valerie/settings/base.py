@@ -14,7 +14,7 @@ import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 # Quick-start development settings - unsuitable for production
@@ -116,7 +116,7 @@ STATIC_URL = '/static/'
 
 UPLOAD_URL = '/'+UPLOAD_RELATIVE_DIR+'/'
 
-UPLOAD_DIR = BASE_DIR+UPLOAD_URL
+UPLOAD_DIR = BASE_DIR + UPLOAD_URL
 
 STATIC_ROOT = '/data/www/prod/Valerie/static'
 
