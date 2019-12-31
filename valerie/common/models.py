@@ -34,4 +34,4 @@ class DocumentAttachment(Attachment):
     doc = models.FileField(upload_to=Attachment.upload_path, verbose_name="Document")
 
     verbose_name = _('Document en pièce jointe')
-    verbose_name_plural = _('Document en pièce jointe')
+    verbose_name_plural = _('Documents en pièce jointe')

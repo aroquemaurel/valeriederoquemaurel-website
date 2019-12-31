@@ -4,11 +4,18 @@ from valerie.common.admin import admin_method_attributes
 from valerie.events.models import Event, ImageAttachmentEvent, DocumentAttachmentEvent
 
 
-class EventsImagesInline(admin.TabularInline):
-    model = ImageAttachmentEvent
+class EventsAttachmentInline(admin.TabularInline):
     raw_id_fields = ('event',)
     min_num = 0
     extra = 0
+
+
+class EventsImagesInline(EventsAttachmentInline):
+    model = ImageAttachmentEvent
+
+
+class EventsDocInline(EventsAttachmentInline):
+    model = DocumentAttachmentEvent
 
 
 class EventsAdmin(admin.ModelAdmin):
@@ -22,6 +29,7 @@ class EventsAdmin(admin.ModelAdmin):
 
     inlines = [
         EventsImagesInline,
+        EventsDocInline,
     ]
 
     @staticmethod
