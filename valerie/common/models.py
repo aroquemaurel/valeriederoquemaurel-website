@@ -14,7 +14,7 @@ class Attachment(models.Model):
         return settings.UPLOAD_RELATIVE_DIR + '/' + self.folder_name()
 
     position = models.PositiveIntegerField(verbose_name="Position")
-    title = models.CharField(max_length=256, verbose_name="Titre")
+    title = models.CharField(max_length=256, verbose_name="Titre", blank=True)
 
 
 class ImageAttachment(Attachment):
