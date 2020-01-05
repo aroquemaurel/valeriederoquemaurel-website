@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
-from datetime import date
+from datetime import date, timedelta
 from freezegun import freeze_time
 
 from django.test import TestCase
@@ -98,6 +98,21 @@ class EventModelTests(TestCase):
         self.assertEqual(doc4, event3.get_documents()[0])
         self.assertEqual(doc6, event3.get_documents()[1])
 
+    def test_get_label(self):
+        event = Event.objects.create(title="Test1", start_date=date.today(), end_date=date.today(), location="Test",
+                                      description="Test")
+
+        self.assertEqual("Actuellement", event.get_label())
+
+        event.end_date = date.today() + timedelta(days=10)
+        self.assertEqual("Actuellement", event.get_label())
+
+        event.start_date = date.today() + timedelta(days=1)
+        self.assertEqual("Prochainement", event.get_label())
+
+        event.start_date = date.today() - timedelta(days=10)
+        event.end_date = date.today() - timedelta(days=1)
+        self.assertEqual("Terminé", event.get_label())
 
 class ImageAttachmentEventModelsTests(TestCase):
     def test_folder_name(self):
