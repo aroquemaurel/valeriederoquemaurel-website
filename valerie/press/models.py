@@ -2,18 +2,23 @@
 from __future__ import unicode_literals
 
 from django.db import models
+from django.utils.translation import ugettext_lazy as _
 
 from valerie.common.models import ImageAttachment
 
 
 class Article(models.Model):
-    date = models.DateField()
-    title = models.CharField(max_length=256)
-    content = models.TextField(null=True, blank=True)
-    youtube_link = models.CharField(max_length=256, null=True, blank=True)
+    date = models.DateField(verbose_name="Date de l'article")
+    title = models.CharField(max_length=256, verbose_name="Titre")
+    content = models.TextField(null=True, blank=True, verbose_name="Description")
+    youtube_link = models.CharField(max_length=256, null=True, blank=True, verbose_name="Lien Youtube")
 
     def get_images(self):
         return self.article_attachment_image.all().order_by('position')
+
+    class Meta:
+        verbose_name = _('Article')
+        verbose_name_plural = _(verbose_name + 's')
 
 
 class ImageAttachmentArticle(ImageAttachment):
@@ -21,3 +26,7 @@ class ImageAttachmentArticle(ImageAttachment):
         return "presse"
 
     article = models.ForeignKey('press.Article', null=True, related_name='article_attachment_image', on_delete=models.CASCADE)
+
+    class Meta:
+        verbose_name = _(ImageAttachment.verbose_name)
+        verbose_name_plural = _(ImageAttachment.verbose_name_plural)

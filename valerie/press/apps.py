@@ -6,3 +6,4 @@ from django.apps import AppConfig
 
 class PressConfig(AppConfig):
     name = 'valerie.press'
+    verbose_name = 'Presse'
