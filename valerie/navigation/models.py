@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.conf import settings
+from django.utils.translation import ugettext_lazy as _
 
 
 class Category(models.Model):
@@ -38,4 +39,12 @@ class Category(models.Model):
         return self.parent_cat.all()
 
     def __str__(self):
-        return self.title
+        if self.title is not None:
+            return self.title
+
+        return ""
+
+    class Meta:
+        verbose_name = _('Catégorie')
+        verbose_name_plural = _(verbose_name + 's')
+
