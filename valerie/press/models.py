@@ -9,8 +9,8 @@ from valerie.common.models import ImageAttachment
 class Article(models.Model):
     date = models.DateField()
     title = models.CharField(max_length=256)
-    content = models.TextField(null=True)
-    youtube_link = models.CharField(max_length=256, null=True)
+    content = models.TextField(null=True, blank=True)
+    youtube_link = models.CharField(max_length=256, null=True, blank=True)
 
     def get_images(self):
         return self.article_attachment_image.all().order_by('position')
