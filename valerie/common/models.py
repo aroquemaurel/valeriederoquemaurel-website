@@ -22,7 +22,8 @@ class ImageAttachment(Attachment):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.img.field.upload_to = self.upload_path()
+        if self.folder_name() is not None:
+            self.img.field.upload_to = self.upload_path()
 
     def folder_name(self):
         pass
@@ -34,7 +35,8 @@ class ImageAttachment(Attachment):
 class DocumentAttachment(Attachment):
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.doc.field.upload_to = self.upload_path()
+        if self.folder_name() is not None:
+            self.doc.field.upload_to = self.upload_path()
 
     def folder_name(self):
         pass
