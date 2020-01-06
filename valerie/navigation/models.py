@@ -5,6 +5,9 @@ from django.db import models
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 
+from valerie.pages.models import NameablePage
+from valerie.photos_gallery.models import Photo
+
 
 class Category(models.Model):
     title = models.CharField(max_length=256, verbose_name="Titre")
@@ -30,6 +33,13 @@ class Category(models.Model):
         if page is None:
             # TODO AR : on retourne une 404
             return None
+
+        nameablePage = NameablePage.objects.get(page_ptr_id=page.id)
+        if nameablePage is not None:
+            page = nameablePage
+            photo = Photo.objects.get(nameablepage_ptr_id=page.id)
+            if photo is not None:
+                page = photo
 
         return page
 

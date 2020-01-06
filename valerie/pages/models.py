@@ -40,10 +40,7 @@ class Page(models.Model):
         return ""
 
     def __str__(self):
-        if self.title() is not None:
-            return self.title()
-
-        return ""
+        return self.title()
 
     class Meta:
         verbose_name = _('Page')
@@ -53,6 +50,9 @@ class Page(models.Model):
 class NameablePage(Page):
     title = models.CharField(max_length=256, verbose_name="Titre")
     slug = models.SlugField(max_length=100)
+
+    def __str__(self):
+        return self.title
 
     class Meta:
         verbose_name = _('Page nommée')
