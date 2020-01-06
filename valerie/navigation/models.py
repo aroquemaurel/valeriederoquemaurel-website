@@ -34,12 +34,12 @@ class Category(models.Model):
             # TODO AR : on retourne une 404
             return None
 
-        nameablePage = NameablePage.objects.get(page_ptr_id=page.id)
-        if nameablePage is not None:
-            page = nameablePage
-            photo = Photo.objects.get(nameablepage_ptr_id=page.id)
-            if photo is not None:
-                page = photo
+        nameablePage = NameablePage.objects.filter(page_ptr_id=page.id)
+        if nameablePage:
+            page = nameablePage[0]
+            photo = Photo.objects.filter(nameablepage_ptr_id=page.id)
+            if photo:
+                page = photo[0]
 
         return page
 
