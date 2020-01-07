@@ -1,5 +1,6 @@
 from valerie.common.tests.common_tests import CommonCategoryModelTests
-from valerie.pages.models import Page
+from valerie.pages.models import Page, NameablePage
+from valerie.photos_gallery.models import Photo
 
 
 class CategoryModelTests(CommonCategoryModelTests):
@@ -27,13 +28,27 @@ class CategoryModelTests(CommonCategoryModelTests):
 
     def test_get_default_page(self):
         page1 = Page.objects.create(parent=self._category1)
+        page2 = NameablePage.objects.create(parent=self._category1, title="truc", slug="truc")
+        page3 = Photo.objects.create(parent=self._category1, title="truc", slug="truc", content='machin', position=0)
         Page.objects.create(parent=self._category2)
         Page.objects.create(parent=self._category2)
         Page.objects.create(parent=self._category2)
 
         self._category1.default_page = page1
+        self._category2.default_page = page2
+        self._category3.default_page = page3
+
         self.assertEqual(page1, self._category1.get_default_page())
-        self.assertIsNone(self._category3.get_default_page())
+        self.assertIsInstance(page1, Page)
+
+        self.assertEqual(page2, self._category2.get_default_page())
+        self.assertIsInstance(page2, NameablePage)
+
+        self.assertEqual(page3, self._category3.get_default_page())
+        self.assertIsInstance(page3, Photo)
+
+        self.assertIsNone(self._category4.get_default_page())
+        self.assertIsNone(self._category5.get_default_page())
 
     def test_get_childs(self):
         self.assertEqual(1, self._category1.get_childs().count())

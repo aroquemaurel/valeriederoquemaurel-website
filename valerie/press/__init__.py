@@ -1,0 +1,1 @@
+default_app_config = 'valerie.press.apps.PressConfig'
