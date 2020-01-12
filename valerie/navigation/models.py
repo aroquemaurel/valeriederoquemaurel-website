@@ -5,7 +5,7 @@ from django.db import models
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 
-from valerie.pages.models import NameablePage
+from valerie.pages.models import NameablePage, Type
 from valerie.photos_gallery.models import Photo
 
 
@@ -53,6 +53,17 @@ class Category(models.Model):
             return self.title
 
         return ""
+
+    @staticmethod
+    def category_is_photo():
+        categories_id = []
+
+        for cat in Category.objects.all():
+            for page in cat.get_pages():
+                if page.type == Type.PHOTO:
+                    categories_id.append(cat.id)
+
+        return Category.objects.filter(id__in=categories_id).distinct()
 
     class Meta:
         verbose_name = _('Catégorie')

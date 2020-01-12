@@ -1,6 +1,7 @@
 mysqlclient
 Django==2.2.8 # Need migration to django3
 django-mysql==3.3
+django-unique-slugify==1.1
 Pillow
 mock
 freezegun

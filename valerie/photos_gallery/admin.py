@@ -2,6 +2,7 @@
 from __future__ import unicode_literals
 
 from django.contrib import admin
+from django.forms import forms
 from django.utils.translation import gettext_lazy as _
 
 from valerie.common.admin import admin_method_attributes
@@ -30,11 +31,16 @@ class CategoriesListFilter(admin.SimpleListFilter):
 
 
 class PhotoAdmin(admin.ModelAdmin):
+    fields = 'title', 'parent', 'position', 'content', 'photo_img'
     list_display = ('parent', 'title', 'preview_content', 'position')
-    list_display_links = ('title', )
+    list_display_links = ('title',)
     list_filter = (CategoriesListFilter,)
     ordering = 'parent', 'position'
     search_fields = 'title', 'content'
+
+    def render_change_form(self, request, context, *args, **kwargs):
+        context['adminform'].form.fields['parent'].queryset = Category.category_is_photo()
+        return super(PhotoAdmin, self).render_change_form(request, context, *args, **kwargs)
 
     @staticmethod
     @admin_method_attributes(short_description='Contenu', allow_tags=True)
@@ -45,7 +51,6 @@ class PhotoAdmin(admin.ModelAdmin):
     @admin_method_attributes(short_description='Catégories', allow_tags=True)
     def get_categories(photo):
         return []
-    #fields = 'title', 'start_date', 'end_date', 'location', 'url', 'description'
 
 
 admin.site.register(Photo, PhotoAdmin)

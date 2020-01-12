@@ -14,5 +14,10 @@ class Photo(NameablePage):
     position = models.PositiveIntegerField()
     photo_img = models.ImageField(upload_to=settings.UPLOAD_RELATIVE_DIR+'/photos')
 
+    def save(self, *args, **kwargs):
+        super(Photo, self).save(**kwargs)
+        self.parent.type = 1
+        super(Photo, self).save(**kwargs)
+
     def __str__(self):
         return "Photo: " + super(Photo, self).__str__()

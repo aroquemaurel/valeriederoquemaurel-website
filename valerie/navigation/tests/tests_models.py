@@ -1,4 +1,5 @@
 from valerie.common.tests.common_tests import CommonCategoryModelTests
+from valerie.navigation.models import Category
 from valerie.pages.models import Page, NameablePage
 from valerie.photos_gallery.models import Photo
 
@@ -60,4 +61,20 @@ class CategoryModelTests(CommonCategoryModelTests):
 
         self.assertEqual(0, self._category5.get_childs().count())
 
+    def test_category_is_photo(self):
+        Page.objects.create(parent=self._category1)
+        NameablePage.objects.create(title="Truc", parent=self._category1)
+        Photo.objects.create(title="Truc", content="Machin", position=0, parent=self._category1)
+        Photo.objects.create(title="Truc", content="Machin", position=0, parent=self._category1)
+        Photo.objects.create(title="Truc", content="Machin", position=0, parent=self._category2)
+        Photo.objects.create(title="Truc", content="Machin", position=0, parent=self._category5)
+        Page.objects.create(parent=self._category2)
+        Page.objects.create(parent=self._category3)
+
+        categories_photo = Category.category_is_photo()
+        self.assertEqual(4, categories_photo.count())
+        self.assertEqual(self._category1, categories_photo[0])
+        self.assertEqual(self._category2, categories_photo[1])
+        self.assertEqual(self._category3, categories_photo[2]) # category3 is child of category2
+        self.assertEqual(self._category5, categories_photo[3])
 
