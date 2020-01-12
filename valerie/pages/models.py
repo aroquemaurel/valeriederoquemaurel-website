@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
+from django_unique_slugify import unique_slugify
 
 
 class Type:
@@ -13,8 +14,11 @@ class Type:
 
 
 class Page(models.Model):
-    parent = models.ForeignKey('navigation.Category', null=True, related_name='category_page',
-                               on_delete=models.CASCADE, verbose_name="Catégorie parente")
+    parent = models.ForeignKey('navigation.Category',
+                               null=True,
+                               related_name='category_page',
+                               on_delete=models.CASCADE,
+                               verbose_name="Catégorie parente")
     type = models.IntegerField(default=1, verbose_name="Type de page")
 
     def title(self):
@@ -49,7 +53,13 @@ class Page(models.Model):
 
 class NameablePage(Page):
     title = models.CharField(max_length=256, verbose_name="Titre")
-    slug = models.SlugField(max_length=100)
+    slug = models.SlugField(max_length=100, blank=True)
+
+    def save(self, *args, **kwargs):
+        if not self.slug:
+            unique_slugify(self, self.title)
+
+        super(NameablePage, self).save(**kwargs)
 
     def __str__(self):
         return self.title
@@ -57,4 +67,3 @@ class NameablePage(Page):
     class Meta:
         verbose_name = _('Page nommée')
         verbose_name_plural = _('Pages nommées')
-

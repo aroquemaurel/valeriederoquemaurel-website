@@ -6,7 +6,7 @@ from datetime import date
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 
-from valerie.common.models import ImageAttachment, DocumentAttachment
+from valerie.common.models import ImageAttachment, DocumentAttachment, Attachment
 
 
 class Event(models.Model):
@@ -24,6 +24,11 @@ class Event(models.Model):
     @property
     def is_now(self):
         return self.start_date <= date.today() <= self.end_date
+
+    def save(self, *args, **kwargs):
+        Attachment.set_default_position(self.get_documents())
+        Attachment.set_default_position(self.get_images())
+        super(Event, self).save(**kwargs)
 
     def get_images(self):
         return self.event_attachment_image.all().order_by('position')
