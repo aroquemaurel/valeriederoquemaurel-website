@@ -13,8 +13,21 @@ class Attachment(models.Model):
     def upload_path(self):
         return settings.UPLOAD_RELATIVE_DIR + '/' + self.folder_name()
 
-    position = models.PositiveIntegerField(verbose_name="Position")
+    position = models.PositiveIntegerField(verbose_name="Position", null=True, blank=True)
     title = models.CharField(max_length=256, verbose_name="Titre", blank=True)
+
+    @staticmethod
+    def set_default_position(all_attachments):
+        if all_attachments:
+            last_position = all_attachments.order_by('position').last().position
+            if not last_position:
+                last_position = 0
+
+            for attach in all_attachments:
+                if not attach.position:
+                    last_position += 1
+                    attach.position = last_position
+                    attach.save()
 
 
 class ImageAttachment(Attachment):
@@ -45,3 +58,4 @@ class DocumentAttachment(Attachment):
 
     verbose_name = _('Document en pièce jointe')
     verbose_name_plural = _('Documents en pièce jointe')
+
