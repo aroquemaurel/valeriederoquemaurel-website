@@ -16,6 +16,9 @@ class Article(models.Model):
     def get_images(self):
         return self.article_attachment_image.all().order_by('position')
 
+    def __str__(self):
+        "Article " + self.title + " du" + self.date.strftime('%d %b %Y')
+
     class Meta:
         verbose_name = _('Article')
         verbose_name_plural = _(verbose_name + 's')

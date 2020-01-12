@@ -26,5 +26,5 @@ class Photo(NameablePage):
         super(Photo, self).save(**kwargs)
 
     def __str__(self):
-        return "Photo: " + super(Photo, self).__str__()
+        return "Photo " + super(Photo, self).__str__()
 
