@@ -31,7 +31,7 @@ class CategoriesListFilter(admin.SimpleListFilter):
 
 
 class PhotoAdmin(admin.ModelAdmin):
-    fields = 'title', 'parent', 'position', 'content', 'photo_img'
+    fields = 'title', 'parent', 'content', 'photo_img', 'position'
     list_display = ('parent', 'title', 'preview_content', 'position')
     list_display_links = ('title',)
     list_filter = (CategoriesListFilter,)

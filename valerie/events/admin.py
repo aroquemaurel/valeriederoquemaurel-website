@@ -1,6 +1,7 @@
 from django.contrib import admin
 
 from valerie.common.admin import admin_method_attributes
+from valerie.common.models import Attachment
 from valerie.events.models import Event, ImageAttachmentEvent, DocumentAttachmentEvent
 
 

@@ -58,7 +58,8 @@ class NameablePage(Page):
     def save(self, *args, **kwargs):
         if not self.slug:
             unique_slugify(self, self.title)
-            super(NameablePage, self).save(**kwargs)
+
+        super(NameablePage, self).save(**kwargs)
 
     def __str__(self):
         return self.title

@@ -63,7 +63,7 @@ class Category(models.Model):
                 if page.type == Type.PHOTO:
                     categories_id.append(cat.id)
 
-        return Category.objects.filter(id__in=categories_id).distinct()
+        return Category.objects.filter(id__in=categories_id)
 
     class Meta:
         verbose_name = _('Catégorie')
