@@ -1,5 +1,3 @@
-import numpy as np
-
 from valerie.common.models import Config
 
 
