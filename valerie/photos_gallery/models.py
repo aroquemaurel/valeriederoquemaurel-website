@@ -28,3 +28,4 @@ class Photo(NameablePage):
     def __str__(self):
         return "Photo " + super(Photo, self).__str__()
 
+
