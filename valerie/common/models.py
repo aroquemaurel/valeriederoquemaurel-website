@@ -59,3 +59,6 @@ class DocumentAttachment(Attachment):
     verbose_name = _('Document en pièce jointe')
     verbose_name_plural = _('Documents en pièce jointe')
 
+
+class Config:
+    NB_ELEMENTS_AROUND_PHOTO = 3
