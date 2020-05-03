@@ -27,11 +27,15 @@
     {% endif %}
 
     <div class="main-photo">
+        {% if is_photo %}
             <img style="" src="/{{ page.photo_img }}" alt="{{ page.title }}"/><br/>
-            <div class="caption">
-                <h2 id="title">{{ page.title }} </h2>
-                <span id="content">{{ page.content }}</span>
-            </div>
+        {% else %}
+            TOTO
+        {% endif %}
+        <div class="caption">
+            <h2 id="title">{{ page.title }} </h2>
+            <span id="content">{{ page.content }}</span>
+        </div>
     </div>
 
     {% if next_photos|length != 0 %}

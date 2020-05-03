@@ -1,22 +1,25 @@
+from itertools import chain
+
 from valerie.common.models import Config
 
 
-class ServicePhotos:
+class ServiceGallery:
     _all_previous_photos = []
     _all_next_photos = []
     _current_photo = None
-    _all_photos = []
+    _all_items = []
 
-    def __init__(self, all_photos):
-        self._all_photos = all_photos
+    def __init__(self, all_photos, all_videos):
+        self._all_items = list(chain(all_photos, all_videos))
+        self._all_items.sort(key=lambda x: x.position_Item)
 
-    def get_previous_photos(self, current_photo):
-        if current_photo not in self._all_photos:
+    def get_previous_items(self, current_photo):
+        if current_photo not in self._all_items:
             return []
 
         self._init_all_photos_around(current_photo)
 
-        if len(self._all_photos) <= (Config.NB_ELEMENTS_AROUND_PHOTO * 2 + 1):
+        if len(self._all_items) <= (Config.NB_ELEMENTS_AROUND_PHOTO * 2 + 1):
             return self._all_previous_photos
 
         if len(self._all_previous_photos) > Config.NB_ELEMENTS_AROUND_PHOTO:
@@ -27,13 +30,13 @@ class ServicePhotos:
 
         return self._all_previous_photos
 
-    def get_next_photos(self, current_photo):
-        if current_photo not in self._all_photos:
+    def get_next_items(self, current_photo):
+        if current_photo not in self._all_items:
             return []
 
         self._init_all_photos_around(current_photo)
 
-        if len(self._all_photos) <= (Config.NB_ELEMENTS_AROUND_PHOTO * 2 + 1):
+        if len(self._all_items) <= (Config.NB_ELEMENTS_AROUND_PHOTO * 2 + 1):
             return self._all_next_photos
 
         if len(self._all_next_photos) > Config.NB_ELEMENTS_AROUND_PHOTO:
@@ -52,7 +55,7 @@ class ServicePhotos:
         self._all_previous_photos = []
         self._all_next_photos = []
         self._current_photo = current_photo
-        for photo in self._all_photos:
+        for photo in self._all_items:
             if photo == current_photo:
                 fill_previous = False
             elif fill_previous:
