@@ -6,7 +6,7 @@ from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 
 from valerie.pages.models import NameablePage, Type
-from valerie.photos_gallery.models import Photo
+from valerie.photos_gallery.models import OldPhoto
 
 
 class Category(models.Model):
@@ -37,7 +37,7 @@ class Category(models.Model):
         nameablePage = NameablePage.objects.filter(page_ptr_id=page.id)
         if nameablePage:
             page = nameablePage[0]
-            photo = Photo.objects.filter(nameablepage_ptr_id=page.id)
+            photo = OldPhoto.objects.filter(nameablepage_ptr_id=page.id)
             if photo:
                 page = photo[0]
 

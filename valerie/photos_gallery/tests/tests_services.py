@@ -2,7 +2,7 @@ from django.test import TestCase
 
 from valerie.common.models import Config
 from valerie.navigation.models import Category
-from valerie.photos_gallery.models import Photo
+from valerie.photos_gallery.models import OldPhoto
 from valerie.photos_gallery.services import ServicePhotos
 
 
@@ -126,7 +126,7 @@ class CategoryModelTests(TestCase):
     def _create_photo(self, position, category):
         no_photo = len(self._all_photos) + 1
 
-        return Photo.objects.create(title="Photo " + str(no_photo),
-                                    content="Ma super photo " + str(no_photo),
-                                    position=position,
-                                    parent=category)
+        return OldPhoto.objects.create(title="Photo " + str(no_photo),
+                                       content="Ma super photo " + str(no_photo),
+                                       position=position,
+                                       parent=category)

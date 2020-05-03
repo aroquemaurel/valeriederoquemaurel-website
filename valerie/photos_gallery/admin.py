@@ -8,7 +8,7 @@ from django.utils.translation import gettext_lazy as _
 from valerie.common.admin import admin_method_attributes
 from valerie.common.string_helper import preview_content
 from valerie.navigation.models import Category
-from valerie.photos_gallery.models import Photo
+from valerie.photos_gallery.models import OldPhoto
 
 
 class CategoriesListFilter(admin.SimpleListFilter):
@@ -53,4 +53,4 @@ class PhotoAdmin(admin.ModelAdmin):
         return []
 
 
-admin.site.register(Photo, PhotoAdmin)
+admin.site.register(OldPhoto, PhotoAdmin)

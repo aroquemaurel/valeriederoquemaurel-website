@@ -5,14 +5,14 @@ from django.http import HttpResponse, HttpResponseNotFound
 from django.shortcuts import render
 
 from valerie.navigation.models import Category
-from valerie.photos_gallery.models import Photo
+from valerie.photos_gallery.models import OldPhoto
 from valerie.photos_gallery.services import ServicePhotos
 
 
 def display_photo(request, id_photo):
     try:
-        current_photo = Photo.objects.get(id=id_photo)
-    except Photo.DoesNotExist:
+        current_photo = OldPhoto.objects.get(id=id_photo)
+    except OldPhoto.DoesNotExist:
         return HttpResponseNotFound('<h1>Page not found</h1>')
 
     cat = current_photo.parent
@@ -22,7 +22,7 @@ def display_photo(request, id_photo):
     else:
         current_cat = cat
 
-    all_photos = Photo.objects.filter(parent_id=cat.id).order_by('position', 'id')
+    all_photos = OldPhoto.objects.filter(parent_id=cat.id).order_by('position', 'id')
     service_photos = ServicePhotos(all_photos)
 
     return render(request, 'photos_gallery/display-photo.html',
