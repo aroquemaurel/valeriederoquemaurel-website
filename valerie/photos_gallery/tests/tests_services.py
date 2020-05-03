@@ -117,6 +117,9 @@ class ServicesTest(TestCase):
         self.assertEqual(0, len(previous_photos))
 
     def _init_few_photos(self):
+        for p in self._all_photos:
+            p.delete()
+
         self._all_photos = []
         for i in range(3):
             self._all_photos.append(self._create_photo(i, self._category))

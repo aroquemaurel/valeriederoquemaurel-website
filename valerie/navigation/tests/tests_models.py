@@ -1,7 +1,7 @@
 from valerie.common.tests.common_tests import CommonCategoryModelTests
 from valerie.navigation.models import Category
 from valerie.pages.models import Page, NameablePage
-from valerie.photos_gallery.models import OldPhoto
+from valerie.photos_gallery.models import PhotoGallery
 
 
 class CategoryModelTests(CommonCategoryModelTests):
@@ -30,7 +30,7 @@ class CategoryModelTests(CommonCategoryModelTests):
     def test_get_default_page(self):
         page1 = Page.objects.create(parent=self._category1)
         page2 = NameablePage.objects.create(parent=self._category1, title="truc", slug="truc")
-        page3 = OldPhoto.objects.create(parent=self._category1, title="truc", slug="truc", content='machin', position=0)
+        page3 = PhotoGallery.objects.create(parent=self._category1, title="truc", slug="truc", content_Item='machin', position_Item=0)
         Page.objects.create(parent=self._category2)
         Page.objects.create(parent=self._category2)
         Page.objects.create(parent=self._category2)
@@ -46,7 +46,7 @@ class CategoryModelTests(CommonCategoryModelTests):
         self.assertIsInstance(page2, NameablePage)
 
         self.assertEqual(page3, self._category3.get_default_page())
-        self.assertIsInstance(page3, OldPhoto)
+        self.assertIsInstance(page3, PhotoGallery)
 
         self.assertIsNone(self._category4.get_default_page())
         self.assertIsNone(self._category5.get_default_page())
@@ -64,10 +64,10 @@ class CategoryModelTests(CommonCategoryModelTests):
     def test_category_is_photo(self):
         Page.objects.create(parent=self._category1)
         NameablePage.objects.create(title="Truc", parent=self._category1)
-        OldPhoto.objects.create(title="Truc", content="Machin", position=0, parent=self._category1)
-        OldPhoto.objects.create(title="Truc", content="Machin", position=0, parent=self._category1)
-        OldPhoto.objects.create(title="Truc", content="Machin", position=0, parent=self._category2)
-        OldPhoto.objects.create(title="Truc", content="Machin", position=0, parent=self._category5)
+        PhotoGallery.objects.create(title="Truc", content_Item="Machin", position_Item=0, parent=self._category1)
+        PhotoGallery.objects.create(title="Truc", content_Item="Machin", position_Item=0, parent=self._category1)
+        PhotoGallery.objects.create(title="Truc", content_Item="Machin", position_Item=0, parent=self._category2)
+        PhotoGallery.objects.create(title="Truc", content_Item="Machin", position_Item=0, parent=self._category5)
         Page.objects.create(parent=self._category2)
         Page.objects.create(parent=self._category3)
 
