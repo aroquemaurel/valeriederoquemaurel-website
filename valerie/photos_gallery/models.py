@@ -34,6 +34,13 @@ class PhotoGallery(GalleryItem):
         return "Photo " + super(PhotoGallery, self).__str__()
 
 
+class VideoGallery(GalleryItem):
+    youtube_url = models.CharField(max_length=256, null=True, blank=True, verbose_name="Lien Youtube")
+
+    def __str__(self):
+        return "Vidéo " + super(VideoGallery, self).__str__()
+
+
 @deprecated
 class OldPhoto(NameablePage):
     # TODO AR : Categorie
