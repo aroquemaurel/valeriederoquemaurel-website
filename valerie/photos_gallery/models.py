@@ -3,6 +3,7 @@ from __future__ import unicode_literals
 
 from django.db import models
 from django.conf import settings
+from django.utils.translation import ugettext_lazy as _
 
 from valerie.pages.models import Page, NameablePage
 
@@ -11,9 +12,9 @@ from deprecated import deprecated
 
 class GalleryItem(NameablePage):
     # TODO AR : Categorie
-    content_Item = models.TextField(null=True)
+    content_Item = models.TextField(null=True, verbose_name="Contenu")
     # TODO AR : favorite home, home image, home link, utile ?
-    position_Item = models.PositiveIntegerField(blank=True, null=True)
+    position_Item = models.PositiveIntegerField(blank=True, null=True, verbose_name="Position")
 
     def save(self, *args, **kwargs):
         if not self.position_Item:
@@ -33,13 +34,20 @@ class PhotoGallery(GalleryItem):
     def __str__(self):
         return "Photo " + super(PhotoGallery, self).__str__()
 
+    class Meta:
+        verbose_name = _('Photo')
+        verbose_name_plural = _(verbose_name + 's')
+
 
 class VideoGallery(GalleryItem):
-    youtube_url = models.CharField(max_length=256, null=True, blank=True, verbose_name="Lien Youtube")
+    youtube_url = models.CharField(max_length=256, verbose_name="Lien Youtube")
 
     def __str__(self):
         return "Vidéo " + super(VideoGallery, self).__str__()
 
+    class Meta:
+        verbose_name = _('Vidéo')
+        verbose_name_plural = _(verbose_name + 's')
 
 @deprecated
 class OldPhoto(NameablePage):

@@ -1,4 +1,5 @@
 {% extends "pages/page.html" %}
+{% load common_url %}
 {% load static %}
 
 {% block body %}
@@ -10,7 +11,11 @@
     {% for photo in previous_photos %}
         <span class="mini-photo">
         <a href="{% url 'display_photo' current_cat.slug current_subcat.slug photo.id photo.slug %}">
-        <img src="/{{ photo.photo_img }}" alt="{{ photo.title }}" />
+            {% if photo.photo_img %}
+                <img src="/{{ photo.photo_img }}" alt="{{ photo.title }}" />
+            {% else %}
+                <span class="glyphicon glyphicon-facetime-video"></span>
+            {% endif %}
         </a>
         </span>
     {% endfor %}
@@ -28,10 +33,11 @@
 
     <div class="main-photo">
         {% if is_photo %}
-            <img style="" src="/{{ page.photo_img }}" alt="{{ page.title }}"/><br/>
+            <img style="" src="/{{ page.photo_img }}" alt="{{ page.title }}"/>
         {% else %}
-            TOTO
+            {{ page.youtube_url|youtube_embedded|safe }}
         {% endif %}
+    <br/>
         <div class="caption">
             <h2 id="title">{{ page.title }} </h2>
             <span id="content">{{ page.content }}</span>
@@ -51,7 +57,11 @@
     {% for photo in next_photos %}
         <span class="mini-photo">
         <a href="{% url 'display_photo' current_cat.slug current_subcat.slug photo.id photo.slug %}">
-            <img src="/{{ photo.photo_img }}" alt="TODO" />
+            {% if photo.photo_img %}
+                <img src="/{{ photo.photo_img }}" alt="{{ photo.title }}" />
+            {% else %}
+                <span class="glyphicon glyphicon-facetime-video"></span>
+            {% endif %}
         </a>
         </span>
     {% endfor %}

@@ -1,6 +1,7 @@
 from itertools import chain
 
 from valerie.common.models import Config
+from valerie.photos_gallery.models import PhotoGallery
 
 
 class ServiceGallery:
@@ -13,19 +14,26 @@ class ServiceGallery:
         self._all_items = list(chain(all_photos, all_videos))
         self._all_items.sort(key=lambda x: x.position_Item)
 
+    def _get_nb_items(self, current_photo):
+        if isinstance(current_photo, PhotoGallery):
+            return Config.NB_ELEMENTS_AROUND_PHOTO
+        else:
+            return Config.NB_ELEMENTS_AROUND_VIDEO
+
     def get_previous_items(self, current_photo):
         if current_photo not in self._all_items:
             return []
 
         self._init_all_photos_around(current_photo)
+        nb_items = self._get_nb_items(current_photo)
 
-        if len(self._all_items) <= (Config.NB_ELEMENTS_AROUND_PHOTO * 2 + 1):
+        if len(self._all_items) <= (nb_items * 2 + 1):
             return self._all_previous_photos
 
-        if len(self._all_previous_photos) > Config.NB_ELEMENTS_AROUND_PHOTO:
-            return self._all_previous_photos[::-1][:Config.NB_ELEMENTS_AROUND_PHOTO][::-1]
-        elif len(self._all_previous_photos) < Config.NB_ELEMENTS_AROUND_PHOTO:
-            nb_next_photos_to_take = Config.NB_ELEMENTS_AROUND_PHOTO - len(self._all_previous_photos)
+        if len(self._all_previous_photos) > nb_items:
+            return self._all_previous_photos[::-1][:nb_items][::-1]
+        elif len(self._all_previous_photos) < nb_items:
+            nb_next_photos_to_take = nb_items - len(self._all_previous_photos)
             return self._all_next_photos[::-1][:nb_next_photos_to_take][::-1] + self._all_previous_photos
 
         return self._all_previous_photos
@@ -35,14 +43,15 @@ class ServiceGallery:
             return []
 
         self._init_all_photos_around(current_photo)
+        nb_items = self._get_nb_items(current_photo)
 
-        if len(self._all_items) <= (Config.NB_ELEMENTS_AROUND_PHOTO * 2 + 1):
+        if len(self._all_items) <= (nb_items * 2 + 1):
             return self._all_next_photos
 
-        if len(self._all_next_photos) > Config.NB_ELEMENTS_AROUND_PHOTO:
-            return self._all_next_photos[:Config.NB_ELEMENTS_AROUND_PHOTO]
-        elif len(self._all_next_photos) < Config.NB_ELEMENTS_AROUND_PHOTO:
-            nb_previous_photos_to_take = Config.NB_ELEMENTS_AROUND_PHOTO - len(self._all_next_photos)
+        if len(self._all_next_photos) > nb_items:
+            return self._all_next_photos[:nb_items]
+        elif len(self._all_next_photos) < nb_items:
+            nb_previous_photos_to_take = nb_items - len(self._all_next_photos)
             return self._all_next_photos + self._all_previous_photos[:nb_previous_photos_to_take]
 
         return self._all_next_photos
