@@ -11,9 +11,7 @@ from deprecated import deprecated
 
 
 class GalleryItem(NameablePage):
-    # TODO AR : Categorie
     content_Item = models.TextField(null=True, verbose_name="Contenu")
-    # TODO AR : favorite home, home image, home link, utile ?
     position_Item = models.PositiveIntegerField(blank=True, null=True, verbose_name="Position")
 
     def save(self, *args, **kwargs):
@@ -49,11 +47,10 @@ class VideoGallery(GalleryItem):
         verbose_name = _('Vidéo')
         verbose_name_plural = _(verbose_name + 's')
 
+
 @deprecated
 class OldPhoto(NameablePage):
-    # TODO AR : Categorie
     content = models.TextField(null=True)
-    # TODO AR : favorite home, home image, home link, utile ?
     position = models.PositiveIntegerField(blank=True, null=True)
     photo_img = models.ImageField(upload_to=settings.UPLOAD_RELATIVE_DIR+'/photos')
 
