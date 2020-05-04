@@ -75,6 +75,7 @@ class CategoryModelTests(CommonCategoryModelTests):
         self.assertEqual(4, categories_photo.count())
         self.assertEqual(self._category1, categories_photo[0])
         self.assertEqual(self._category2, categories_photo[1])
-        self.assertEqual(self._category3, categories_photo[2]) # category3 is child of category2
+        # category3 is child of category2
+        self.assertEqual(self._category3, categories_photo[2])
         self.assertEqual(self._category5, categories_photo[3])
 
