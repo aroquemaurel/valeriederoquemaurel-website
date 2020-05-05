@@ -44,18 +44,18 @@ def display_subcategory(request, slug_cat, slug_subcat):
     try:
         cat = Category.objects.get(slug=slug_cat)
     except Category.DoesNotExist:
-        logger.error("The category " + slug_cat + " is not found")
+        logger.error("The category %s is not found", slug_cat)
         return HttpResponseNotFound('<h1>Page not found</h1>')
 
     try:
         subcat = Category.objects.get(slug=slug_subcat)
     except Category.DoesNotExist:
-        logger.error("The subcategory " + slug_subcat + " is not found")
+        logger.error("The subcategory %s is not found", slug_subcat)
         return HttpResponseNotFound('<h1>Page not found</h1>')
 
     default_page = subcat.get_default_page()
     if default_page is None:
-        logger.error("The default page of " + slug_subcat + " is not found")
+        logger.error("The default page of %s is not found", slug_subcat)
         return HttpResponseNotFound('<h1>Page not found</h1>')
 
     return valerie.pages.views.display_page(request, default_page)

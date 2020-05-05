@@ -18,10 +18,10 @@ def display_photo(request, id_photo):
         current_item = PhotoGallery.objects.get(id=id_photo)
     except GalleryItem.DoesNotExist:
         try:
-            logger.debug("Photo "+id_photo + " not found, search video")
+            logger.debug("Photo %d is not found, search video", id_photo)
             current_item = VideoGallery.objects.get(id=id_photo)
         except VideoGallery.DoesNotExist:
-            logger.error("The photo or the video "+id_photo+ " doest not exists.")
+            logger.error("The photo or the video %d doest not exists.", id_photo)
             return HttpResponseNotFound('<h1>Page not found</h1>')
 
     cat = current_item.parent

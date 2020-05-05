@@ -34,7 +34,7 @@ def display_page(request, page):
 
         template_path += page.slug()
 
-        logger.debug("Display the page "+template_path)
+        logger.debug("Display the page %s ")
         return render(request, 'pages/content/' + template_path + '.html',
                       {
                           'categories': Category.objects.filter(parent=None),
@@ -52,5 +52,5 @@ def display_page(request, page):
         return valerie.press.views.display_articles(request, page.id)
 
     else:
-        logger.debug("The type of page is unknown " + page.type.__str__())
+        logger.debug("The type of page is unknown %d", page.type)
         return None

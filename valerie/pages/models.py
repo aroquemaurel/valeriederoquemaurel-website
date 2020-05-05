@@ -45,7 +45,7 @@ class Page(models.Model):
         elif self.type == Type.PRESS:
             return "Presse"
         else:
-            logger.error("The type of object " + self.type.__str__() + " is unknown")
+            logger.error("The type of object %d is unknown", self.type)
 
         return ""
 

@@ -19,15 +19,15 @@ class ServiceGallery:
 
     def get_previous_items(self, current_photo):
         if current_photo not in self._all_items:
-            logger.warning("The item " + current_photo + " is not in the gallery.")
+            logger.warning("The item %s is not in the gallery.", current_photo)
             return []
 
         self._init_all_photos_around(current_photo)
         nb_items = self._get_nb_items(current_photo)
 
         min_items = nb_items * 2 + 1
-        if len(self._all_items) <= min:
-            logger.debug("The number of items is lower or equal than " + min_items)
+        if len(self._all_items) <= min_items:
+            logger.debug("The number of items is lower or equal than %d", min_items)
             return self._all_previous_photos
 
         if len(self._all_previous_photos) > nb_items:
@@ -40,15 +40,15 @@ class ServiceGallery:
 
     def get_next_items(self, current_photo):
         if current_photo not in self._all_items:
-            logger.warning("The item " + current_photo + " is not in the gallery.")
+            logger.warning("The item %s is not in the gallery.", current_photo)
             return []
 
         self._init_all_photos_around(current_photo)
         nb_items = self._get_nb_items(current_photo)
 
         min_items = nb_items * 2 + 1
-        if len(self._all_items) <= (nb_items * 2 + 1):
-            logger.debug("The number of items is lower or equal than " + min_items)
+        if len(self._all_items) <= min_items:
+            logger.debug("The number of items is lower or equal than %d", min_items)
             return self._all_next_photos
 
         if len(self._all_next_photos) > nb_items:
