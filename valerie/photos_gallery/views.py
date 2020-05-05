@@ -8,14 +8,20 @@ from valerie.navigation.models import Category
 from valerie.photos_gallery.models import GalleryItem, PhotoGallery, VideoGallery
 from valerie.photos_gallery.services import ServiceGallery
 
+import logging
+
+logger = logging.getLogger(__name__)
+
 
 def display_photo(request, id_photo):
     try:
         current_item = PhotoGallery.objects.get(id=id_photo)
     except GalleryItem.DoesNotExist:
         try:
+            logger.debug("Photo "+id_photo + " not found, search video")
             current_item = VideoGallery.objects.get(id=id_photo)
         except VideoGallery.DoesNotExist:
+            logger.error("The photo or the video "+id_photo+ " doest not exists.")
             return HttpResponseNotFound('<h1>Page not found</h1>')
 
     cat = current_item.parent

@@ -1,9 +1,13 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+import logging
+
 from django.db import models
 from django.utils.translation import ugettext_lazy as _
 from django_unique_slugify import unique_slugify
+
+logger = logging.getLogger(__name__)
 
 
 class Type:
@@ -40,6 +44,8 @@ class Page(models.Model):
             return "Evenement"
         elif self.type == Type.PRESS:
             return "Presse"
+        else:
+            logger.error("The type of object " + self.type.__str__() + " is unknown")
 
         return ""
 

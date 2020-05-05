@@ -1,7 +1,10 @@
+import logging
 from itertools import chain
 
 from valerie.common.models import Config
 from valerie.photos_gallery.models import PhotoGallery
+
+logger = logging.getLogger(__name__)
 
 
 class ServiceGallery:
@@ -14,20 +17,17 @@ class ServiceGallery:
         self._all_items = list(chain(all_photos, all_videos))
         self._all_items.sort(key=lambda x: x.position_Item)
 
-    def _get_nb_items(self, current_photo):
-        if isinstance(current_photo, PhotoGallery):
-            return Config.NB_ELEMENTS_AROUND_PHOTO
-        else:
-            return Config.NB_ELEMENTS_AROUND_VIDEO
-
     def get_previous_items(self, current_photo):
         if current_photo not in self._all_items:
+            logger.warning("The item " + current_photo + " is not in the gallery.")
             return []
 
         self._init_all_photos_around(current_photo)
         nb_items = self._get_nb_items(current_photo)
 
-        if len(self._all_items) <= (nb_items * 2 + 1):
+        min_items = nb_items * 2 + 1
+        if len(self._all_items) <= min:
+            logger.debug("The number of items is lower or equal than " + min_items)
             return self._all_previous_photos
 
         if len(self._all_previous_photos) > nb_items:
@@ -40,12 +40,15 @@ class ServiceGallery:
 
     def get_next_items(self, current_photo):
         if current_photo not in self._all_items:
+            logger.warning("The item " + current_photo + " is not in the gallery.")
             return []
 
         self._init_all_photos_around(current_photo)
         nb_items = self._get_nb_items(current_photo)
 
+        min_items = nb_items * 2 + 1
         if len(self._all_items) <= (nb_items * 2 + 1):
+            logger.debug("The number of items is lower or equal than " + min_items)
             return self._all_next_photos
 
         if len(self._all_next_photos) > nb_items:
@@ -71,3 +74,10 @@ class ServiceGallery:
                 self._all_previous_photos.append(photo)
             else:
                 self._all_next_photos.append(photo)
+
+    @staticmethod
+    def _get_nb_items(current_photo):
+        if isinstance(current_photo, PhotoGallery):
+            return Config.NB_ELEMENTS_AROUND_PHOTO
+        else:
+            return Config.NB_ELEMENTS_AROUND_VIDEO
