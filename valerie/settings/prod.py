@@ -20,3 +20,47 @@ DATABASES = {
          },
      }
 }
+
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'formatters': {
+        'verbose': {
+            'format': '%(levelname)s - %(asctime)s %(filename)s:%(lineno)s - function %(funcName)s\n*******\t%(message)s'
+        },
+    },
+    'handlers': {
+        'file_info': {
+            'level': 'INFO',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'backupCount': 10,  # keep at most 10 log files
+            'maxBytes': 5242880,  # 5*1024*1024 bytes (5MB)
+            'filename': os.path.join(BASE_DIR, 'logs/valerie_info.log'),
+            'formatter': 'verbose'
+        },
+        'file_debug': {
+            'level': 'DEBUG',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'backupCount': 10,  # keep at most 10 log files
+            'maxBytes': 5242880,  # 5*1024*1024 bytes (5MB)
+            'filename': os.path.join(BASE_DIR, 'logs/valerie_debug.log'),
+            'formatter': 'verbose',
+        },
+        'file_errors': {
+            'level': 'ERROR',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'backupCount': 10,  # keep at most 10 log files
+            'maxBytes': 5242880,  # 5*1024*1024 bytes (5MB)
+            'filename': os.path.join(BASE_DIR, 'logs/valerie_errors.log'),
+            'formatter': 'verbose'
+        },
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file_debug', 'file_errors', 'file_info'],
+            'level': 'DEBUG',
+            'propagate': True
+        },
+    }
+}
