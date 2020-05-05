@@ -40,8 +40,10 @@ LOGGING = {
         },
         'file': {
             'level': 'DEBUG',
-            'class': 'logging.FileHandler',
-            'filename': '/tmp/django_valerie.log',
+            'class': 'logging.handlers.RotatingFileHandler',
+            'backupCount': 3,  # keep at most 10 log files
+            'maxBytes': 5242880,  # 5*1024*1024 bytes (5MB)
+            'filename': os.path.join(BASE_DIR, 'logs/valerie_debug.log'),
             'formatter': 'verbose'
         },
     },
