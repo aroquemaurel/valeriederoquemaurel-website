@@ -18,13 +18,13 @@
     text-align: left;
 }
 
-.mini-photos a img {
+.mini-photos a img, .mini-photos a i {
     opacity: 0.70;
     filter: blur(1.5px);
     height: 80px;
 }
 
-.mini-photo a:hover img {
+.mini-photo a:hover img, .mini-photos a i {
     opacity: 1;
     filter: blur(0px);
 }
@@ -33,9 +33,11 @@
     display: inline-block;
     margin-top: 130px;
     margin-left: 2px;
-    margin-right: 2px
+    margin-right: 2px;
 }
-
+.mini-photos a .glyphicon-facetime-video {
+    font-size: 24pt;
+}
 .caption {
     display: inline-block;
 }

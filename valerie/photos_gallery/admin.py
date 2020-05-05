@@ -8,7 +8,7 @@ from django.utils.translation import gettext_lazy as _
 from valerie.common.admin import admin_method_attributes
 from valerie.common.string_helper import preview_content
 from valerie.navigation.models import Category
-from valerie.photos_gallery.models import Photo
+from valerie.photos_gallery.models import PhotoGallery, VideoGallery
 
 
 class CategoriesListFilter(admin.SimpleListFilter):
@@ -30,22 +30,21 @@ class CategoriesListFilter(admin.SimpleListFilter):
         return queryset.filter(parent__id=self.value())
 
 
-class PhotoAdmin(admin.ModelAdmin):
-    fields = 'title', 'parent', 'content', 'photo_img', 'position'
-    list_display = ('parent', 'title', 'preview_content', 'position')
+class GalleryItemAdmin(admin.ModelAdmin):
+    list_display = ('parent', 'title', 'preview_content', 'position_Item')
     list_display_links = ('title',)
     list_filter = (CategoriesListFilter,)
-    ordering = 'parent', 'position'
-    search_fields = 'title', 'content'
+    ordering = 'parent', 'position_Item'
+    search_fields = 'title', 'content_Item'
 
     def render_change_form(self, request, context, *args, **kwargs):
         context['adminform'].form.fields['parent'].queryset = Category.category_is_photo()
-        return super(PhotoAdmin, self).render_change_form(request, context, *args, **kwargs)
+        return super(GalleryItemAdmin, self).render_change_form(request, context, *args, **kwargs)
 
     @staticmethod
     @admin_method_attributes(short_description='Contenu', allow_tags=True)
     def preview_content(photo):
-        return preview_content(photo.content)
+        return preview_content(photo.content_Item)
 
     @staticmethod
     @admin_method_attributes(short_description='Catégories', allow_tags=True)
@@ -53,4 +52,13 @@ class PhotoAdmin(admin.ModelAdmin):
         return []
 
 
-admin.site.register(Photo, PhotoAdmin)
+class PhotoAdmin(GalleryItemAdmin):
+    fields = 'title', 'parent', 'content_Item', 'photo_img', 'position_Item'
+
+
+class VideoAdmin(GalleryItemAdmin):
+    fields = 'title', 'parent', 'content_Item', 'youtube_url', 'position_Item'
+
+
+admin.site.register(PhotoGallery, PhotoAdmin)
+admin.site.register(VideoGallery, VideoAdmin)

@@ -62,3 +62,4 @@ class DocumentAttachment(Attachment):
 
 class Config:
     NB_ELEMENTS_AROUND_PHOTO = 3
+    NB_ELEMENTS_AROUND_VIDEO = 2
