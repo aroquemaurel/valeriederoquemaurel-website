@@ -1,12 +1,17 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+import logging
+
 from django.db import models
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
 
 from valerie.pages.models import NameablePage, Type
 from valerie.photos_gallery.models import PhotoGallery
+
+
+logger = logging.getLogger(__name__)
 
 
 class Category(models.Model):
@@ -32,6 +37,7 @@ class Category(models.Model):
 
         if page is None:
             # TODO AR : on retourne une 404
+            logger.error("The default page is unknown")
             return None
 
         nameablePage = NameablePage.objects.filter(page_ptr_id=page.id)

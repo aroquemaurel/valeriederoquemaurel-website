@@ -1,6 +1,8 @@
 # -*- coding: utf-8 -*-
 from __future__ import unicode_literals
 
+import logging
+
 from django.db import models
 from django.conf import settings
 from django.utils.translation import ugettext_lazy as _
@@ -8,6 +10,8 @@ from django.utils.translation import ugettext_lazy as _
 from valerie.pages.models import Page, NameablePage
 
 from deprecated import deprecated
+
+logger = logging.getLogger(__name__)
 
 
 class GalleryItem(NameablePage):
@@ -54,6 +58,17 @@ class OldPhoto(NameablePage):
     position = models.PositiveIntegerField(blank=True, null=True)
     photo_img = models.ImageField(upload_to=settings.UPLOAD_RELATIVE_DIR+'/photos')
 
+    @staticmethod
+    def _is_deprecated():
+        logger.warning("The model OldPhoto is deprecated")
+
+    def __str__(self):
+        self._is_deprecated()
+        super(NameablePage, self).__str__()
+
+    def save(self, *args, **kwargs):
+        self._is_deprecated()
+        super(OldPhoto, self).save(**kwargs)
 
 
 
