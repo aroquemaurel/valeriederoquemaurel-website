@@ -1,5 +1,3 @@
-from django.test import TestCase
-
 from valerie.common.tests.common_tests import CommonCategoryModelTests
 from valerie.pages.models import Page, Type
 

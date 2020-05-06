@@ -1,4 +1,6 @@
 **/*.pyc
+*/*.log
+logs/*.log.*
 venv
 /venv/
 /valerie.env
