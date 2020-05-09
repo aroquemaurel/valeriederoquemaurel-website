@@ -16,13 +16,13 @@
 
 .timeline .title {
     position: absolute;
-    margin-left: -63px;
+    margin-left: -58px;
     display: block;
-    width: 50px;
     text-align: center;
     color: #b14b85;
     font-weight: bold;
-
+	width: 100px;
+	left: -10px;
 }
 
 .timeline .text h3 {
@@ -31,6 +31,7 @@
 .timeline .text {
     margin-top: 0;
     display: block;
+	margin-left: 10px;
 }
 
 /*Content*/
