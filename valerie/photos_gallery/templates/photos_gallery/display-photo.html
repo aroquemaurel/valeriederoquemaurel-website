@@ -33,7 +33,7 @@
 
     <div class="main-photo">
         {% if is_photo %}
-            <img style="" src="/{{ page.photo_img }}" alt="{{ page.title }}"/>
+            <img src="/{{ page.photo_img }}" alt="{{ page.title }}"/>
         {% else %}
             {{ page.youtube_url|youtube_embedded|safe }}
         {% endif %}

@@ -48,7 +48,7 @@
 }
 
 .main-photo img {
-    max-width: 550px;
+    max-width: 450px;
     padding-right: 10px;
     padding-left: 10px;
 }
@@ -66,19 +66,20 @@ div.caption {
 }
 
 .gallery .horizontal-arrow {
-    display: inline;
+    background-color: red;
+    display: inline-block;
     position: absolute;
-    margin-top: 300px;
+    margin-top: 350px;
+
 }
 
 .gallery .horizontal-arrow.left {
-    margin-left: -100px;
+    margin-left: -130px;
 }
 
 .gallery .horizontal-arrow.right {
-    margin-left: 20px;
+    right: 450px;
 }
-
 .gallery .horizontal-arrow img {
     width: 70px;
 }
