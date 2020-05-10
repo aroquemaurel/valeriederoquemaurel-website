@@ -7,6 +7,10 @@ body, footer {
 body #content {
     width: 100%;
     min-height: 580px;
+    padding-right: 40px;
+}
+#text-left img {
+    max-width: 370px;
 }
 
 .title, h1, h2, h3, h4, h5 {
@@ -30,6 +34,8 @@ body #content #text-content #text-main {
 #text-left {
     position: absolute;
     top: 350px;
+    text-align: center;
+    width: 370px;
 }
 
 a:hover {
@@ -107,7 +113,17 @@ a {
 
 #back2Top:hover {
 }
+@media(min-width: 758px) {
+    @media (max-width: 1000px) {
+        #text-left  {
+            width: 300px;
+        }
 
+        #text-left img {
+            max-width: 250px;
+        }
+    }
+}
 @media(max-width: 758px) {
     #logo {
         display: none;
