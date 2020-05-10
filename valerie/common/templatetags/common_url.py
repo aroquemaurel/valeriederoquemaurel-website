@@ -11,9 +11,9 @@ def youtube_embedded(text):
     if len(sp) < 2:
         return text
 
-    return '<iframe ' \
-           'width="560" ' \
-           'height="315" ' \
+    return '<iframe style="margin-top: 20px;"' \
+           'width="450" ' \
+           'height="254" ' \
            'src="https://www.youtube.com/embed/'+sp[1]+'" '\
            'frameborder = "0" ' \
            'allow = "autoplay; encrypted-media" ' \

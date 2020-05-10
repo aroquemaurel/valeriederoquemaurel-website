@@ -33,7 +33,7 @@
 
     <div class="main-photo">
         {% if is_photo %}
-            <img style="" src="/{{ page.photo_img }}" alt="{{ page.title }}"/>
+            <img src="/{{ page.photo_img }}" alt="{{ page.title }}"/>
         {% else %}
             {{ page.youtube_url|youtube_embedded|safe }}
         {% endif %}
@@ -60,7 +60,7 @@
             {% if photo.photo_img %}
                 <img src="/{{ photo.photo_img }}" alt="{{ photo.title }}" />
             {% else %}
-                <span class="glyphicon glyphicon-facetime-video"></span>
+                <img src="{%  static '/style/img/mini-youtube.png' %}" alt="Vidéo" />
             {% endif %}
         </a>
         </span>
