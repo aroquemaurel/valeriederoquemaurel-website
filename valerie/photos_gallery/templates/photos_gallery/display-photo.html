@@ -10,7 +10,7 @@
     <div class="mini-photos left">&nbsp;
     {% for photo in previous_photos %}
         <span class="mini-photo">
-        <a href="{% url 'display_photo' current_cat.slug current_subcat.slug photo.id photo.slug %}">
+        <a class="mini-photo-{{ forloop.counter }}" href="{% url 'display_photo' current_cat.slug current_subcat.slug photo.id photo.slug %}">
             {% if photo.photo_img %}
                 <img src="/{{ photo.photo_img }}" alt="{{ photo.title }}" />
             {% else %}
@@ -56,7 +56,7 @@
     <div class="mini-photos right">&nbsp;
     {% for photo in next_photos %}
         <span class="mini-photo">
-        <a href="{% url 'display_photo' current_cat.slug current_subcat.slug photo.id photo.slug %}">
+        <a class="mini-photo-{{ forloop.revcounter }}" href="{% url 'display_photo' current_cat.slug current_subcat.slug photo.id photo.slug %}">
             {% if photo.photo_img %}
                 <img src="/{{ photo.photo_img }}" alt="{{ photo.title }}" />
             {% else %}
