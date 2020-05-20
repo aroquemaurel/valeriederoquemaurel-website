@@ -1,6 +1,6 @@
 body, footer {
     margin: auto;
-    max-width: 1200px;
+    max-width: 1000px;
     font-family: Candara, Galdeano, Orienta,Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
 }
 
@@ -122,6 +122,8 @@ a {
         #text-left img {
             max-width: 250px;
         }
+
+
     }
 }
 @media(max-width: 758px) {
