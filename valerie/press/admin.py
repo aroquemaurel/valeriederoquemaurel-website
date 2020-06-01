@@ -16,12 +16,12 @@ class ArticleImagesInline(admin.TabularInline):
 
 
 class ArticleAdmin(admin.ModelAdmin):
-    list_display = ('title', 'date', 'preview_content')
+    list_display = ('title', 'date')
     list_filter = ('date', )
     date_hierarchy = 'date'
     ordering = ('-date', )
-    search_fields = 'title', 'date', 'content'
-    fields = 'title', 'date', 'content'
+    search_fields = 'title', 'date'
+    fields = 'title', 'date'
 
     inlines = [
         ArticleImagesInline
