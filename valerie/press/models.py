@@ -17,7 +17,7 @@ class Article(models.Model):
         return self.article_attachment_image.all().order_by('position')
 
     def __str__(self):
-        "Article " + self.title + " du" + self.date.strftime('%d %b %Y')
+        return "Article " + self.title + " du " + self.date.strftime('%d %b %Y')
 
     class Meta:
         verbose_name = _('Article')

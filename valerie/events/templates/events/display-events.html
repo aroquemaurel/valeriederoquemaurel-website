@@ -24,7 +24,7 @@
                                                 L'expo est dans {{ event.start_date|timeuntil }}
                                             {% endif %}
                                         </em>
-                                        {{ event.description|linebreaks }}
+                                        {{ event.description|linebreaks|urlize }}
                                     </p>
 
                                     {% with images=event.get_images %}
