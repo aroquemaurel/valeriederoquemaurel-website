@@ -4,11 +4,12 @@ body, footer {
     font-family: Candara, Galdeano, Orienta,Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
 }
 
-body #content {
+#content {
     width: 100%;
     min-height: 580px;
     padding-right: 40px;
 }
+
 #text-left img {
     max-width: 370px;
 }
@@ -17,15 +18,16 @@ body #content {
     font-variant: small-caps;
 }
 
-body #content #main {
-    margin: auto;"
+#content #main {
+    margin: auto;
 }
 
-body #content #text-content #only-text {
+#content #text-content #only-text {
     width: 60%;
     margin-left: 20%;
 }
-body #content #text-content #text-main {
+
+#content #text-content #text-main {
     text-align: justify;
     width: 60%;
     margin-left: 40%;
@@ -111,8 +113,6 @@ a {
     right: 20px;
 }
 
-#back2Top:hover {
-}
 @media(min-width: 758px) {
     @media (max-width: 1000px) {
         #text-left  {
@@ -126,6 +126,7 @@ a {
 
     }
 }
+
 @media(max-width: 758px) {
     #logo {
         display: none;
