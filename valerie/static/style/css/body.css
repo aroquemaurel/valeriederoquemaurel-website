@@ -1,13 +1,14 @@
 body, footer {
     margin: auto;
     max-width: 1000px;
-    font-family: Roboto, Candara, Galdeano, Orienta, Calibri, Segoe, Segoe UI, Optima, Arial, sans-serif;
+    font-family: Roboto, Candara, Arial, sans-serif;
 }
 
 #content {
     width: 100%;
     min-height: 580px;
     padding-right: 40px;
+    color: #515151;
 }
 
 #text-left img {
