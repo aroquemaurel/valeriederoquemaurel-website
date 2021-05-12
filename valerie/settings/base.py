@@ -34,6 +34,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'compressor',
     'valerie',
     'valerie.photos_gallery',
     'valerie.navigation',
@@ -92,6 +93,20 @@ AUTH_PASSWORD_VALIDATORS = [
     },
 ]
 
+STATICFILES_FINDERS = (
+    'django.contrib.staticfiles.finders.FileSystemFinder',
+    'django.contrib.staticfiles.finders.AppDirectoriesFinder',
+    'compressor.finders.CompressorFinder',
+)
+COMPRESS_FILTERS = {
+    'css': [
+        'compressor.filters.css_default.CssAbsoluteFilter',
+        'compressor.filters.cssmin.CSSMinFilter'
+    ],
+    'js': [
+        'compressor.filters.jsmin.JSMinFilter'
+    ]
+}
 
 # Internationalization
 # https://docs.djangoproject.com/en/1.11/topics/i18n/
@@ -121,5 +136,5 @@ UPLOAD_DIR = BASE_DIR + UPLOAD_URL
 
 STATIC_ROOT = BASE_DIR + STATIC_URL
 
-
+COMPRESS_ENABLED = True
 STATICFILES_DIRS = [ ]
